@@ -30,7 +30,7 @@
                 <li><a href="Index.php">Home</a></li>
                 <li><a href="#">Vocational Training Centres</a></li>
                 <li  class="active"><a href="AboutAll.php">About us</a></li>
-                <li><a href="ContactAll.php">Contact</a></li>
+                <li><a href="4ContactAll.php">Contact</a></li>
               </ul>
           </div>
           
