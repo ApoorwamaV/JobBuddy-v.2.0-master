@@ -5,7 +5,7 @@
  $dbpass = '';
  $dbname = 'jobbuddy';
 
- //$connection = mysqli_connect('localhost','root','','jobbuddy');
+ $connection = mysqli_connect('localhost','root','','jobbuddy');
 
  //Checking the Connection
 

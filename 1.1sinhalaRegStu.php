@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Register</title>
+    <title>ශිෂ්‍ය ලියාපදිංචි වීම</title>
 
     <link rel="stylesheet" type="text/css" href="Lib.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -20,12 +20,18 @@
 <!--Page Body-->
     <img src="Stu Reg.jpg" alt="Student Registration"  width="1550" height="768">
   
+    <div class="form-row col-12 col-md-12 col-sm-12" >
+    පෝරමය පිරවීම සඳහා උපදෙස්<br>
+    1. ලියාපදිංචි කිරීමේ පෝරමය පුරවන විට කරුණාකර ඉංග්‍රීසි භාෂාව භාවිතා කරන්න. </br>
+    2. සම්පූර්ණ නම පුරවන විට කරුණාකර ඉංග්රීසි කැපිටල් අකුරු භාවිතා කරන්න. </div>
+
 <!--Student Register Form-->
 <section class="container-fluid">
     <section class="row justify-content-center">
     <section class="col-12 col-sm-6 col-md-10">
     <form class="form-container justify-content-center col-12 col-sm-6 col-md-10 " method="post" action="Reg_Student.php" enctype="multipart/form-data">
     <form class="stuReg">
+    
 <!-------------------------------------Row 01------------------------------------------------>
     <div class="form-row col-12 col-md-12 col-sm-12">
   
@@ -39,20 +45,21 @@
         </div>  
 <!--First Name-->
         <div class="form-group col-md-5">
-            <label for="firstNameStu">First Name</label>
+            <label for="firstNameStu">මුල් නම</label>
             <input type="text" class="form-control" name="firstNameStu" placeholder="Prathiba"  required>
         </div>
 <!--Last Name-->
         <div class="form-group col-md-5">
-            <label for="lastNameStu">Last Name</label>
+            <label for="lastNameStu">වාසගම</label>
             <input type="text" class="form-control" name="lastNameStu" placeholder="Iddamalgoda"  required>
         </div>
     </div>
+    
 <!-------------------------------------Row 02------------------------------------------------>
 <div class="form-row col-12 col-md-12 col-sm-12">
 <!--Full Name-->
             <div class="form-group col-md-12">
-                <label for="fullNameStu">Full Name</label>
+                <label for="fullNameStu">සම්පූර්ණ නම</label> 
                 <input type="text" class="form-control" name="fullNameStu" placeholder="PRATHIBA IDDAMALGODA"  required>
             </div>        
 </div>
@@ -60,7 +67,7 @@
 <div class="form-row col-12 col-md-12 col-sm-12">
 <!--Name with initials-->
             <div class="form-group col-md-12">
-                <label for="initialNameStu">Name with initials</label>
+                <label for="initialNameStu">මුලකුරු සහිත නම</label>
                 <input type="text" class="form-control" name="initialNameStu" placeholder="P.Iddamalgoda"  required>
             </div>         
 </div>    
@@ -68,7 +75,7 @@
 <div class="form-row col-12 col-md-12 col-sm-12">
 <!--E mail-->
         <div class="form-group col-md-6">
-            <label for="inputEmailStu">Email</label>
+            <label for="inputEmailStu">විද්යුත් තැපැල් ලිපිනය</label> 
             <input type="email" class="form-control" name="inputEmailStu" placeholder="prathiba@email.com">
         </div>
 <!--Password-->
@@ -77,6 +84,9 @@
             <input type="password" class="form-control" name="inputPasswordStu" required>
         </div>
 </div>
+<div class="form-row col-12 col-md-12 col-sm-12">
+<a href="https://www.youtube.com/channel/UCzh1By4MZccb8SsgAlvyFSA"> How to create an Email address. </a>
+</div><br>
 <!-------------------------------------Row 05------------------------------------------------>
 <div class="form-row col-12 col-md-12 col-sm-12">
 <!--NIC number-->

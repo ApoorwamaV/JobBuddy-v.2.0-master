@@ -32,17 +32,17 @@
           </button>
           <div class="collapse navbar-collapse justify-content-center" id="barLink">
             <ul class="nav navbar-nav" >
-                <li class="active"><a href="Index.php">මුල් පිටුව</a></li>
+                <li class="active"><a href="sinhalaIndex.php">මුල් පිටුව</a></li>
                 <li><a href="#">වෘත්තීය පුහුණු මධ්‍යස්ථාන</a></li>
-                <li><a href="./3AboutAll.php">අපි ගැන</a></li>
+                <li><a href="./3sinhalaAboutAll.php">අපි ගැන</a></li>
                 <!--Admin Panel-->
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">පරිශීලක විස්තර
                   <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="./stu_admin_panel.php">ශිෂ්‍ය විස්තර</a></li>
-                    <li><a href="./vtc_admin_panel.php">වෘත්තීය පුහුණු මධ්‍යස්ථාන විස්තර</a></li>
-                    <li><a href="./com_admin_panel.php">ආයතනික විස්තර</a></li>
+                    <li><a href="./sinhalastu_admin_panel.php">ශිෂ්‍ය විස්තර</a></li>
+                    <li><a href="./sinhalavtc_admin_panel.php">වෘත්තීය පුහුණු මධ්‍යස්ථාන විස්තර</a></li>
+                    <li><a href="./sinhalacom_admin_panel.php">ආයතනික විස්තර</a></li>
                   </ul>
                 </li><li><a href="./ContactAll.php">සන්නිවේදනය</a></li>
                 <!--Register-->
@@ -50,19 +50,19 @@
                   <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">ලියාපදිංචි වන්න
                   <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="./1.1RegStu.php">ශිෂ්‍ය</a></li>
+                    <li><a href="./1.1sinhalaRegStu.php">ශිෂ්‍ය</a></li>
                     <li><a href="./1.1RegVocationalCentre.php">වෘත්තීය පුහුණු මධ්‍යස්ථාන</a></li>
                     <li><a href="./1.1RegCompany.php">ආයතන</a></li>
                   </ul>
                 </li>
                 <!--Login-->
                 <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">පවතින ගිණුමට පිවිසෙන්න
                   <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="./2.1StuLogIn.php">ශිෂ්‍ය</a></li>
-                    <li><a href="./2.2VTCLogIn.php">වෘත්තීය පුහුණු මධ්‍යස්ථාන</a></li>
-                    <li><a href="./2.3CompanyLogIn.php">ආයතන</a></li>
+                    <li><a href="./2.1sinhalaStuLogIn.php">ශිෂ්‍ය</a></li>
+                    <li><a href="./2.2sinhalaVTCLogIn.php">වෘත්තීය පුහුණු මධ්‍යස්ථාන</a></li>
+                    <li><a href="./2.3sinhalaCompanyLogIn.php">ආයතන</a></li>
                   </ul>
                 </li>
                 
