@@ -7,14 +7,15 @@ ul {
     margin: 0;
     color: thistle;
     padding: 2em 3em;
-    position: fixed;
+    position: relative;
+   /* position: fixed;*/
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-   /* display: flex;
+   display: flex;
     justify-content: space-between;
-    transition: background 250ms ease-in;*/
+    transition: background 250ms ease-in;
 } 
 
 .Lang{
@@ -62,7 +63,7 @@ li a:link {
 /* visited link */
 li a:visited {
     color: white;
-    background-color: #f3f3f3;
+    background-color: #1f0303;
 }
 
 /* mouse over link */
@@ -90,19 +91,27 @@ li a:active {
 
 }
 /*---------------------------------------------------------------------Background--------------------------------------------------------------------------*/
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 .Parallex{
     background: url(Images/wp5595795.jpg) no-repeat ;
     background-size: cover;
     background-attachment: fixed;
     height: 500px;
 }
-/*.Title{
-    background: url(Images/WEB\ 1.jpg) no-repeat ;
+.Title{
+    background: url(Images/WEB_2.jpg) no-repeat ;
     background-size: cover;
-    background-attachment: fixed;
     height: 500px;
 }
-*/
+
 .img{
     /*max-width: 100%;*/
     height: auto;
@@ -111,7 +120,21 @@ li a:active {
     background-size: 100%;
 }
 
-
+.bg-image {
+    /* Full height */
+    height: 50%; 
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Images used */
+  .img1 { background-image: url("WEB_1.jpg"); }
+  .img2 { background-image: url("img_girl.jpg"); }
+  .img3 { background-image: url("img_lights.jpg"); }
+  .img4 { background-image: url("img_nature.jpg"); }
 
 /*---------------------------------------------------------------------2Log In--------------------------------------------------------------------------*/
 .form-container{

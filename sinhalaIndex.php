@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <div class="Title" align="center">
+  <div class="Title" >
     
   </div>
 <div class = "Container">
