@@ -32,27 +32,27 @@
           </button>
           <div class="collapse navbar-collapse justify-content-center" id="barLink">
             <ul class="nav navbar-nav" >
-                <li class="active"><a href="Index.php">Home</a></li>
-                <li><a href="#">Vocational Training Centres</a></li>
-                <li><a href="./3AboutAll.php">About us</a></li>
+                <li class="active"><a href="Index.php">මුල් පිටුව</a></li>
+                <li><a href="#">වෘත්තීය පුහුණු මධ්‍යස්ථාන</a></li>
+                <li><a href="./3AboutAll.php">අපි ගැන</a></li>
                 <!--Admin Panel-->
                 <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">User Details
+                  <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">පරිශීලක විස්තර
                   <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="./stu_admin_panel.php">Student Details</a></li>
-                    <li><a href="./vtc_admin_panel.php">Vocational Training Centre Details</a></li>
-                    <li><a href="./com_admin_panel.php">Company Details</a></li>
+                    <li><a href="./stu_admin_panel.php">ශිෂ්‍ය විස්තර</a></li>
+                    <li><a href="./vtc_admin_panel.php">වෘත්තීය පුහුණු මධ්‍යස්ථාන විස්තර</a></li>
+                    <li><a href="./com_admin_panel.php">ආයතනික විස්තර</a></li>
                   </ul>
-                </li><li><a href="./ContactAll.php">Contact</a></li>
+                </li><li><a href="./ContactAll.php">සන්නිවේදනය</a></li>
                 <!--Register-->
                 <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">Register
+                  <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">ලියාපදිංචි වන්න
                   <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="./1.1RegStu.php">Student</a></li>
-                    <li><a href="./1.1RegVocationalCentre.php">Vocational Training Centre</a></li>
-                    <li><a href="./1.1RegCompany.php">Company</a></li>
+                    <li><a href="./1.1RegStu.php">ශිෂ්‍ය</a></li>
+                    <li><a href="./1.1RegVocationalCentre.php">වෘත්තීය පුහුණු මධ්‍යස්ථාන</a></li>
+                    <li><a href="./1.1RegCompany.php">ආයතන</a></li>
                   </ul>
                 </li>
                 <!--Login-->
@@ -60,9 +60,9 @@
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login
                   <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="./2.1StuLogIn.php">Student</a></li>
-                    <li><a href="./2.2VTCLogIn.php">Vocational Training Centre</a></li>
-                    <li><a href="./2.3CompanyLogIn.php">Company</a></li>
+                    <li><a href="./2.1StuLogIn.php">ශිෂ්‍ය</a></li>
+                    <li><a href="./2.2VTCLogIn.php">වෘත්තීය පුහුණු මධ්‍යස්ථාන</a></li>
+                    <li><a href="./2.3CompanyLogIn.php">ආයතන</a></li>
                   </ul>
                 </li>
                 
@@ -71,7 +71,7 @@
         </div>
     </nav>
 <!-- Language -->
-    <div class="Lang" align="left">
+<div class="Lang" align="left">
       <li><a href="Index.php"><button type="button" href class="btn btn-primary btn-block">English</button></a></li>
       <li><a href="sinhalaIndex.php"><button type="button" href class="btn btn-primary btn-block">සිංහල</button></a></li>
       <li><a href="tamilIndex.php"><button type="button" href class="btn btn-primary btn-block">தமிழ்</button></a></li>

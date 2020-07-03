@@ -51,7 +51,7 @@ $tmp_name = $_FILES['id_copy']['tmp_name'];
  }
  
  $query = "INSERT INTO students(designationStu,firstNameStu,lastNameStu,fullNameStu,initialNameStu,EmailStu,passwordStu,NICStu,DOBStu,genderStu,civilStatusStu,addressStu,districtStu,contactNoStu,eduLevelStu,softCopy) VALUES ('{$designationStu}','{$firstNameStu}','{$lastNameStu}','{$fullNameStu}','{$initialNameStu}','{$inputEmailStu}','{$hashed_password}','{$inputNICStu}','{$DOBStu}','{$inputGenderStu}','{$inputCStatusStu}','{$inputAddressStu}','{$inputDistrictStu}','{$inputContactNoStu}','{$eduLevel}','{$image}')";
-       
+  $result='';     
   $result = mysqli_query($connection,$query); 
 
         if($result){
@@ -66,5 +66,7 @@ $tmp_name = $_FILES['id_copy']['tmp_name'];
         }else{
           $errors[] = 'Failed to add New Record';
         }
+
+        
 
 ?>
