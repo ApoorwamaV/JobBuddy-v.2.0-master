@@ -80,12 +80,12 @@
         </div>
 <!--Password-->
         <div class="form-group col-md-6">
-            <label for="inputPasswordStu">Password</label>
+            <label for="inputPasswordStu">රහස් පදය</label>
             <input type="password" class="form-control" name="inputPasswordStu" required>
         </div>
 </div>
 <div class="form-row col-12 col-md-12 col-sm-12">
-<a href="https://www.youtube.com/channel/UCzh1By4MZccb8SsgAlvyFSA"> How to create an Email address. </a>
+<a href="https://www.youtube.com/channel/UCzh1By4MZccb8SsgAlvyFSA"> විද්‍යුත් තැපැල් ලිපිනයක් නිර්මාණය කරන්නේ කෙසේද </a>
 </div><br>
 <!-------------------------------------Row 05------------------------------------------------>
 <div class="form-row col-12 col-md-12 col-sm-12">

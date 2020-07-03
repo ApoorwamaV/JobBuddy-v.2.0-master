@@ -34,7 +34,7 @@
             <ul class="nav navbar-nav" >
                 <li class="active"><a href="sinhalaIndex.php">මුල් පිටුව</a></li>
                 <li><a href="#">වෘත්තීය පුහුණු මධ්‍යස්ථාන</a></li>
-                <li><a href="./3sinhalaAboutAll.php">අපි ගැන</a></li>
+                <li><a href="./3sinhalaAboutAll.php">අප පිළිබඳව</a></li>
                 <!--Admin Panel-->
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">පරිශීලක විස්තර

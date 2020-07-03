@@ -20,6 +20,12 @@
 <!--Page Body-->
     <img src="Stu Reg.jpg" alt="Student Registration"  width="1550" height="768">
   
+    <div class="form-row col-12 col-md-12 col-sm-12">
+    Instructions for fill the form<br>
+    1. Please use English when filling out the registration form. <br>
+    2. Please use English capital letters when filling in your full name. 
+    </div>
+
 <!--Student Register Form-->
 <section class="container-fluid">
     <section class="row justify-content-center">
@@ -36,7 +42,8 @@
                 <option>Mrs.</option>
                 <option>Miss.</option>
             </select>
-        </div>  
+        </div> 
+
 <!--First Name-->
         <div class="form-group col-md-5">
             <label for="firstNameStu">First Name</label>
@@ -77,6 +84,11 @@
             <input type="password" class="form-control" name="inputPasswordStu" required>
         </div>
 </div>
+
+<div class="form-row col-12 col-md-12 col-sm-12">
+<a href="https://www.youtube.com/channel/UCzh1By4MZccb8SsgAlvyFSA"> How to create an Email address. </a>
+</div><br>
+
 <!-------------------------------------Row 05------------------------------------------------>
 <div class="form-row col-12 col-md-12 col-sm-12">
 <!--NIC number-->
