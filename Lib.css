@@ -5,17 +5,17 @@ ul {
     list-style-type: none;
     background: transparent;
     margin: 0;
-    color: thistle;
-    padding: 2em 3em;
+    color: rgb(16, 44, 5);
+   /* padding: 2em 3em;
     position: relative;
    /* position: fixed;*/
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
+    width: auto;
    display: flex;
     justify-content: space-between;
-    transition: background 250ms ease-in;
+    /*transition: background 250ms ease-in;*/
 } 
 
 .Lang{
