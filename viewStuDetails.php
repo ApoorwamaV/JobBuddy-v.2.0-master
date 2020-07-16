@@ -1,21 +1,15 @@
 <?php require_once('includes/connection.php'); ?>
 <?php require_once('includes/functions.php'); ?>
 
-<?php
 
 
-
-$result = mysqli_query($connection,"SELECT * FROM students WHERE NICStu ='".$_GET['id']."'");
-$row= mysqli_fetch_array($result);
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Details Update</title>
+    <title>Student Register</title>
 
     <link rel="stylesheet" type="text/css" href="Lib.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -26,6 +20,12 @@ $row= mysqli_fetch_array($result);
 <!--Page Body-->
     <img src="Stu Reg.jpg" alt="Student Registration"  width="1550" height="768">
   
+    <div class="form-row col-12 col-md-12 col-sm-12">
+    Instructions for fill the form<br>
+    1. Please use English when filling out the registration form. <br>
+    2. Please use English capital letters when filling in your full name. 
+    </div>
+
 <!--Student Register Form-->
 <section class="container-fluid">
     <section class="row justify-content-center">
@@ -38,21 +38,21 @@ $row= mysqli_fetch_array($result);
 <!--Miss/ Mrs/ Mr-->
         <div class="form-group col-md-2"><br>
             <select id="designationStu" class="form-control" name="designationStu">
-                <option selected><?php echo $row['designationStu']; ?></option>
-                <option>Mr.</option>
+                <option selected>Mr.</option>
                 <option>Mrs.</option>
                 <option>Miss.</option>
             </select>
-        </div>  
+        </div> 
+
 <!--First Name-->
         <div class="form-group col-md-5">
             <label for="firstNameStu">First Name</label>
-            <input type="text" class="form-control" name="firstNameStu" placeholder="Prathiba" value="<?php echo $row['firstNameStu']; ?>" required>
+            <input type="text" class="form-control" name="firstNameStu" placeholder="Prathiba"  required>
         </div>
 <!--Last Name-->
         <div class="form-group col-md-5">
             <label for="lastNameStu">Last Name</label>
-            <input type="text" class="form-control" name="lastNameStu" placeholder="Iddamalgoda" value="<?php echo $row['lastNameStu']; ?>" required>
+            <input type="text" class="form-control" name="lastNameStu" placeholder="Iddamalgoda"  required>
         </div>
     </div>
 <!-------------------------------------Row 02------------------------------------------------>
@@ -60,7 +60,7 @@ $row= mysqli_fetch_array($result);
 <!--Full Name-->
             <div class="form-group col-md-12">
                 <label for="fullNameStu">Full Name</label>
-                <input type="text" class="form-control" name="fullNameStu" placeholder="PRATHIBA IDDAMALGODA" value="<?php echo $row['fullNameStu']; ?>" required>
+                <input type="text" class="form-control" name="fullNameStu" placeholder="PRATHIBA IDDAMALGODA"  required>
             </div>        
 </div>
 <!-------------------------------------Row 03------------------------------------------------>
@@ -68,7 +68,7 @@ $row= mysqli_fetch_array($result);
 <!--Name with initials-->
             <div class="form-group col-md-12">
                 <label for="initialNameStu">Name with initials</label>
-                <input type="text" class="form-control" name="initialNameStu" placeholder="P.Iddamalgoda" value="<?php echo $row['initialNameStu']; ?>" required>
+                <input type="text" class="form-control" name="initialNameStu" placeholder="P.Iddamalgoda"  required>
             </div>         
 </div>    
 <!-------------------------------------Row 04------------------------------------------------>
@@ -76,21 +76,30 @@ $row= mysqli_fetch_array($result);
 <!--E mail-->
         <div class="form-group col-md-6">
             <label for="inputEmailStu">Email</label>
-            <input type="email" class="form-control" name="inputEmailStu" value="<?php echo $row['EmailStu']; ?>" placeholder="prathiba@email.com">
+            <input type="email" class="form-control" name="inputEmailStu" placeholder="prathiba@email.com">
         </div>
-
+<!--Password-->
+        <div class="form-group col-md-6">
+            <label for="inputPasswordStu">Password</label>
+            <input type="password" class="form-control" name="inputPasswordStu" required>
+        </div>
 </div>
+
+<div class="form-row col-12 col-md-12 col-sm-12">
+<a href="https://www.youtube.com/channel/UCzh1By4MZccb8SsgAlvyFSA"> How to create an Email address. </a>
+</div><br>
+
 <!-------------------------------------Row 05------------------------------------------------>
 <div class="form-row col-12 col-md-12 col-sm-12">
 <!--NIC number-->
         <div class="form-group col-6 col-md-6">
             <label for="inputNICStu">NIC number</label>
-            <input type="text" class="form-control" name="inputNICStu" placeholder="95******" value="<?php echo $row['NICStu']; ?>" required> 
+            <input type="text" class="form-control" name="inputNICStu" placeholder="95******" required> 
         </div>
 <!--Date of Birth-->
         <div class="form-group col-md-6">
           <label for="DOBStu">Date of birth</label>
-          <input type="date" class="form-control" name="DOBStu" value="<?php echo $row['DOBStu']; ?>" required>
+          <input type="date" class="form-control" name="DOBStu" required>
         </div>
 </div>
 <!-------------------------------------Row 05------------------------------------------------>
@@ -99,10 +108,8 @@ $row= mysqli_fetch_array($result);
         <div class="form-group col-6 col-md-6">
             <label for="inputGenderStu">Gender</label>
             <div class="form-group col-md-4">
-            <select name="inputGenderStu" class="form-control">
-              
-              <option selected><?php echo $row['genderStu']; ?></option>
-              <option>Male</option>
+            <select name="inputGenderStu"  class="form-control">
+              <option selected>Male</option>
               <option>Female</option>
             </select>
             </div>
@@ -110,9 +117,8 @@ $row= mysqli_fetch_array($result);
 <!--Civil Status-->
         <div class="form-group col-6 col-md-6">
             <label for="inputCStatusStu">Civil Status</label>
-            <select name="inputCStatusStu" class="form-control" >
-            <option selected><?php echo $row['civilStatusStu']; ?></option> 
-              <option>Married</option>
+            <select name="inputCStatusStu" class="form-control">
+              <option selected>Married</option>
               <option>Single</option>
             </select>
           </div>
@@ -121,16 +127,15 @@ $row= mysqli_fetch_array($result);
 <!--Address-->
           <div class="form-group col-12 col-md-12 col-sm-12">
             <label for="inputAddressStu">Address</label>
-              <input type="text" class="form-control" name="inputAddressStu" placeholder="1234, Kandy road, Nittambuwa." value="<?php echo $row['addressStu']; ?>" required>
+              <input type="text" class="form-control" name="inputAddressStu" placeholder="1234, Kandy road, Nittambuwa." required>
           </div>
 <!-------------------------------------Row 07------------------------------------------------>      
 <!--Password-->               
 <div class="form-row col-12 col-md-12 col-sm-12">
           <div class="form-group col-md-6">
             <label for="inputDistrictStu">District</label>
-            <select name="inputDistrictStu" class="form-control" required>
-              <option selected><?php echo $row['districtStu']; ?></option>
-              <option>Colombo</option>
+            <select name="inputDistrictStu" class="form-control"required>
+              <option selected>Colombo</option>
               <option>Gampaha</option>
               <option>Kaluthara</option>
               <option>Rathnapura</option>
@@ -145,7 +150,7 @@ $row= mysqli_fetch_array($result);
           </div>
           <div class="form-group col-md-6">
             <label for="inputContactNoStu">Contact No</label>
-            <input type="text" class="form-control" name="inputContactNoStu" value="<?php echo $row['contactNoStu']; ?>" placeholder="+94 7# ## ## ###">
+            <input type="text" class="form-control" name="inputContactNoStu" placeholder="+94 7# ## ## ###">
           </div>
 </div>
 <!-------------------------------------Row 08------------------------------------------------>
@@ -157,7 +162,7 @@ $row= mysqli_fetch_array($result);
 <div class=" form-row col-12 col-md-12 col-sm-12">
 <!--Primary-->
           <div class="form-check col-6 col-md-6 col-sm-6">
-            <input class="form-check-input" type="radio" name="edu" id="gridRadiosPrimary"  value="Primary" >
+            <input class="form-check-input" type="radio" name="edu" id="gridRadiosPrimary" value="Primary" >
             <label class="form-check-label" for="gridRadiosPrimary">
               Primary Eduction
             </label>
@@ -218,7 +223,7 @@ $row= mysqli_fetch_array($result);
 <!-------------------------------------Row 13------------------------------------------------>
 <div class="form-row col-12 col-md-12 col-sm-12"><label for="inputNICPhoto">Drop Your NIC Softcopy File</label>
 <div class="custom-file">
-        <input type="file" class="custom-file-input" id="validatedCustomFile" name="id_copy" value="<?php echo $row['softCopy']; ?>">
+        <input type="file" class="custom-file-input" id="validatedCustomFile" name="id_copy">
         <label class="custom-file-label" for="validatedCustomFile" name="text_id">Choose file...</label>
         <div class="invalid-feedback">Example invalid custom file feedback</div>
 </div>

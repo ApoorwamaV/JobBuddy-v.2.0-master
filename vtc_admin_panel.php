@@ -109,7 +109,7 @@ $(document).on('click', '#btn_add', function(){
     //Update
     $(document).on('click', '.btn_update', function(){  
         var id=$(this).data("id9");  
-            window.location.href ="http://localhost/dashboard/JobBuddy%20v.2.0/vtc_update.php?id="+id;
+            window.location.href ="http://localhost/dashboard/A_Updated_Home/JobBuddy-v.2.0-master/vtc_update.php?id="+id;
            
           
     });  

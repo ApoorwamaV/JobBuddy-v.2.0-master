@@ -17,7 +17,7 @@
   <section class="row justify-content-center">
     <section class="col-12 col-sm-6 col-md-3">
       <form class="form-container" action="loginStu.php" method="post">
-      <?php 
+      <?php /*
       if(isset($_GET['empty'])){
         $Message=$_GET['empty'];
         $Message= "Please Enter Both User Email & Password";
@@ -29,8 +29,8 @@
       }
       ?>
       <?php 
-      if(isset($_GET['U_Invalid'])){
-        $Message=$_GET['U_Invalid'];
+      if(isset($_POST['U_Invalid'])){
+        $Message=$_POST['U_Invalid'];
         $Message= "Invalid User Credentials";
       
       
@@ -40,20 +40,20 @@
       }
       ?>
        <?php 
-      if(isset($_GET['P_Invalid'])){
-        $Message=$_GET['P_Invalid'];
+      if(isset($_POST['P_Invalid'])){
+        $Message=$_POST['P_Invalid'];
         $Message= "Invalid Password";
       
       
       ?>
       <div class="alert alert-danger text-center"><?php echo $Message?></div>
       <?php 
-      }
+      }*/
       ?>
         <div class="form-group" >
-          <label for="exampleInputEmail1">Email address or NIC</label>
+          <label for="exampleInputEmail1">Email address </label>
           <input type="email" name="Stu_Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your E mail">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <small id="emailHelp" class="form-text text-muted"> We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>

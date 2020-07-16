@@ -18,18 +18,21 @@
 </head>
 <body>
 <!--Page Body-->
-    <img src="Stu Reg.jpg" alt="Student Registration"  width="1550" height="768">
-  
-    <div class="form-row col-12 col-md-12 col-sm-12">
-    Instructions for fill the form<br>
+    <img id="stuRegImg" src="Stu Reg.jpg" alt="Student Registration"  width="1550"><br><br><br>
+    <div style="background: url(image/197798-Ireland-trees-green-road-grass-street-fence-shrubs-summer-nature-landscape-hedges-748x474.jpg)" class="page-holder bg-cover">
+
+  <!--Page Content-->
+  <div>
+    <div class="form-row col-12 col-md-12 col-sm-12" >
+    <p class="main">Instructions for fill the form<br>
     1. Please use English when filling out the registration form. <br>
-    2. Please use English capital letters when filling in your full name. 
+    2. Please use English capital letters when filling in your full name. </p>
     </div>
 
 <!--Student Register Form-->
 <section class="container-fluid">
     <section class="row justify-content-center">
-    <section class="col-12 col-sm-6 col-md-10">
+    <section class="col-12 col-sm-12 col-md-12">
     <form class="form-container justify-content-center col-12 col-sm-6 col-md-10 " method="post" action="Reg_Student.php" enctype="multipart/form-data">
     <form class="stuReg">
 <!-------------------------------------Row 01------------------------------------------------>
@@ -211,16 +214,17 @@
 </div>
 <!-------------------------------------Row 12------------------------------------------------>      
       <div class="form-check col-12 col-md-12 col-sm-12 disabled">
+      <div class="form-check col-6 col-md-6 col-sm-6">
         <input class="form-check-input" type="radio" name="edu" id="gridRadiosNone" value="None" checked>
         <label class="form-check-label" for="gridRadiosNone">
           None
         </label>
-      </div>
+        </div></div>
     </div>
     </div>
   </div>
 </fieldset>
-<!-------------------------------------Row 13------------------------------------------------>
+<!-------------------------------------Row 13------------------------------------------------><br>
 <div class="form-row col-12 col-md-12 col-sm-12"><label for="inputNICPhoto">Drop Your NIC Softcopy File</label>
 <div class="custom-file">
         <input type="file" class="custom-file-input" id="validatedCustomFile" name="id_copy">
@@ -230,17 +234,27 @@
 </div>
 <!-------------------------------------Row 09------------------------------------------------>
                 <div class="form-group col-12 col-md-12 col-sm-12">
-                  <div class="form-check">
+                  <div class="form-check"> <br><br><br>
+                    <p> <a href="#"> I checked the agreement statement and I accept all the terms and conditions. </a> </p>
+                    <div class="form-group col-6 col-md-6 col-sm-6">
                     <input class="form-check-input" type="checkbox" id="gridCheckStu">
                     <label class="form-check-label" for="gridCheck">
-                      Check me out
+                      I agree
+                    </label>
+                    <div class="form-group col-6 col-md-6 col-sm-6">
+                    <input class="form-check-input" type="checkbox" id="gridCheckStu">
+                    <label class="form-check-label" for="gridCheck">
+                      I disagree
                     </label>
                   </div>
                 </div>
 <!-------------------------------------Row 10------------------------------------------------>               
-    <button type="submit" name="register" class="btn btn-primary btn-block">Submit</button> </br></br>
-    <button type="button" href class="btn btn-primary btn-block">Back</button> </form><br><br>
-    
+    <div class="form-group col-12 col-md-12 col-sm-12"> 
+    <div class="form-group col-6 col-md-6 col-sm-6"> 
+    <button type="submit" name="register" class="btn btn-primary btn-block">Submit</button> </div>
+    <div class="form-group col-6 col-md-6 col-sm-6">
+    <a href="Index.php"><button type="button" href class="btn btn-primary btn-block"> Back</button> </a></form>
+    </div>
 </form>
 <!-- </form>-->
 </section>
@@ -256,7 +270,7 @@
 </section>
 </section>
 </section>
-  
+</div> 
   <!--End of the Page Body-->
     <script.src="js/jquery.js"></script>
     <script.src="js/bootstrap.js"></script>  

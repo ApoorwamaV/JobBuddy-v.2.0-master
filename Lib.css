@@ -1,6 +1,108 @@
 
-/*---------------------------------------------------------------------Nav Bar--------------------------------------------------------------------------*/
+body{
+    align-content: stretch;
+    margin: 0;
+    padding: 0;
+    background-image: url(wp5595795.jpg);
+    font-size: 16px;
+    /*background-image: url(success-at-SHL-tests.jpg);*/
+    background-size: cover;
+   /*margin-right: 50pt;*/
+}
+.page-holder {
+    min-height: 100vh;
+  }
+  
+  .bg-cover {
+    background-size: cover ;
+  }
+.main{
+    font-size: 20px;
+    width:"1525";
+    color: #f2f2f2;
+    text-decoration-color: #f2f2f2;
+    background-color: rgb(16, 44, 5);
+    background-size: cover;
+    align-content: center;
+    margin: auto;
+}
+.Container{
+    margin: auto;
+    padding: 25px;
+    align-content: center;
 
+}
+.social{
+    font-size: 16px;
+    background-image: url(image/vocational-education.jpg);
+    opacity:0.5;
+}
+/*---------------------------------------------------------------------btn--------------------------------------------------------------------------*/
+.fa {
+    padding: 20px;
+    font-size: 100px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    justify-content: center;
+  }
+  .fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-whatsapp {
+    background: #20a557;
+    color: white;
+  }
+  
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;}
+
+/*---------------------------------------------------------------------Nav Bar--------------------------------------------------------------------------*/
+#Nav{
+    float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;/*
+    background-color:rgb(7, 7, 34);
+   color:black;
+   width:100%;
+   height:60px;
+   margin:0;
+   padding:0;
+   top:0;
+   z-index:99;
+   width: 900px;
+   text-align: right;
+   margin: auto;*/}
+    /*background-size: cover;}*/
 ul {
     list-style-type: none;
     background: transparent;
@@ -14,7 +116,7 @@ ul {
     right: 0;
     width: auto;
    display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;
     /*transition: background 250ms ease-in;*/
 } 
 
@@ -27,7 +129,7 @@ ul {
 .dropdown-menu{
     display: block;
     background-color: transparent;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: left;
     padding: 14px 16px;
     text-decoration: none;
@@ -78,18 +180,6 @@ li a:active {
     background-color: #f3f3f3;
 }
 
-/*body{
-    align-content: stretch;
-    /*background-image: url(success-at-SHL-tests.jpg);
-    background-size: cover;
-   margin-right: 50pt;
-}*/
-.Container{
-    margin: auto;
-    padding: 25px;
-    align-content: center;
-
-}
 /*---------------------------------------------------------------------Background--------------------------------------------------------------------------*/
 .carousel-item {
     height: 100vh;
@@ -137,6 +227,7 @@ li a:active {
   .img4 { background-image: url("img_nature.jpg"); }
 
 /*---------------------------------------------------------------------2Log In--------------------------------------------------------------------------*/
+
 .form-container{
     position: absolute;
     top: 15vh;
@@ -144,6 +235,7 @@ li a:active {
     padding: 30px; /*for gap borders*/
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(75, 60, 60, 0);
+    
 }
 
 .bg{
@@ -159,11 +251,17 @@ li a:active {
     margin:20px;
     padding:20px;
 }
+.stuRegImg{
+    background-size: cover;
+    background-image: url(image/197798-Ireland-trees-green-road-grass-street-fence-shrubs-summer-nature-landscape-hedges-748x474.jpg);
+}
 .eduLevel{
     padding: 5px;
 }
 .stuReg{
+    align-content: center;
     padding: 30px;
+    font-size: 16px;
 }
 
 

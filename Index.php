@@ -10,6 +10,10 @@
     <link rel="stylesheet" type="text/css" href="Lib.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="javascript" href="js/bootstrap.js">
+    
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </head>
 <body>
@@ -19,7 +23,7 @@
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <!--<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>-->
     </ol>
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
@@ -55,17 +59,20 @@
 
 <div class="Navigation Bar">
   
-    <nav class="navbar navbar-expand-sm navbar-default navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-default navbar-dark bg-dark">
         <div class="container-fluid">
-          
+          <!--logo-->
+        <a class="navbar-brand" href="#">
+    <img src="LOGO.jpg" alt="logo" style="width:40px;">
+  </a>     
 <!--Creating toggle-->
           <button class="navbar-toggler" data-toggle="collapse" data-target="#barLink"> <!--# for a id-->
                 <span class="navbar-toggler-icon">
 
                 </span>
           </button>
-          <div class="collapse navbar-collapse justify-content-center" id="barLink">
-            <ul class="nav navbar-nav" >
+          <div class="collapse navbar-collapse navbar-expand-md justify-content-end" id="barLink">
+            <ul class="nav navbar-nav nav-tabs" id="Nav" >
                 <li class="active"><a href="Index.php">Home</a></li>
                 <li><a href="#">Vocational Training Centres</a></li>
                 <li><a href="./3AboutAll.php">About us</a></li>
@@ -99,7 +106,10 @@
                     <li><a href="./2.3CompanyLogIn.php">Company</a></li>
                   </ul>
                 </li>
-                
+                <form class="form-inline" action="/action_page.php">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-success" type="submit">Search</button>
+  </form>
               </ul>
               
         </div>
@@ -116,12 +126,43 @@
   
   <div class= "Parallex">
   </div>
-
+  <button class="btn"><i class="fa fa-home"></i> Home</button>
+<button class="btn"><i class="fa fa-bars"></i> Menu</button>
+<button class="btn"><i class="fa fa-trash"></i> Trash</button>
+<button class="btn"><i class="fa fa-close"></i> Close</button>
+<button class="btn"><i class="fa fa-folder"></i> Folder</button>
   <div class="bg-image img1"></div>
 <div class="bg-image img2"></div>
 <div class="bg-image img3"></div>
 <div class="bg-image img4"></div>
   </div>   
+
+<!-- Add social media icons -->
+  <div class="justify-content-end" >
+<div class="form-row col-12 col-md-12 col-sm-12">
+<div class="form-group col-md-3">
+    <a href="https://www.facebook.com/106660131113039?referrer=whatsapp" class="fa fa-facebook"></a> </div>
+<div class="form-group col-md-3">
+    <a href="#" class="fa fa-google"></a> </div>
+<div class="form-group col-md-3">
+    <a href="#" class="fa fa-whatsapp"></a> </div>
+<div class="form-group col-md-3">
+    <a href="https://www.youtube.com/channel/UCzh1By4MZccb8SsgAlvyFSA" class="fa fa-youtube"></a> </div>
+</div>
+</div>
+<!-- Add social media names -->
+<div class="social justify-content-center" >
+<div class="form-row col-12 col-md-12 col-sm-12">
+<div class="form-group col-md-3">
+    <p> JOBBuddy Career </p></div>
+<div class="form-group col-md-3">
+    <p> JOBBuddy Career </p></div>
+<div class="form-group col-md-3">
+    <p> +94 70 588 2716 </p></div>
+<div class="form-group col-md-3">
+    <p> JOBBuddy Career </p></div>
+</div>
+</div>
 <!--<img src="success-at-SHL-tests.jpg" alt="JobBuddy" width="2000px" height="1085px"><!-- alt="Mountain View" style="width:304px;height:228px;">-->
 
  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
