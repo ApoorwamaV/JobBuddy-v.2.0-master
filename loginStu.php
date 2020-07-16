@@ -11,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $StuEmail = $_POST['Stu_Email'];
     $password = $_POST['StuPassword']; 
    
-    $Query = "SELECT * FROM students WHERE Stu_Email = '".$StuEmail."' and StuPassword = '".$password."'";
+    $Query = "SELECT * FROM '.$students.' WHERE Stu_Email = '".$StuEmail."' and StuPassword = '".$password."'";
    $result = mysqli_query($connection,$Query);
    
    /*if($row=mysqli_fetch_assoc($result)){
