@@ -1,3 +1,4 @@
+<?php require_once('includes/connection.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@
   <section class="row justify-content-center">
     <section class="col-12 col-sm-6 col-md-3">
       <form class="form-container" action="loginStu.php" method="post">
-      <?php /*
+      <?php 
       if(isset($_GET['empty'])){
         $Message=$_GET['empty'];
         $Message= "Please Enter Both User Email & Password";
@@ -48,7 +49,7 @@
       ?>
       <div class="alert alert-danger text-center"><?php echo $Message?></div>
       <?php 
-      }*/
+      }
       ?>
         <div class="form-group" >
           <label for="exampleInputEmail1">Email address </label>
@@ -75,7 +76,7 @@
 
 <!--End of the Page Body-->
 <?php
-  if(isset($_POST))
+  if(isset($_POST));
 ?>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-   /*include('session.php');*/
+   include('session.php');
 ?>
 
 <!DOCTYPE html>
@@ -16,26 +16,28 @@
 
 </head>
 <body>
-<?php
-include "connection.php";
+<a href="Index`.php">  Home</a>
+<h1>Welcome <?php echo $login_session; ?></h1> 
+      <h2><a href = "logout.php">Sign Out</a></h2>
 
-// Check user login or not
-if(!isset($_SESSION['stu'])){
-    header('Location: index.php');
-}
+<div id="google_translate_element"></div>  
+      
+    <script type="text/javascript">  
+        function googleTranslateElementInit() {  
+            new google.translate.TranslateElement( 
+                {pageLanguage: 'en'},  
+                'google_translate_element' 
+            );  
+        }  
+    </script>  
+      
+    <script type="text/javascript" src= 
+"https://translate.google.com/translate_a/element.js? 
+        cb=googleTranslateElementInit"> 
+    </script>  
 
-// logout
-if(isset($_POST['but_logout'])){
-    session_destroy();
-    header('Location: index.php');
-}
-?>
 
-        <h1>Homepage</h1>
-        <form method='post' action="">
-            <input type="submit" value="Logout" name="but_logout">
-        </form>
-    
+
 <div class="Navigation Bar">
     <nav class="navbar navbar-expand-sm navbar-default navbar-dark bg-dark">
         <div class="container-fluid">

@@ -48,22 +48,15 @@
         </a>
   </div>
 </header>
-<!--Background Slider End-->
-
-<!--<div class="img-fluid">
-  <div class="Title" >
-  </div>  
-  </div>-->
-
-<div class = "Container">
-
 <div class="Navigation Bar">
-  
-    <nav class="navbar navbar-expand-md navbar-default navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-default navbar-dark bg-dark">
         <div class="container-fluid">
-          <!--logo-->
-        <a class="navbar-brand" href="#">
-    <img src="LOGO.jpg" alt="logo" style="width:40px;">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Job Buddy</a>
+          </div>
+<!--logo-->
+  <a class="navbar-brand" href="#">
+    <img src="LOGO.jpg" alt="logo" style="width:100px;">
   </a>     
 <!--Creating toggle-->
           <button class="navbar-toggler" data-toggle="collapse" data-target="#barLink"> <!--# for a id-->
@@ -71,11 +64,10 @@
 
                 </span>
           </button>
-          <div class="collapse navbar-collapse navbar-expand-md justify-content-end" id="barLink">
-            <ul class="nav navbar-nav nav-tabs" id="Nav" >
+          <div class="collapse navbar-collapse justify-content-center" id="barLink">
+            <ul class="nav navbar-nav">
                 <li class="active"><a href="Index.php">Home</a></li>
                 <li><a href="#">Vocational Training Centres</a></li>
-                <li><a href="./3AboutAll.php">About us</a></li>
                 <!--Admin Panel-->
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">User Details
@@ -85,42 +77,54 @@
                     <li><a href="./vtc_admin_panel.php">Vocational Training Centre Details</a></li>
                     <li><a href="./com_admin_panel.php">Company Details</a></li>
                   </ul>
-                </li><li><a href="./ContactAll.php">Contact</a></li>
-                <!--Register-->
-                <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">Register
-                  <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
+                </li>
+                <li><a href="3AboutAll.php">About us</a></li>
+                <li><a href="4ContactAll.php">Contact</a></li>
+
+<!--Register-->
+              <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">Register
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
                     <li><a href="./1.1RegStu.php">Student</a></li>
                     <li><a href="./1.1RegVocationalCentre.php">Vocational Training Centre</a></li>
                     <li><a href="./1.1RegCompany.php">Company</a></li>
-                  </ul>
-                </li>
-                <!--Login-->
-                <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login
-                  <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
+              </ul>
+              </li>
+<!--Login-->
+              <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
                     <li><a href="./2.1StuLogIn.php">Student</a></li>
                     <li><a href="./2.2VTCLogIn.php">Vocational Training Centre</a></li>
                     <li><a href="./2.3CompanyLogIn.php">Company</a></li>
-                  </ul>
-                </li>
-                <form class="form-inline" action="/action_page.php">
-    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-    <button class="btn btn-success" type="submit">Search</button>
-  </form>
               </ul>
-              
-        </div>
-    </nav>
+              </li>
+<!--Search-->
+      <form class="form-inline" action="/action_page.php">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+      </form>
+</ul>
+</div>
+</nav>              
+                
 <!-- Language -->
     <div class="Lang" align="left">
+
       <li><a href="Index.php"><button type="button" href class="btn btn-primary btn-block">English</button></a></li>
       <li><a href="sinhalaIndex.php"><button type="button" href class="btn btn-primary btn-block">සිංහල</button></a></li>
       <li><a href="tamilIndex.php"><button type="button" href class="btn btn-primary btn-block">தமிழ்</button></a></li>
     </div>
           </div>          
+  </div>
+
+  <div class="para">
+  <div class="container-fluid">
+    <h1> About us </h1>
+    <p> hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
+  </div>  
   </div>
 
   
@@ -131,6 +135,8 @@
 <button class="btn"><i class="fa fa-trash"></i> Trash</button>
 <button class="btn"><i class="fa fa-close"></i> Close</button>
 <button class="btn"><i class="fa fa-folder"></i> Folder</button>
+
+<a href="./StuHome copy.php"> Student Home</a>
   <div class="bg-image img1"></div>
 <div class="bg-image img2"></div>
 <div class="bg-image img3"></div>
