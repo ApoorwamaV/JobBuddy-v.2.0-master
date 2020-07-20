@@ -9,11 +9,11 @@ body{
     background-size: cover;
    /*margin-right: 50pt;*/
 }
-.watapita{
-    background: url(Image/LightBulb.jpg) repeat;
+.container-Reg{
+    background: url(Image/asfalt.png) repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 500px;
+    height: 100%;
 }
 .avatar {
     vertical-align: middle;

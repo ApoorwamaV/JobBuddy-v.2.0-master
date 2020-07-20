@@ -24,7 +24,7 @@
 
 </head>
 <body>
-
+<div class="container-Reg">
 <!--Page Body-->
 <div class="watapita">
     <img id="stuRegImg" src="Stu Reg.jpg" alt="Student Registration"  width="1550"><br><br><br>
@@ -282,7 +282,7 @@
 </section>
 </section>
 </div> 
-</div>
+</div></div>
   <!--End of the Page Body-->
     <script.src="js/jquery.js"></script>
     <script.src="js/bootstrap.js"></script>  
