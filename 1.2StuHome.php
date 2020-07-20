@@ -1,5 +1,5 @@
 <?php
-   /*include('session.php');*/
+   require_once('includes/connection.php');
 ?>
 
 <!DOCTYPE html>
@@ -13,56 +13,76 @@
     <link rel="stylesheet" type="text/css" href="Lib.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="javascript" href="js/bootstrap.js">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
 <?php
-include "connection.php";
-
-// Check user login or not
-if(!isset($_SESSION['stu'])){
-    header('Location: index.php');
-}
-
-// logout
+//logout
 if(isset($_POST['but_logout'])){
     session_destroy();
-    header('Location: index.php');
+    header('Location: Index.php');
 }
 ?>
-
-        <h1>Homepage</h1>
-        <form method='post' action="">
-            <input type="submit" value="Logout" name="but_logout">
-        </form>
-    
 <div class="Navigation Bar">
     <nav class="navbar navbar-expand-sm navbar-default navbar-dark bg-dark">
         <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand" href="#">Job Buddy</a>
           </div>
+<!--logo-->
+  <a class="navbar-brand" href="#">
+  <img src="LOGO.jpg" alt="logo" style="width:100px;">
+  </a>     
 <!--Creating toggle-->
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#barLink"> <!--# for a id-->
-                <span class="navbar-toggler-icon">
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#barLink"> <!--# for a id-->
+    <span class="navbar-toggler-icon">
+    </span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center" id="barLink">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="1.2StuHome.php" >Home</a></li>
+      <li><a href="#">Vocational Training Centres</a></li>
+      <li><a href="3AboutAll.php">About us</a></li>
+      <li><a href="4ContactAll.php">Contact</a></li>
 
-                </span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-center" id="barLink">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="Index.php">Home</a></li>
-                <li><a href="#">Vocational Training Centres</a></li>
-                <li><a href="AboutAll.php">About us</a></li>
-                <li><a href="ContactAll.php">Contact</a></li>
-              </ul>
+<!--Search-->
+      <li>
+      <form class="form-inline" action="/action_page.php">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+      </form>
+</li> 
+<!--Logout-->
+      <li>
+          <form method='post' action="">
+            <button class="btn btn-danger" type="submit" name="but_logout">Logout</button>
+          </form>
+      </li>
+</ul>
+</div>
+</nav>              
+                
+<!-- Language -->
+    <div class="Lang" align="left">
+
+      <li class=btn><a href="1.2StuHome.php"><button type="button" href class="btn btn-primary btn-block">English</button></a></li>
+      <li class=btn><a href="sinhala1.2StuHome.php"><button type="button" href class="btn btn-primary btn-block">සිංහල</button></a></li>
+      <li class=btn><a href="tamil1.2StuHome.php"><button type="button" href class="btn btn-primary btn-block">தமிழ்</button></a></li>
+    </div>
           </div>          
-        </div>
-    </nav>
   </div>
 
-  <div class="Title" align="center">
+  <div class="bg-image img1"></div>
+
+  <section class="col-12 col-sm-6 col-md-3">
+    
+  </section>
+
+  <!--<div class="Title" align="center">
     <img src="WEB 2.jpg" alt="Job Buddy"  width="1520" height="768">
-  </div>
+  </div>-->
 
     
 <!--<img src="success-at-SHL-tests.jpg" alt="JobBuddy" width="2000px" height="1085px"><!-- alt="Mountain View" style="width:304px;height:228px;">-->

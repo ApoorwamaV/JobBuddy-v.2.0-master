@@ -18,39 +18,7 @@
   <section class="row justify-content-center">
     <section class="col-12 col-sm-6 col-md-3">
       <form class="form-container" action="loginStu.php" method="post">
-      <?php 
-      if(isset($_GET['empty'])){
-        $Message=$_GET['empty'];
-        $Message= "Please Enter Both User Email & Password";
       
-      
-      ?>
-      <div class="alert alert-danger text-center"><?php echo $Message?></div>
-      <?php 
-      }
-      ?>
-      <?php 
-      if(isset($_POST['U_Invalid'])){
-        $Message=$_POST['U_Invalid'];
-        $Message= "Invalid User Credentials";
-      
-      
-      ?>
-      <div class="alert alert-danger text-center"><?php echo $Message?></div>
-      <?php 
-      }
-      ?>
-       <?php 
-      if(isset($_POST['P_Invalid'])){
-        $Message=$_POST['P_Invalid'];
-        $Message= "Invalid Password";
-      
-      
-      ?>
-      <div class="alert alert-danger text-center"><?php echo $Message?></div>
-      <?php 
-      }
-      ?>
         <div class="form-group" >
           <label for="exampleInputEmail1">Email address </label>
           <input type="email" name="Stu_Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your E mail">

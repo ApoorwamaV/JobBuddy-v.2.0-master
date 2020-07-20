@@ -136,16 +136,19 @@
 <button class="btn"><i class="fa fa-close"></i> Close</button>
 <button class="btn"><i class="fa fa-folder"></i> Folder</button>
 
-<a href="./StuHome copy.php"> Student Home</a>
-  <div class="bg-image img1"></div>
+
+  
 <div class="bg-image img2"></div>
 <div class="bg-image img3"></div>
 <div class="bg-image img4"></div>
+<div class="bg-image img5"></div>
   </div>   
 
 <!-- Add social media icons -->
+<div class="social-icons">
   <div class="justify-content-end" >
-<div class="form-row col-12 col-md-12 col-sm-12">
+<div class=" form-row col-12 col-md-12 col-sm-12">
+  
 <div class="form-group col-md-3">
     <a href="https://www.facebook.com/106660131113039?referrer=whatsapp" class="fa fa-facebook"></a> </div>
 <div class="form-group col-md-3">
@@ -154,7 +157,7 @@
     <a href="#" class="fa fa-whatsapp"></a> </div>
 <div class="form-group col-md-3">
     <a href="https://www.youtube.com/channel/UCzh1By4MZccb8SsgAlvyFSA" class="fa fa-youtube"></a> </div>
-</div>
+    </div></div>
 </div>
 <!-- Add social media names -->
 <div class="social justify-content-center" >
