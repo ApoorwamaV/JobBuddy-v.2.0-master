@@ -9,12 +9,19 @@ body{
     background-size: cover;
    /*margin-right: 50pt;*/
 }
+.watapita{
+    background: url(Image/LightBulb.jpg) repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+}
 .avatar {
     vertical-align: middle;
     width: 50px;
     height: 50px;
     border-radius: 50%;
   }
+ 
 li btn{
     font-size: 16px;
 }
@@ -253,7 +260,11 @@ li a:active {
 .form-container{
     position: absolute;
     top: 15vh;
-    background:transparent;
+    right: 0;
+    margin: 20px;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
     box-shadow: #f2f2f2;
     padding: 30px; /*for gap borders*/
     border-radius: 10px;
@@ -282,14 +293,62 @@ li a:active {
     padding: 5px;
 }
 .stuReg{
+    background-color: #555;
     align-content: center;
     padding: 30px;
     font-size: 16px;
+    
 }
 
 
 
-/*---------------------------------------------------------------------Log In--------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------Log In--------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------Previous and Next Button--------------------------------------------------------------------------*/
+
+  .previous {
+    background-color: #4CAF50 ;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-size: 100%;
+  }
+  
+  .next {
+    background-color: #f1f1f1;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+  
+  .round {
+    border-radius: 50%;
+  }
+/*---------------------------------------------------------------------icon bar--------------------------------------------------------------------------*/
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: #555; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+  }
+  
+  .icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+  }
+  
+  .icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+  }
+  
+  .active {
+    background-color: #4CAF50; /* Add an active/current color */
+  }
 /*---------------------------------------------------------------------Log In--------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------Log In--------------------------------------------------------------------------*/

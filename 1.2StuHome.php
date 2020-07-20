@@ -43,7 +43,7 @@ if(isset($_POST['but_logout'])){
   <div class="collapse navbar-collapse justify-content-center" id="barLink">
     <ul class="nav navbar-nav">
       <li class="active"><a href="1.2StuHome.php" >Home</a></li>
-      <li><a href="#">Vocational Training Centres</a></li>
+      <li><a href="#">I want to know </a></li>
       <li><a href="3AboutAll.php">About us</a></li>
       <li><a href="4ContactAll.php">Contact</a></li>
 
@@ -76,8 +76,10 @@ if(isset($_POST['but_logout'])){
 
   <div class="bg-image img1"></div>
 
-  <section class="col-12 col-sm-6 col-md-3">
-    
+  <section class="form-row col-12 col-md-12 col-sm-12">
+    <section class="form-group col-md-2">
+        <a href=""><img src="avatar.png" alt="Avatar" class="avatar"></a>
+    </section>
   </section>
 
   <!--<div class="Title" align="center">

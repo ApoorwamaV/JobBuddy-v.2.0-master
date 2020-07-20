@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link rel="stylesheet" type="text/css" href="Lib.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="javascript" href="js/bootstrap.js">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+
+    <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         
     <title>Students Data Admin Panel</title>
 </head>
 <body>
+
+<div class="icon-bar">
+  <a class="active" href="Index.php"><i class="fa fa-home"></i></a>
+  <a href="#"><i class="fa fa-search"></i></a>
+  <a href="#"><i class="fa fa-trash"></i></a>
+</div>
+<a href="Index.php" class="previous round">&#8249;</a>
 <div class="container">  
             <br />  
             <br />
@@ -20,7 +34,8 @@
 				<span id="result"></span>
 				<div id="live_data"></div>                 
 			</div>  
-		</div>
+        </div>
+
 </body>
 </html>
 <script>

@@ -15,12 +15,23 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="javascript" href="js/bootstrap.js">
 
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+  
+</style>
+
 </head>
 <body>
+
 <!--Page Body-->
+<div class="watapita">
     <img id="stuRegImg" src="Stu Reg.jpg" alt="Student Registration"  width="1550"><br><br><br>
     <div style="background: url(image/197798-Ireland-trees-green-road-grass-street-fence-shrubs-summer-nature-landscape-hedges-748x474.jpg)" class="page-holder bg-cover">
-
+    <a href="Index.php" class="previous round">&#8249;</a>
+    <a href="#" class="next round">&#8250;</a>
+    <button class="btn"><i class="fa fa-close"></i> Close</button>
   <!--Page Content-->
   <div>
     <div class="form-row col-12 col-md-12 col-sm-12" >
@@ -271,6 +282,7 @@
 </section>
 </section>
 </div> 
+</div>
   <!--End of the Page Body-->
     <script.src="js/jquery.js"></script>
     <script.src="js/bootstrap.js"></script>  
