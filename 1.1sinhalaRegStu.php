@@ -80,7 +80,7 @@
         </div>
 <!--Password-->
         <div class="form-group col-md-6">
-            <label for="inputPasswordStu">රහස් පදය</label>
+            <label for="inputPasswordStu">මුරපදය</label>
             <input type="password" class="form-control" name="inputPasswordStu" required>
         </div>
 </div>
@@ -91,12 +91,12 @@
 <div class="form-row col-12 col-md-12 col-sm-12">
 <!--NIC number-->
         <div class="form-group col-6 col-md-6">
-            <label for="inputNICStu">NIC number</label>
+            <label for="inputNICStu">ජාතික හැඳුනුම්පත් අංකය</label>
             <input type="text" class="form-control" name="inputNICStu" placeholder="95******" required> 
         </div>
 <!--Date of Birth-->
         <div class="form-group col-md-6">
-          <label for="DOBStu">Date of birth</label>
+          <label for="DOBStu">උපන්දිනය</label>
           <input type="date" class="form-control" name="DOBStu" required>
         </div>
 </div>
@@ -104,7 +104,7 @@
 <div class="form-row col-12 col-md-12 col-sm-12">
 <!--Gender-->
         <div class="form-group col-6 col-md-6">
-            <label for="inputGenderStu">Gender</label>
+            <label for="inputGenderStu">ස්ත්‍රී පුරුෂ භාවය (Male-පිරිමි, Female-ගැහැණු)</label>
             <div class="form-group col-md-4">
             <select name="inputGenderStu"  class="form-control">
               <option selected>Male</option>
@@ -114,7 +114,7 @@
         </div>
 <!--Civil Status-->
         <div class="form-group col-6 col-md-6">
-            <label for="inputCStatusStu">Civil Status</label>
+            <label for="inputCStatusStu">සිවිල් තත්වය (Maried-විවාහක,Single-අවිවාහක)</label>
             <select name="inputCStatusStu" class="form-control">
               <option selected>Married</option>
               <option>Single</option>
@@ -124,14 +124,14 @@
 <!-------------------------------------Row 06------------------------------------------------>
 <!--Address-->
           <div class="form-group col-12 col-md-12 col-sm-12">
-            <label for="inputAddressStu">Address</label>
+            <label for="inputAddressStu">ලිපිනය</label>
               <input type="text" class="form-control" name="inputAddressStu" placeholder="1234, Kandy road, Nittambuwa." required>
           </div>
 <!-------------------------------------Row 07------------------------------------------------>      
 <!--Password-->               
 <div class="form-row col-12 col-md-12 col-sm-12">
           <div class="form-group col-md-6">
-            <label for="inputDistrictStu">District</label>
+            <label for="inputDistrictStu">දිස්ත්‍රික්ක</label>
             <select name="inputDistrictStu" class="form-control"required>
               <option selected>Colombo</option>
               <option>Gampaha</option>
@@ -147,14 +147,14 @@
             </select>
           </div>
           <div class="form-group col-md-6">
-            <label for="inputContactNoStu">Contact No</label>
+            <label for="inputContactNoStu">ඇමතුම් අංකය</label>
             <input type="text" class="form-control" name="inputContactNoStu" placeholder="+94 7# ## ## ###">
           </div>
 </div>
 <!-------------------------------------Row 08------------------------------------------------>
 <fieldset class="form-group" id="eduLevelStu">
 <div class="form-row col-12 col-md-12 col-sm-12">
-<legend class="col-form-label col-sm-2 pt-0">Education Level</legend>
+<legend class="col-form-label col-sm-2 pt-0">අධ්‍යාපන මට්ටම</legend>
 <div class="eduLevel">
 <!-------------------------------------Row 09------------------------------------------------>
 <div class=" form-row col-12 col-md-12 col-sm-12">
@@ -219,10 +219,10 @@
   </div>
 </fieldset>
 <!-------------------------------------Row 13------------------------------------------------>
-<div class="form-row col-12 col-md-12 col-sm-12"><label for="inputNICPhoto">Drop Your NIC Softcopy File</label>
+<div class="form-row col-12 col-md-12 col-sm-12"><label for="inputNICPhoto">ඔබේ ජාතික හැඳුනුම්පත් මෘදුකාංග ගොනුව දෙන්න</label>
 <div class="custom-file">
         <input type="file" class="custom-file-input" id="validatedCustomFile" name="id_copy">
-        <label class="custom-file-label" for="validatedCustomFile" name="text_id">Choose file...</label>
+        <label class="custom-file-label" for="validatedCustomFile" name="text_id">ගොනුව තෝරන්න...</label>
         <div class="invalid-feedback">Example invalid custom file feedback</div>
 </div>
 </div>
@@ -236,8 +236,9 @@
                   </div>
                 </div>
 <!-------------------------------------Row 10------------------------------------------------>               
-    <button type="submit" name="register" class="btn btn-primary btn-block">Submit</button> </br></br>
-    <button type="button" href class="btn btn-primary btn-block">Back</button> </form><br><br>
+    <button type="submit" name="register" class="btn btn-primary btn-block">ලියාපදිංචි කිරීම</button> </br></br>
+    <a href="Index.php"><button type="button" href class="btn btn-primary btn-block"> ආපසු</button> </a>
+    </form><br><br>
     
 </form>
 <!-- </form>-->

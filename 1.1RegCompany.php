@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vocational Training Centre Register</title>
+    <title>Company Register</title>
 
     <link rel="stylesheet" type="text/css" href="Lib.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -13,7 +13,9 @@
 <body>
 <!--Page Body-->
     <!--<img src="Stu Reg.jpg" alt="Student Registration"  width="1550" height="768">-->
-  
+    <img id="comRegImg" src="local-web-design-creative-background.jpg" alt="Company Registration"  width="1550"><br><br><br>
+    <div class="bg-image img2"></div> 
+    <h1 align="center"> Company Registration </h1>
 <!--VTC Register Form-->
 <section class="container-fluid">
     <section class="row justify-content-center">
@@ -162,7 +164,8 @@
                   </div>
                 </div>
 <!-------------------------------------Row 10------------------------------------------------>               
-    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    <button type="submit" class="btn btn-primary btn-block">Submit</button> </br></br>
+    <a href="Index.php"><button type="button" href class="btn btn-primary btn-block"> Back</button> </a></form>
 </form>
 <!-- </form>-->
 </section>

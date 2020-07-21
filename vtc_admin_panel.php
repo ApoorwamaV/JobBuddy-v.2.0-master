@@ -7,10 +7,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+
+        <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         
     <title>Vocational Training Centers Admin Panel</title>
 </head>
 <body>
+<div class="icon-bar">
+  <a class="active" href="Index.php"><i class="fa fa-home"></i></a>
+  <a href="#"><i class="fa fa-search"></i></a>
+  <a href="#"><i class="fa fa-trash"></i></a>
+</div>
+<a href="Index.php" class="previous round">&#8249;</a>
+
 <div class="container">  
             <br />  
             <br />
@@ -24,6 +35,9 @@
 </body>
 </html>
 <script>
+
+
+
 $(document).ready(function(){
     function fetch_data()  
     {  

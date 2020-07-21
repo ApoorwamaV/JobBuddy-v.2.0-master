@@ -13,7 +13,9 @@
 <body>
 <!--Page Body-->
     <!--<img src="Stu Reg.jpg" alt="Student Registration"  width="1550" height="768">-->
-  
+    <img id="vtcRegImg" src="young-people.jpg" alt="VTC Registration"  width="1550"><br><br><br>
+    <div class="bg-image img3"></div>  
+    <h1 align="center"> Vocational Training Centre Registration </h1>
 <!--VTC Register Form-->
 <section class="container-fluid">
     <section class="row justify-content-center">
@@ -162,36 +164,14 @@
                   </div>
                 </div>
 <!-------------------------------------Row 10------------------------------------------------>               
-    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    <button type="submit" class="btn btn-primary btn-block">Submit</button> </br></br>
+    <a href="Index.php"><button type="button" href class="btn btn-primary btn-block"> Back</button> </a></form>
 </form>
 <!-- </form>-->
 </section>
 </section>
 </section><br><br><br><br>
   <!-- End of the Student Registration Form-->
-
-<section class="container-fluid ">
-<section class="row justify-content-center bg-last">
-<section class="col-12 col-sm-6 col-md-10">
-  <!--width="1550" height="768"-->
-<form class="form-container  justify-content-center col-12 col-sm-6 col-md-10 " >
-<!-------------------------------------Row 01------------------------------------------------>
-<div class="form-row">
-<!--Contact No-->
-<div class="form-group col-6 col-sm-6 col-md-6">
-<img src="" alt="">
-<label for="firstName">+94 77 25 86 493</label>
-</div> 
-<!--Email-->
-<div class="form-group col-6 col-sm-6 col-md-6">
-  <img src="" alt="">
-  <label for="firstName">job.buddy@gmail.com</label>
-</div>
-</div>  
-</form>  
-</section>
-</section>
-</section>
   
   <!--End of the Page Body-->
     <script.src="js/jquery.js"></script>

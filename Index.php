@@ -111,11 +111,12 @@
 </nav>              
                 
 <!-- Language -->
+    <!-- Language -->
     <div class="Lang" align="left">
 
-      <li><a href="Index.php"><button type="button" href class="btn btn-primary btn-block">English</button></a></li>
-      <li><a href="sinhalaIndex.php"><button type="button" href class="btn btn-primary btn-block">සිංහල</button></a></li>
-      <li><a href="tamilIndex.php"><button type="button" href class="btn btn-primary btn-block">தமிழ்</button></a></li>
+      <li class=btn><a href="Index.php"><button type="button" href class="btn btn-primary btn-block">English</button></a></li>
+      <li class=btn><a href="sinhalaIndex.php"><button type="button" href class="btn btn-primary btn-block">සිංහල</button></a></li>
+      <li class=btn><a href="tamilIndex.php"><button type="button" href class="btn btn-primary btn-block">தமிழ்</button></a></li>
     </div>
           </div>          
   </div>
@@ -123,13 +124,16 @@
   <div class="para">
   <div class="container-fluid">
     <h1> About us </h1>
-    <p> hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
+    <span class="about"> <p> This web platform is basically facilitating students to find vocational courses according to
+their qualifications and facilitates to publish about the vocational training centers and the
+courses. The vocational training centres have to publish about new intakes for the courses
+and job opportunities and students can identify the opportunities and register.<p></span>
   </div>  
   </div>
 
   
   <div class= "Parallex">
-  </div>
+  </div><!--
   <button class="btn"><i class="fa fa-home"></i> Home</button>
 <button class="btn"><i class="fa fa-bars"></i> Menu</button>
 <button class="btn"><i class="fa fa-trash"></i> Trash</button>
@@ -142,7 +146,7 @@
 <div class="bg-image img3"></div>
 <div class="bg-image img4"></div>
 <div class="bg-image img5"></div>
-  </div>   
+  </div>   -->
 
 <!-- Add social media icons -->
 <div class="social-icons">
@@ -160,7 +164,8 @@
     </div></div>
 </div>
 <!-- Add social media names -->
-<div class="social justify-content-center" >
+<div class="social" >
+<div class="justify-content-end" >
 <div class="form-row col-12 col-md-12 col-sm-12">
 <div class="form-group col-md-3">
     <p> JOBBuddy Career </p></div>
@@ -171,7 +176,7 @@
 <div class="form-group col-md-3">
     <p> JOBBuddy Career </p></div>
 </div>
-</div>
+</div></div>
 <!--<img src="success-at-SHL-tests.jpg" alt="JobBuddy" width="2000px" height="1085px"><!-- alt="Mountain View" style="width:304px;height:228px;">-->
 
  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

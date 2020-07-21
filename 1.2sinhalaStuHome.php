@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Student Profile</title>
+    <title>ශිෂ්‍ය ගිණුම</title>
 
     <link rel="stylesheet" type="text/css" href="Lib.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -42,22 +42,22 @@ if(isset($_POST['but_logout'])){
   </button>
   <div class="collapse navbar-collapse justify-content-center" id="barLink">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="1.2StuHome.php" >Home</a></li>
-      <li><a href="#">I want to know more about </a></li>
-      <li><a href="3AboutAll.php">About us</a></li>
-      <li><a href="4ContactAll.php">Contact</a></li>
+      <li class="active"><a href="1.2sinhalaStuHome.php" >මුල් පිටුව</a></li>
+      <li><a href="#">මට වැඩි විස්තර දැන ගැනීමට අවශ්‍යයි</a></li>
+      <li><a href="3AboutAll.php">අප පිළිබඳව</a></li>
+      <li><a href="4ContactAll.php">සන්නිවේදනය</a></li>
 
 <!--Search-->
       <li>
       <form class="form-inline" action="/action_page.php">
           <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-success" type="submit">Search</button>
+          <button class="btn btn-success" type="submit">සොයන්න</button>
       </form>
 </li> 
 <!--Logout-->
       <li>
           <form method='post' action="">
-            <button class="btn btn-danger" type="submit" name="but_logout">Logout</button>
+            <button class="btn btn-danger" type="submit" name="but_logout">ගිණුමෙන් ඉවත් වන්න</button>
           </form>
       </li>
 </ul>

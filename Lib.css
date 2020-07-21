@@ -9,12 +9,15 @@ body{
     background-size: cover;
    /*margin-right: 50pt;*/
 }
+.about{
+  font-size: 16px;
+}
 .container-Reg{
     background: url(Image/asfalt.png) repeat;
     background-size: cover;
     background-attachment: fixed;
     height: 100%;
-}
+} 
 .avatar {
     vertical-align: middle;
     width: 50px;
@@ -49,9 +52,9 @@ li btn{
 
 }
 .social{
+  margin-left: 15cm;
     font-size: 16px;
-    background-image: url(image/vocational-education.jpg);
-    opacity:0.5;
+    
 }
 /*---------------------------------------------------------------------btn--------------------------------------------------------------------------*/
 .fa {
@@ -251,8 +254,8 @@ li a:active {
   
   /* Images used */
   .img1 { background-image: url("meeting-design-brainstorming.jpg"); }
-  .img2 { background-image: url("img_girl.jpg"); }
-  .img3 { background-image: url("img_lights.jpg"); }
+  .img2 { background-image: url("meeting-design-brainstorming.jpg"); }
+  .img3 { background-image: url("meeting-design-brainstorming.jpg"); }
   .img4 { background-image: url("img_nature.jpg"); }
 
 /*---------------------------------------------------------------------2Log In--------------------------------------------------------------------------*/
@@ -297,7 +300,12 @@ li a:active {
     align-content: center;
     padding: 30px;
     font-size: 16px;
-    
+}
+.comRegImg{
+  background-size: cover;
+}
+.vtcRegImg{
+  background-size: cover;
 }
 
 
