@@ -65,7 +65,7 @@
                 </span>
           </button>
           <div class="collapse navbar-collapse justify-content-center" id="barLink">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav justify-content-end">
                 <li class="active"><a href="Index.php">Home</a></li>
                 <li><a href="#">Vocational Training Centres</a></li>
                 <!--Admin Panel-->
@@ -99,6 +99,7 @@
                     <li><a href="./2.1StuLogIn.php">Student</a></li>
                     <li><a href="./2.2VTCLogIn.php">Vocational Training Centre</a></li>
                     <li><a href="./2.3CompanyLogIn.php">Company</a></li>
+                    <li><a href="./2.4adminLogIn.php">Administrator</a></li>
               </ul>
               </li>
 <!--Search-->
@@ -147,6 +148,8 @@ and job opportunities and students can identify the opportunities and register.<
 <div class="bg-image img4"></div>
 <div class="bg-image img5"></div>
   </div>   -->
+  <a href="1.2StuHome.php" >StuHome</a>
+  <a href="1.2vtcHome.php" >vtcHome</a>
 
 <!-- Add social media icons -->
 <div class="social-icons">
@@ -156,7 +159,7 @@ and job opportunities and students can identify the opportunities and register.<
 <div class="form-group col-md-3">
     <a href="https://www.facebook.com/106660131113039?referrer=whatsapp" class="fa fa-facebook"></a> </div>
 <div class="form-group col-md-3">
-    <a href="#" class="fa fa-google"></a> </div>
+    <a href="mailto:jobbuddycareer@gmail.com" class="fa fa-google"></a> </div> 
 <div class="form-group col-md-3">
     <a href="#" class="fa fa-whatsapp"></a> </div>
 <div class="form-group col-md-3">

@@ -242,6 +242,11 @@
         <label class="custom-file-label" for="validatedCustomFile" name="text_id">Choose file...</label>
         <div class="invalid-feedback">Example invalid custom file feedback</div>
 </div>
+<!--
+<form action="/action_page.php">
+  <input type="file" id="myFile" name="filename">
+  <input type="submit">
+</form>-->
 </div>
 <!-------------------------------------Row 09------------------------------------------------>
                 <div class="form-group col-12 col-md-12 col-sm-12">
@@ -260,11 +265,14 @@
                   </div>
                 </div>
 <!-------------------------------------Row 10------------------------------------------------>               
-    <div class="form-group col-12 col-md-12 col-sm-12"> 
-    <div class="form-group col-6 col-md-6 col-sm-6"> 
-    <button type="submit" name="register" class="btn btn-primary btn-block">Submit</button> </div>
-    <div class="form-group col-6 col-md-6 col-sm-6">
-    <a href="Index.php"><button type="button" href class="btn btn-primary btn-block"> Back</button> </a></form>
+    <div class="form-row col-12 col-md-12 col-sm-12"> 
+      <div class="form-group col-4 col-md-4 col-sm-4"> 
+        <button type="submit" name="register" class="btn btn-primary btn-block">Register</button>
+      </div>
+      <div class="form-group col-4 col-md-4 col-sm-4"><div>
+      <div class="form-group col-4 col-md-4 col-sm-4">
+        <button type="button" href="Index.php" class="btn btn-primary btn-block"> Back</button> 
+      </div>
     </div>
 </form>
 <!-- </form>-->

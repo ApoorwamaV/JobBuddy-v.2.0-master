@@ -13,7 +13,7 @@ $row= mysqli_fetch_array($result);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vocational Training Centre Update</title>
+    <title>Company Centre Update</title>
 
     <link rel="stylesheet" type="text/css" href="Lib.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -25,7 +25,7 @@ $row= mysqli_fetch_array($result);
     <!--<img src="Stu Reg.jpg" alt="Student Registration"  width="1550" height="768">-->
   
 <!--VTC Register Form-->
-<h2>Upadte Company Details</h2>
+<h2>Update Company Details</h2>
 <section class="container-fluid">
     <section class="row justify-content-center">
     <section class="col-12 col-sm-6 col-md-10">

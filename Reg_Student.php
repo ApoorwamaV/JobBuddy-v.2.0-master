@@ -50,31 +50,77 @@ $tmp_name = $_FILES['id_copy']['tmp_name'];
      echo "not uploaded";
  }
 
- /*55555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555*/
+ /*555555555555555555555555555555555555555------------------Data validation---------------------5555555555555555555555555555555555555555555555555555555*/
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
+//$name = $email = $gender = $comment = $website = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
-  } else {
-    $name = test_input($_POST["name"]);
-    // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed";
-    }
-  }
 
-  if (empty($_POST["email"])) {
-    $emailErr = "Email is required";
-  } else {
-    $email = test_input($_POST["email"]);
-    // check if e-mail address is well-formed
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $emailErr = "Invalid email format";
+    //--------------------------------------------------------$designationStu = $_POST['designationStu'];
+    //--------------------------------------------------------$firstNameStu = $_POST['firstNameStu'];
+    if (empty($_POST["firstNameStu"])) {
+      $nameErr = "First Name is required";
+    } else {
+      $name = test_input($_POST["firstNameStu"]);
+      // check if name only contains letters and whitespace
+      if (!preg_match("/^[a-zA-Z ]*$/",$firstNameStu)) {
+        $nameErr = "Only letters and white space allowed";
+      }
     }
-  }
+    //--------------------------------------------------------$lastNameStu =$_POST['lastNameStu'];
+    if (empty($_POST["lastNameStu"])) {
+      $nameErr = "Last Name is required";
+    } else {
+      $name = test_input($_POST["name"]);
+      // check if name only contains letters and whitespace
+      if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+        $nameErr = "Only letters and white space allowed";
+      }
+    }
+    //--------------------------------------------------------$fullNameStu = $_POST['fullNameStu'];
+    if (empty($_POST["firstNameStu"])|| empty($_POST["lastNameStu"]) || empty($_POST["fullNameStu"])) {
+      $nameErr = "Name is required";
+    } else {
+      $name = test_input($_POST["name"]);
+      // check if name only contains letters and whitespace
+      if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+        $nameErr = "Only letters and white space allowed";
+      }
+    }
+    //--------------------------------------------------------$inputEmailStu = $_POST['inputEmailStu'];
+    if (empty($_POST["email"])) {
+      $emailErr = "Email is required";
+    } else {
+      $email = test_input($_POST["email"]);
+      // check if e-mail address is well-formed
+      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $emailErr = "Invalid email format";
+      }
+    }
+    //--------------------------------------------------------$initialNameStu =$_POST['initialNameStu'];
+    if (empty($_POST["firstNameStu"])) {
+      $nameErr = "Name is required";
+    } else {
+      $name = test_input($_POST["name"]);
+      // check if name only contains letters and whitespace
+      if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+        $nameErr = "Only letters and white space allowed";
+      }
+    }
+    //--------------------------------------------------------$inputPasswordStu = $_POST['inputPasswordStu'];
+    //--------------------------------------------------------$inputNICStu = $_POST['inputNICStu'];
+    //--------------------------------------------------------$DOBStu = $_POST['DOBStu'];
+    //--------------------------------------------------------$inputGenderStu = $_POST['inputGenderStu'];
+    //--------------------------------------------------------$inputCStatusStu = $_POST['inputCStatusStu'];
+    //--------------------------------------------------------$inputAddressStu = $_POST['inputAddressStu'];
+    //--------------------------------------------------------$inputDistrictStu = $_POST['inputDistrictStu'];
+    //--------------------------------------------------------$inputContactNoStu = $_POST['inputContactNoStu'];
+    //--------------------------------------------------------$eduLevel = $_POST['edu'];
+   //-------------------------------------------------------- $hashed_password= sha1($inputPasswordStu);
+  
+
+   /*
 
   if (empty($_POST["website"])) {
     $website = "";
@@ -92,12 +138,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comment = test_input($_POST["comment"]);
   }
 
-  if (empty($_POST["gender"])) {
+ if (empty($_POST["gender"])) {
     $genderErr = "Gender is required";
   } else {
     $gender = test_input($_POST["gender"]);
   }
-}
+}*/
 ?><?php
  /*555555555555555555555555555555555555555555555555555555555555555555555555555555555555555*/
  
