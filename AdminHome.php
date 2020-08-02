@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Student Profile</title>
+    <title>Admin Profile</title>
 
     <link rel="stylesheet" type="text/css" href="Lib.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -18,27 +18,14 @@
 
 </head>
 <body>
-<!--Name-->
-      <?php 
-if(session_status() == PHP_SESSION_NONE  || session_id() == '') {
-    session_start();
-}
-//-header--->
-# Check if session 'name' exists
-if(isset($_SESSION["firstNameStu"])) {
-    echo "Hello, " . $_SESSION['firstNameStu'];
-}else{
-    // Do an action to show the user that there is no session.
-}
-?>
 <?php
-
 //logout
 if(isset($_POST['but_logout'])){
     session_destroy();
     header('Location: Index.php');
 }
 ?>
+
 <div class="Navigation Bar">
     <nav class="navbar navbar-expand-sm navbar-default navbar-dark bg-dark">
         <div class="container-fluid">
@@ -60,6 +47,16 @@ if(isset($_POST['but_logout'])){
       <li><a href="#">I want to know more about </a></li>
       <li><a href="3AboutAll.php">About us</a></li>
       <li><a href="4ContactAll.php">Contact</a></li>
+<!--Admin Panel-->
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">User Details
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="./stu_admin_panel.php">Student Details</a></li>
+                    <li><a href="./vtc_admin_panel.php">Vocational Training Centre Details</a></li>
+                    <li><a href="./com_admin_panel.php">Company Details</a></li>
+                  </ul>
+                </li>
 
 <!--Search-->
       <li>
@@ -68,44 +65,20 @@ if(isset($_POST['but_logout'])){
           <button class="btn btn-success" type="submit">Search</button>
       </form>
 </li> 
-
-      </li>
-
 <!--Logout-->
-<li>
-          <span>
+      <li>
+          <form method='post' action="">
             <button class="btn btn-danger" type="submit" name="but_logout">Logout</button>
-          </span>
-</li>
-
+          </form>
+      </li>
 </ul>
 </div>
 </nav>              
                 
-<!-- Language -->
-    <div class="Lang" align="left">
-
-      <li class=btn><a href="1.2StuHome.php"><button type="button" href class="btn btn-primary btn-block">English</button></a></li>
-      <li class=btn><a href="1.2sinhalaStuHome.php"><button type="button" href class="btn btn-primary btn-block">සිංහල</button></a></li>
-      <li class=btn><a href="tamil1.2StuHome.php"><button type="button" href class="btn btn-primary btn-block">தமிழ்</button></a></li>
-    </div>
-          </div>          
+ </div>          
   </div>
 
   <div class="bg-image img1"></div>
-<!--
-  <section class="form-row col-12 col-md-12 col-sm-12">
-    <section class="form-group col-md-2">
-        <a href=""><img src="avatar.png" alt="Avatar" class="avatar"></a>
-    </section>
-  </section>-->
-
-  <!--<div class="Title" align="center">
-    <img src="WEB 2.jpg" alt="Job Buddy"  width="1520" height="768">
-  </div>-->
-
-    
-<!--<img src="success-at-SHL-tests.jpg" alt="JobBuddy" width="2000px" height="1085px"><!-- alt="Mountain View" style="width:304px;height:228px;">-->
 
  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

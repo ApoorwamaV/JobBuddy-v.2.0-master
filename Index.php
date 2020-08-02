@@ -68,16 +68,7 @@
             <ul class="nav navbar-nav justify-content-end">
                 <li class="active"><a href="Index.php">Home</a></li>
                 <li><a href="#">Vocational Training Centres</a></li>
-                <!--Admin Panel-->
-                <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">User Details
-                  <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="./stu_admin_panel.php">Student Details</a></li>
-                    <li><a href="./vtc_admin_panel.php">Vocational Training Centre Details</a></li>
-                    <li><a href="./com_admin_panel.php">Company Details</a></li>
-                  </ul>
-                </li>
+                
                 <li><a href="3AboutAll.php">About us</a></li>
                 <li><a href="4ContactAll.php">Contact</a></li>
 
@@ -99,7 +90,7 @@
                     <li><a href="./2.1StuLogIn.php">Student</a></li>
                     <li><a href="./2.2VTCLogIn.php">Vocational Training Centre</a></li>
                     <li><a href="./2.3CompanyLogIn.php">Company</a></li>
-                    <li><a href="./2.4adminLogIn.php">Administrator</a></li>
+                    <li><a href="./adminLogIn.php">Administrator</a></li>
               </ul>
               </li>
 <!--Search-->

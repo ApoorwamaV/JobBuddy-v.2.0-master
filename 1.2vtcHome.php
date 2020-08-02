@@ -116,7 +116,7 @@ if(isset($_POST['but_logout'])){
 
   <div class="bg-image img1"></div>
 
-  <a href="viewvtcCourses.php"><i class="fa fa-fw fa-wrench"></i> View Courses</a>
+  <a href="./vtc_admin_panel.php"><i class="fa fa-fw fa-wrench"></i> View Courses</a>
 
   <a href="addvtcCourses.php"><i class="fa fa-fw fa-wrench"></i> Add Courses</a>
 

@@ -15,18 +15,17 @@
 
 <!--Login Form-->
 <section class="container-fluid bg">
-  <section class="row justify-content-center">
-    <section class="col-12 col-sm-6 col-md-3">
-      <form class="form-container" action="loginStu.php" method="post">
-      
-        <div class="form-group" >
-          <label for="exampleInputEmail1">Email address </label>
-          <input type="email" name="Stu_Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your E mail">
-          <small id="emailHelp" class="form-text text-muted"> We'll never share your email with anyone else.</small>
+<section class="row justify-content-center">
+<section class="col-12 col-sm-6 col-md-3">
+      <form class="form-container" action="loginAdmin.php" method="post">
+        <div class="form-group">
+          <label for="adminID">Admin ID</label>
+          <input type="text" class="form-control" name="adminID" id="adminID" 
+                  aria-describedby="adminID" placeholder="Admin ID">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" name="StuPassword" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+          <label for="adminPassword">Password</label>
+          <input type="password" class="form-control" name="adminPassword" id="adminPassword" placeholder="Admin Password">
         </div>
         <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -41,10 +40,9 @@
   </section>
 </section>
 <!-- End of the Login Form-->
-
-<!--End of the Page Body-->
 <?php
   if(isset($_POST));
 ?>
+<!--End of the Page Body-->
 </body>
 </html>

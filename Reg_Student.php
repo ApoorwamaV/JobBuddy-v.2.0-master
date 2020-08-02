@@ -42,7 +42,7 @@ $tmp_name = $_FILES['id_copy']['tmp_name'];
  $inputContactNoStu = $_POST['inputContactNoStu'];
  $eduLevel = $_POST['edu'];
  $hashed_password= sha1($inputPasswordStu);
-
+/*
  //image upload
  if(move_uploaded_file($tmp_name,$target)){
      echo "uploaded succesfully";
@@ -51,9 +51,9 @@ $tmp_name = $_FILES['id_copy']['tmp_name'];
  }
 
  /*555555555555555555555555555555555555555------------------Data validation---------------------5555555555555555555555555555555555555555555555555555555*/
-// define variables and set to empty values
+ /* //define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
-//$name = $email = $gender = $comment = $website = "";
+$name = $email = $gender = $comment = $website = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -144,8 +144,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = test_input($_POST["gender"]);
   }
 }*/
-?><?php
+
  /*555555555555555555555555555555555555555555555555555555555555555555555555555555555555555*/
+ 
  
  $query = "INSERT INTO students(designationStu,firstNameStu,lastNameStu,fullNameStu,initialNameStu,EmailStu,passwordStu,NICStu,DOBStu,genderStu,civilStatusStu,addressStu,districtStu,contactNoStu,eduLevelStu,softCopy) VALUES ('{$designationStu}','{$firstNameStu}','{$lastNameStu}','{$fullNameStu}','{$initialNameStu}','{$inputEmailStu}','{$hashed_password}','{$inputNICStu}','{$DOBStu}','{$inputGenderStu}','{$inputCStatusStu}','{$inputAddressStu}','{$inputDistrictStu}','{$inputContactNoStu}','{$eduLevel}','{$image}')";
   $result='';     
