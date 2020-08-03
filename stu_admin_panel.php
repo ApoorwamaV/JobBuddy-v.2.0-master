@@ -57,7 +57,7 @@ fetch_data();
 $(document).on('click', '#btn_add', function(){  
         var first_name = $('#first_name').text();  
         var last_name = $('#last_name').text();  
-        if(first_name == '')  
+        if(first_name == '')        
         {  
             alert("Enter First Name");  
             return false;  

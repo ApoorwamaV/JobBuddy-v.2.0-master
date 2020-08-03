@@ -22,7 +22,7 @@
 	  if($rows > 10)
 	  {
 		  $delete_records = $rows - 10;
-		  $delete_sql = "DELETE FROM vtcenters LIMIT $delete_records";
+		  $delete_sql = "DELETE FROM companies LIMIT $delete_records";
 		  mysqli_query($connect, $delete_sql);
 	  }
       while($row = mysqli_fetch_array($result))  

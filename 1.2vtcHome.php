@@ -120,6 +120,8 @@ if(isset($_POST['but_logout'])){
 
   <a href="addvtcCourses.php"><i class="fa fa-fw fa-wrench"></i> Add Courses</a>
 
+  
+
 <!--
   <section class="form-row col-12 col-md-12 col-sm-12">
     <section class="form-group col-md-2">

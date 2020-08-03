@@ -55,6 +55,19 @@
           <label for="courseReqEdu">Required Education Qualification  </label>
           <input type="text" name="courseReqEdu" class="form-control" id="courseReqEdu"  placeholder="Required Education Qualification (Minimun)">          
         </div>
+
+        <div class="form-group" >
+          <label for="courseNVQ">NVQ Level  </label>
+          <select name="courseNVQ" class="form-control"required>
+              <option selected>None</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>              
+            </select></div>
         
 
 <div class="form-row col-12 col-md-12 col-sm-12"> 

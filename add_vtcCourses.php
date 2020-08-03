@@ -8,10 +8,11 @@
  $vtcID = $_POST['vtcID'];
  $courseDu = $_POST['courseDu'];
  $courseReqEdu =$_POST['courseReqEdu'];
+ $NVQ =$_POST['NVQ'];
 
  /*555555555555555555555555555555555555555555555555555555555555555555555555555555555555555*/
  
- $query = "INSERT INTO courseDetails(CourseId,CourseName,vtcRegID,Duration,EduLevel) VALUES ('{$courseID}','{$courseName}','{$vtcID}','{$courseDu}','{$courseReqEdu}')";
+ $query = "INSERT INTO courseDetails(CourseId,CourseName,vtcRegID,Duration,EduLevel,NVQ) VALUES ('{$courseID}','{$courseName}','{$vtcID}','{$courseDu}','{$courseReqEdu}','{$NVQ}')";
 
   $result='';     
   $result = mysqli_query($connection,$query); 

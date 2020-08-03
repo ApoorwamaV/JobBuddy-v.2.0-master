@@ -1,4 +1,8 @@
 <?php
+if (session_status() == PHP_SESSION_NONE  || session_id() == '') {
+        session_start();
+    }
+
    require_once('includes/connection.php');
 ?>
 
@@ -18,19 +22,7 @@
 
 </head>
 <body>
-<!--Name-->
-      <?php 
-if(session_status() == PHP_SESSION_NONE  || session_id() == '') {
-    session_start();
-}
-//-header--->
-# Check if session 'name' exists
-if(isset($_SESSION["firstNameStu"])) {
-    echo "Hello, " . $_SESSION['firstNameStu'];
-}else{
-    // Do an action to show the user that there is no session.
-}
-?>
+
 <?php
 
 //logout
@@ -69,13 +61,22 @@ if(isset($_POST['but_logout'])){
       </form>
 </li> 
 
-      </li>
-
 <!--Logout-->
 <li>
           <span>
             <button class="btn btn-danger" type="submit" name="but_logout">Logout</button>
           </span>
+</li>
+<li> Hi 
+<?php
+# Check if session 'name' exists
+if(isset($_SESSION["EmailStu"])) {
+    echo "Hello, " ."(" . $_SESSION['EmailStu'] . ").";
+
+}else{
+    // Do an action to show the user that there is no session.
+}
+?>
 </li>
 
 </ul>
@@ -93,6 +94,9 @@ if(isset($_POST['but_logout'])){
   </div>
 
   <div class="bg-image img1"></div>
+
+  <a href="course_search.php"><i class="fa fa-fw fa-wrench"></i> Add Courses</a>
+  
 <!--
   <section class="form-row col-12 col-md-12 col-sm-12">
     <section class="form-group col-md-2">

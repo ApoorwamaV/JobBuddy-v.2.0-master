@@ -2,6 +2,7 @@
 <?php require_once('includes/functions.php'); ?>
 
 <?php 
+
 ?>
 <?php
 session_start();
@@ -19,10 +20,8 @@ if(isset($_POST['login'])){
             if(mysqli_num_rows($result)==1){
                 header("location: ../JobBuddy-v.2.0-master/1.2StuHome.php");
                 echo " You Have Logged in Successfully.";
-
-                $_SESSION['firstNameStu'] = $firstNameStu;
-                $_SESSION['lastNameStu'] = $lastNameStu;
-                isset($_SESSION["firstNameStu"]);
+                $_SESSION['EmailStu'] = $EmailStu;
+                
                 exit();
             }else{
                 header("location: ../JobBuddy-v.2.0-master/2.1StuLogIn.php");
@@ -30,4 +29,4 @@ if(isset($_POST['login'])){
                exit(); 
             }
 }
-?>
+?> 
