@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         
-    <title>Students Data Admin Panel</title>
+    <title>Courses Data Admin Panel</title>
 </head>
 <body>
 
@@ -30,7 +30,7 @@
             <br />
 			<br />
 			<div class="table-responsive">  
-            <h1>Student Details Table</h1>
+            <h1>Course Details Table</h1>
 				<span id="result"></span>
 				<div id="live_data"></div>                 
 			</div>  
@@ -43,7 +43,7 @@ $(document).ready(function(){
     function fetch_data()  
     {  
         $.ajax({  
-            url:"stu_select.php",  
+            url:"course_select.php",  
             method:"POST",  
             success:function(data){  
 				$('#live_data').html(data);  
@@ -53,7 +53,7 @@ $(document).ready(function(){
     
 
 
-fetch_data(); /*
+fetch_data(); 
 $(document).on('click', '#btn_add', function(){  
         var first_name = $('#first_name').text();  
         var last_name = $('#last_name').text();  
@@ -79,7 +79,7 @@ $(document).on('click', '#btn_add', function(){
             }  
         })  
     });  
-*/
+/*
  function edit_data(id, text, column_name)  
     {  
         $.ajax({  
@@ -92,7 +92,7 @@ $(document).on('click', '#btn_add', function(){
 				$('#result').html("<div class='alert alert-success'>"+data+"</div>");
             }  
         });  
-    } 
+    } */
 
 
    $(document).on('blur', '.first_name', function(){  
@@ -105,7 +105,6 @@ $(document).on('click', '#btn_add', function(){
         var last_name = $(this).text();  
         edit_data(id,last_name, "last_name");  
     }); 
-    //delete details
     $(document).on('click', '.btn_delete', function(){  
         var id=$(this).data("id8");  
         if(confirm("Are you sure you want to delete this?"))  
@@ -122,10 +121,10 @@ $(document).on('click', '#btn_add', function(){
             });  
         }  
     }); 
- //Update dtails
+ //Update
  $(document).on('click', '.btn_update', function(){  
         var id=$(this).data("id9");  
-            window.location.href ="http://localhost/dashboard/A_Updated_Home/JobBuddy-v.2.0-master/stu_update.php?id="+id;
+            window.location.href ="http://localhost/dashboard/A_Updated_Home/JobBuddy-v.2.0-master/courses_update.php?id="+id;
             //C:\xampp\htdocs\dashboard\A_Updated_Home\JobBuddy-v.2.0-master
            
           

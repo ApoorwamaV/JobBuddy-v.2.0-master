@@ -2,7 +2,22 @@
 <?php require_once('includes/functions.php'); ?>
 
 <?php
- $query = "UPDATE students SET NICStu='".$_POST['NICStu']."',comName='".$_POST['comName']."',district='".$_POST['district']."',contact_No='".$_POST['contact_No']."',email_COM='".$_POST['email_COM']."',dir_Designation='".$_POST['dir_Designation']."',ComAddress='".$_POST['ComAddress']."',dir_firstName='".$_POST['dir_firstName']."',dir_lastName='".$_POST['dir_lastName']."',dir_fullName='".$_POST['dir_fullName']."',dir_initialName='".$_POST['dir_initialName']."',dir_NIC='".$_POST['dir_NIC']."' WHERE ComRegID='".$_POST['ComRegID']."'";
+
+ $query = "UPDATE students SET designationStu='".$_POST['designationStu']."',
+                              firstNameStu='".$_POST['firstNameStu']."',
+                              lastNameStu='".$_POST['lastNameStu']."',
+                              fullNameStu='". $_POST['fullNameStu']."',
+                              initialNameStu='".$_POST['initialNameStu']."',
+                              EmailStu='".$_POST['inputEmailStu']."',
+                              DOBStu='".$_POST['DOBStu']."',
+                              genderStu='".$_POST['inputGenderStu']."',
+                              civilStatusStu='".$_POST['inputCStatusStu']."',
+                              addressStu='".$_POST['inputAddressStu']."',
+                              districtStu='".$_POST['inputDistrictStu']."',
+                              contactNoStu='".$_POST['inputContactNoStu']."',
+                              eduLevelStu='".$_POST['edu']."',
+                              softCopy='".$_POST['dir_initialName']."',
+                              WHERE NICStu='".$_POST['inputNICStu']."'";
  mysqli_query($connection,$query);
  //echo "Company Details Upadated Successfully..!";
  $result = mysqli_query($connection,$query); 
@@ -11,7 +26,7 @@
     
  echo "<script>
  window.setTimeout(function() {
-     window.location = 'vtc_admin_panel.php';
+     window.location = 'stu_admin_panel.php';
    }, 500);
  </script>"  ;
  exit();  
@@ -20,9 +35,9 @@
     
     echo "<script>
     window.setTimeout(function() {
-        window.location = 'com_admin_panel.php';
+        window.location = 'stu_admin_panel.php';
       }, 500);
     </script>"  ;
 }
-
 ?>
+  

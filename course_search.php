@@ -9,9 +9,12 @@ $result = mysqli_query($connection, $sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link rel="stylesheet" type="text/css" href="Lib.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="javascript" href="js/bootstrap.js">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
 
         <!-- Add icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -88,31 +91,18 @@ $result = mysqli_query($connection, $sql);
               <option>7</option> 
             </select></div>
       </div>
-
       
-      <table class="table table-bordered">  
-      <tr class="table-row">  
-           <th width="10%">Course ID</th>  
-           <th width="20%">Course Name</th>
-           <th width="10%">Center Name</th>
-           <th width="10%">Duration</th>
-           <th width="20%">Educational Qualification</th>
-           <th width="10%">NVQ Level</th>                     
-      </tr>
-      <?php
-      while($rows=mysqli_fetch_array($result))
-      {
-      ?>
-      <tr>
-          <td><?php echo $rows['CourseId']; ?></td>
-          <td><?php echo $rows['CourseName']; ?></td>
-          <td><?php echo $rows['vtcRegID']; ?></td>
-          <td><?php echo $rows['Duration']; ?></td>
-          <td><?php echo $rows['EduLevel']; ?></td>
-          <td><?php echo $rows['NVQ']; ?></td>
-      </tr>
-      <?php }?>
-      </table>
+<div class="container">  
+            <br />  
+            <br />
+			<br />
+			<div class="table-responsive">  
+            <h1>Course Details</h1>
+				<span id="result"></span>
+				<div id="live_data"></div>                 
+			</div>  
+        </div>
+      
 </body>
 <script> 
 
@@ -126,36 +116,9 @@ $(document).ready(function(){
 				$('#live_data').html(data);  
             }  
         });  
-    }
+    } 
+    
     
 
-    fetch_data(); 
-$(document).on('click', '#btn_add', function(){  
-        var first_name = $('#first_name').text();  
-        var last_name = $('#last_name').text();  
-        if(first_name == '')  
-        {  
-            alert("Enter First Name");  
-            return false;  
-        }  
-        if(last_name == '')  
-        {  
-            alert("Enter Last Name");  
-            return false;  
-        }  
-        $.ajax({  
-            url:"insert.php",  
-            method:"POST",  
-            data:{first_name:first_name, last_name:last_name},  
-            dataType:"text",  
-            success:function(data)  
-            {  
-                alert(data);  
-                fetch_data();  
-            }  
-        })  
-    });  
-
-    
-     });
+    fetch_data(); });
 </script>

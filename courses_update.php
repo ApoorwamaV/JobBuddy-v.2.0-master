@@ -85,8 +85,7 @@ $row= mysqli_fetch_array($result);
 <!--NIC number-->
         <div class="form-group col-6 col-md-6">
             <label for="inputNICStu">NIC number</label>
-            <!--PK- Can't change. So added read only-->
-            <read-only><input type="text" class="form-control" name="inputNICStu" placeholder="95******" value="<?php echo $row['NICStu']; ?>" required ></read-only>
+            <input type="text" class="form-control" name="inputNICStu" placeholder="95******" value="<?php echo $row['NICStu']; ?>" required> 
         </div>
 <!--Date of Birth-->
         <div class="form-group col-md-6">
