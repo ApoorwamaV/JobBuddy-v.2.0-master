@@ -226,12 +226,19 @@
         <div class="invalid-feedback">Example invalid custom file feedback</div>
 </div>
 </div>
-<!-------------------------------------Row 09------------------------------------------------>
-                <div class="form-group col-12 col-md-12 col-sm-12">
-                  <div class="form-check">
+<!-------------------------------------Row 09- Agreement------------------------------------------------>
+<div class="form-group col-12 col-md-12 col-sm-12">
+                  <div class="form-check"> <br><br><br>
+                    <p> <a href="3sinhalaAboutAll.php"> මම ගිවිසුම් ප්‍රකාශය පරීක්ෂා කළ අතර සියලු නියමයන් සහ කොන්දේසි මම පිළිගනිමි. </a> </p>
+                    <div class="form-group col-6 col-md-6 col-sm-6">
                     <input class="form-check-input" type="checkbox" id="gridCheckStu">
                     <label class="form-check-label" for="gridCheck">
-                      Check me out
+                    මම එකඟයි.
+                    </label>
+                    <div class="form-group col-6 col-md-6 col-sm-6">
+                    <input class="form-check-input" type="checkbox" id="gridCheckStu">
+                    <label class="form-check-label" for="gridCheck">
+                    මම එකඟ නොවෙමි.
                     </label>
                   </div>
                 </div>

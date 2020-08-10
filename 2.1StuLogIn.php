@@ -1,3 +1,6 @@
+<?php session_start();
+      //Put session start at the beginning of the file
+?>
 <?php require_once('includes/connection.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +12,10 @@
     <link rel="stylesheet" type="text/css" href="Lib.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="javascript" href="js/bootstrap.js">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+
 </head>
 <body> 
 <!--Page Body-->
@@ -20,9 +27,9 @@
       <form class="form-container" action="loginStu.php" method="post">
       
         <div class="form-group" >
-          <label for="exampleInputEmail1">Email address </label>
-          <input type="email" name="Stu_Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your E mail">
-          <small id="emailHelp" class="form-text text-muted"> We'll never share your email with anyone else.</small>
+          <label for="exampleNIC">NIC Number</label>
+          <input type="text" name="Stu_NIC" class="form-control" id="exampleNIC"  placeholder="Enter your NIC">
+          
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
@@ -45,6 +52,14 @@
 <!--End of the Page Body-->
 <?php
   if(isset($_POST));
+?>
+<?php if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $_SESSION['name'] = $_POST['name'];
+        
+        if($_SESSION['name']) {
+            header('location: printName.php');
+        }
+    }
 ?>
 </body>
 </html>

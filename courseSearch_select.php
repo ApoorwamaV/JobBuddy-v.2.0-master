@@ -1,8 +1,9 @@
+
 <?php  
  $connect = mysqli_connect("localhost", "root", "", "jobbuddy");  
  $output = '';  
- 
- $sql = "SELECT 
+
+$sql = "SELECT 
  coursedetails.CourseId,coursedetails.CourseName, 
  coursedetails.vtcRegID, vtcenters.vtcName, vtcenters.district, 
  coursedetails.Duration, coursedetails.EduLevel, coursedetails.NVQ
@@ -14,24 +15,22 @@ ON
 coursedetails.vtcRegID=vtcenters.vtcRegID";
 
 
- $Query="SELECT vtcName FROM vtcenters" ; 
  $result = mysqli_query($connect, $sql);  
  $output .= '  
       <div class="table-responsive">  
            <table class="table table-bordered">  
                 <tr>  
-                     <th width="15%">Course ID</th>  
+                     <th width="10%">Course ID</th>  
                      <th width="20%">Course Name</th>
                      <th width="10%">Vocational Training Centre ID</th>
                      <th width="30%">Vocational Training Centre Name</th>
                      <th width="10%">District</th>
                      <th width="10%">Duration</th>
-                     <th width="20%">Edulevel</th> 
-                     <th width="10%">Select</th> 
-                     <th width="10%">Like</th>                    
-                     
+                     <th width="20%">Edulevel</th>                     
+                     <th width="20%">Action</th>
                 </tr>';  
  $rows = mysqli_num_rows($result);
+
  if($rows > 0)  
  {  
 	  if($rows > 10)
@@ -43,7 +42,7 @@ coursedetails.vtcRegID=vtcenters.vtcRegID";
       while($row = mysqli_fetch_array($result))  
       {  
            $output .= '  
-                <tr class="table">  
+                <tr>  
                 <td>'.$row["CourseId"].'</td>
                 <td class="CourseName" data_id1="'.$row["CourseId"].'" 
                     contenteditable>'.$row["CourseName"].'</td>
@@ -58,11 +57,11 @@ coursedetails.vtcRegID=vtcenters.vtcRegID";
                 <td class="EduLevel" data_id4="'.$row["CourseId"].'" 
                     contenteditable>'.$row["EduLevel"].'</td>
                 <td>
-                    <button type="button" name="btn_choose"  
-                         data-id7="'.$row["CourseId"].'" class="btn btn-xs btn-danger btn_choose justify-content-center">Select</button></td>
-               <td>    
-                    <button type="button" name="btn_like"  
-                         data-id8="'.$row["CourseId"].'" class="btn btn-xs btn-primary btn_like justify-content-center">Like</button></td>
+                    <button type="button" name="btn_delete"  
+                         data-id7="'.$row["CourseId"].'" class="btn btn-xs btn-danger btn_delete">Like</button>
+                    <button type="button" name="btn_register"  
+                         data-id8="'.$row["CourseId"].'" class="btn btn-xs btn-primary btn_register">
+                         <a href="Reg_StuCourse.php">Register<a></button></td>
                   
                 </tr>  
            ';  

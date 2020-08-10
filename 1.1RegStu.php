@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="Lib.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="javascript" href="js/bootstrap.js">
+    
 
   <!-- Add icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -248,10 +249,10 @@
   <input type="submit">
 </form>-->
 </div>
-<!-------------------------------------Row 09------------------------------------------------>
+<!-------------------------------------Row 09- Agreement------------------------------------------------>
                 <div class="form-group col-12 col-md-12 col-sm-12">
                   <div class="form-check"> <br><br><br>
-                    <p> <a href="#"> I checked the agreement statement and I accept all the terms and conditions. </a> </p>
+                    <p> <a href="3AboutAll.php"> I checked the agreement statement and I accept all the terms and conditions. </a> </p>
                     <div class="form-group col-6 col-md-6 col-sm-6">
                     <input class="form-check-input" type="checkbox" id="gridCheckStu">
                     <label class="form-check-label" for="gridCheck">
