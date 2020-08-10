@@ -6,6 +6,18 @@
 
 <?php echo $_SESSION['Stu_NIC'];
 $Stu_NIC= $_SESSION['Stu_NIC']; 
+
+$sql="select * from students where NICStu='$Stu_NIC'";
+$result=mysqli_query($connection,$sql);
+$result1=$result->fetch_object();
+
+$fullNameStu=$result1->fullNameStu;
+$EmailStu=$result1->EmailStu;
+$contactNoStu=$result1->contactNoStu;
+$eduLevelStu=$result1->eduLevelStu;
+$addressStu=$result1->addressStu;
+$districtStu=$result1->districtStu;
+$DOBStu=$result1->DOBStu;
 isset($_POST['Stu_NIC'])?>
 
 <!DOCTYPE html>
@@ -41,47 +53,7 @@ if(isset($_POST['but_logout'])){
     header('Location: Index.php');
 }
 ?>
-<?php/*
-if(isset($_POST['Stu_NIC'])){
-$sql = "SELECT students.fullNameStu, 
-students.EmailStu, 
-students.NICStu, 
-students.DOBStu, 
-students.addressStu, 
-students.districtStu, 
-students.contactNoStu, students.eduLevelStu FROM students WHERE NICStu LIKE '".$Stu_NIC."' ";  
-$result = mysqli_query($connection, $sql);  
-$rows = mysql_fetch_array($result);
-
- if($rows > 0)  
- { 
-  
-  $fullNameStu = $_POST['fullNameStu'];
-  $EmailStu = $_POST['EmailStu'];
-  
-  $NICStu = $_POST['NICStu'];
-  $DOBStu = $_POST['DOBStu'];
-  $addressStu = $_POST['addressStu'];
-  $districtStu = $_POST['districtStu'];
-  $contactNoStu = $_POST['contactNoStu'];
-  $eduLevelStu = $_POST['eduLevelStu'];
-  
-  } else {
-    
-  $fullNameStu = $_POST['fullNameStu'];
-  $EmailStu = $_POST['EmailStu'];
-  
-  $NICStu = $_POST['NICStu'];
-  $DOBStu = $_POST['DOBStu'];
-  $addressStu = $_POST['addressStu'];
-  $districtStu = $_POST['districtStu'];
-  $contactNoStu = $_POST['contactNoStu'];
-  $eduLevelStu = $_POST['eduLevelStu'];
-  }*/
-
-//$StuNIC = $_POST['Stu_NIC'];
-//$StuName=$_POST['firstNameStu'];
-//echo $StuName;
+<?php/
 }
 ?>
 <div class="Navigation Bar">
@@ -119,6 +91,9 @@ $rows = mysql_fetch_array($result);
           <span>
             <button class="btn btn-danger" type="submit" name="but_logout">Logout</button>
           </span>
+</li>
+<li>
+<?php echo $fullNameStu; ?>
 </li>
 
 </ul>
@@ -186,47 +161,47 @@ $rows = mysql_fetch_array($result);
 	  <input type="text" class="form-control" name="Stu_NIC" value="<?php echo $Stu_NIC; ?>" readonly>
   </div>
   <div class="form-group col-md-6">
-	  <label for="CourseName">Student Email</label>
-	  <input type="text" class="form-control" name="CourseName" value="<?php echo $row['CourseName']; ?> <?php echo $row1['employee_name']; ?>" readonly>
+	  <label for="EmailStu">Student Email</label>
+	  <input type="text" class="form-control" name="EmailStu" value="<?php echo $EmailStu; ?>" readonly>
   </div>
 </div>
 
 <!------------------------------------View Full Name---------------------------------------------->
 <div class="form-row col-12 col-md-12 col-sm-12">  
   <div class="form-group col-md-12">
-	  <label for="CourseId">Full Name</label>
-	  <input type="text" class="form-control" name="CourseId" value="<?php echo $NICStu; ?>" readonly/>
+	  <label for="fullNameStu">Full Name</label>
+	  <input type="text" class="form-control" name="fullNameStu" value="<?php echo $fullNameStu; ?>" readonly/>
   </div>
 </div>
 
 <!-----------------------------------View Stu contact no and edu--------------------------------------------->
 <div class="form-row col-12 col-md-12 col-sm-12">  
   <div class="form-group col-md-6">
-	  <label for="CourseId">Student Contact Number</label>
-	  <input type="text" class="form-control" name="CourseId" value="<?php echo $NICStu; ?>" readonly>
+	  <label for="contactNoStu">Student Contact Number</label>
+	  <input type="text" class="form-control" name="contactNoStu" value="<?php echo $contactNoStu; ?>" readonly>
   </div>
   <div class="form-group col-md-6">
-	  <label for="CourseName">Educational Qualification</label>
-	  <input type="text" class="form-control" name="CourseName" value="<?php echo $row['CourseName']; ?>" readonly>
+	  <label for="eduLevelStu">Educational Qualification</label>
+	  <input type="text" class="form-control" name="eduLevelStu" value="<?php echo $eduLevelStu; ?>" readonly>
   </div>
 </div>
 
 <!-----------------------------------Address ------------------------------------------------>
 <div class="form-row col-12 col-md-12 col-sm-12">  
   <div class="form-group col-md-12">
-	  <label for="CourseId">Address</label>
-	  <input type="text" class="form-control" name="CourseId" value="<?php echo $NICStu; ?>" readonly>
+	  <label for="addressStu">Address</label>
+	  <input type="text" class="form-control" name="addressStu" value="<?php echo $addressStu; ?>" readonly>
   </div> 
 </div>
 <!-----------------------------------District and DOB---------------------------------------------->
 <div class="form-row col-12 col-md-12 col-sm-12"> 
   <div class="form-group col-md-12">
-	  <label for="CourseId">District</label>
-	  <input type="text" class="form-control" name="CourseId" value="<?php echo $NICStu; ?>" readonly>
+	  <label for="districtStu">District</label>
+	  <input type="text" class="form-control" name="districtStu" value="<?php echo $districtStu; ?>" readonly>
   </div>
   <div class="form-group col-md-12">
-	  <label for="CourseId">Date of Birth</label>
-	  <input type="text" class="form-control" name="CourseId" value="<?php echo $NICStu; ?>" readonly>
+	  <label for="DOBStu">Date of Birth</label>
+	  <input type="text" class="form-control" name="DOBStu" value="<?php echo $DOBStu; ?>" readonly>
   </div>
 </div>
 

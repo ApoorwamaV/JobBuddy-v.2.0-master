@@ -158,6 +158,17 @@ if(isset($_POST['but_logout'])){
 	  <input type="text" class="form-control" name="EmailStu" value="<?php echo $row['EmailStu']; ?>" required>
   </div>
 </div>
+
+<!-------------------------------------Row 04------------------------------------------------>
+<div class="form-row col-12 col-md-12 col-sm-12"> 
+      <div class="form-group col-4 col-md-4 col-sm-4"> 
+        <button type="submit" name="register" class="btn btn-primary btn-block">Register</button>
+      </div>
+      
+      <div class="form-group col-4 col-md-4 col-sm-4">
+        <button type="button" href="course_search.php" class="btn btn-primary btn-block"> Back</button> 
+      </div>
+</div>
 	
 	</form></form></section></section></section>
 

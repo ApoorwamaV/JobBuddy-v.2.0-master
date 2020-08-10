@@ -103,8 +103,9 @@ if(isset($_POST['but_logout'])){
 <section class="container-fluid">
     <section class="row ">
     <section class="col-12 col-sm-12 col-md-12">
-    <span class="form-container  col-12 col-sm-12 col-md-12 " method="post" action="courseSearch_select.php" enctype="multipart/form-data">
-    
+    <!--<span class="form-container  col-12 col-sm-12 col-md-12 " method="GET" action="experiment.php" enctype="multipart/form-data">
+   --> 
+   <form action="courseSearch_select.php" method="GET" enctype="multipart/form-data">
 <!-------------------------------------Search Courses------------------------------------------------>
 <div class="form-row col-12 col-md-12 col-sm-12">
   
@@ -174,13 +175,15 @@ if(isset($_POST['but_logout'])){
       </div>
       
       <div class="form-group col-md-6">        
-        <button type="button" href="courseSearch_select.php" class="btn btn-primary btn-block"> Reset</button> 
+        <button type="button" href="course_search.php" class="btn btn-primary btn-block"> Reset</button> 
       </div>
     </div>
-</span>
+<!--</span>--></form>
 </section>
 </section>
 </section>
+
+
       
 <div class="container">  
             <br />  
@@ -192,6 +195,9 @@ if(isset($_POST['but_logout'])){
 				<div id="live_data"></div>                 
 			</div>  
         </div>
+<?php
+
+?>
       
 </body>
 <script> 
