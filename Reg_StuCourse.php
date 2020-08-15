@@ -4,7 +4,7 @@
     //echo $_POST["id"];
 */
 session_start();
-echo $_SESSION['variable'];
+echo $_SESSION['Stu_NIC'];
  ?>
  <?php require_once('includes/connection.php'); ?>
 <?php require_once('includes/functions.php'); ?>
@@ -14,6 +14,17 @@ $result = mysqli_query($connection,$sql);
 $row= mysqli_fetch_array($result);
 
 ?>
+<?php  
+	$connect = mysqli_connect("localhost", "root", "", "jobbuddy");
+	$sql = "select * FROM coursedetails WHERE CourseId = '".$_POST["id"]."'";  
+    //echo $_POST["id"];
+    $result = mysqli_query($connection,$sql);
+    $row= mysqli_fetch_array($result);
+	if(mysqli_query($connect, $sql))  
+	{  
+		echo 'Data Deleted';  
+	}  
+ ?>
  <!DOCTYPE html>
 <html lang="en">
 <head>

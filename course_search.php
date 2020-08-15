@@ -1,6 +1,25 @@
 <?php require_once('includes/connection.php'); 
 
 ?>
+<!---------------------------------Bring User Name-------------------------------->
+<?php session_start();?>
+
+<?php echo $_SESSION['Stu_NIC'];
+$Stu_NIC= $_SESSION['Stu_NIC']; 
+
+$sql="select * from students where NICStu='$Stu_NIC'";
+$result=mysqli_query($connection,$sql);
+$result1=$result->fetch_object();
+
+$fullNameStu=$result1->fullNameStu;
+$EmailStu=$result1->EmailStu;
+$contactNoStu=$result1->contactNoStu;
+$eduLevelStu=$result1->eduLevelStu;
+$addressStu=$result1->addressStu;
+$districtStu=$result1->districtStu;
+$DOBStu=$result1->DOBStu;
+isset($_POST['Stu_NIC'])?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,6 +76,7 @@ if(isset($_POST['but_logout'])){
             <button class="btn btn-danger" type="submit" name="but_logout">Logout</button>
           </span>
 </li>
+<li><?php echo $fullNameStu; ?></li>
 
 </ul>
 </div>
@@ -214,23 +234,12 @@ $(document).ready(function(){
         });  
     } 
 //Register for
-    $(document).on('click', '.btn_register', function(){  
-        var id=$(this).data("CourseId");  
-        if(confirm("Do you want to register for this course?"))
-          
-        {  //<link href="Reg_StuCourse.php">
-            $.ajax({  
-                url:"Reg_StuCourse.php",  
-                method:"POST",  
-                data:{id:id},  
-                dataType:"text",  
-                success:function(data){  
-                    //alert(data); 
-
-                    fetch_data();  
-                }  
-            });  
-        }  
+    
+        $(document).on('click', '.btn_register', function(){  
+        var id=$(this).data("id8");  
+            window.location.href ="http://localhost/dashboard/A_Updated_Home/JobBuddy-v.2.0-master/stu_update.php?id="+id;
+            //C:\xampp\htdocs\dashboard\A_Updated_Home\JobBuddy-v.2.0-master
+           
     }); 
 
     /*

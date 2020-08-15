@@ -17,8 +17,11 @@
     
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
+<style>
+    .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }</style>
 </head>
 <body>
 <!--Background Slider Start-->
@@ -53,7 +56,7 @@
   </div>
 </header>
 <div class="Navigation Bar">
-    <nav class="navbar navbar-expand-sm navbar-default navbar-dark bg-dark">
+    <nav class="navbar  navbar-expand-md navbar-default navbar-dark bg-dark">
         <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand" href="#">Job Buddy</a>
@@ -63,12 +66,12 @@
     <img src="LOGO.jpg" alt="logo" style="width:100px;">
   </a>     
 <!--Creating toggle-->
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#barLink"> <!--# for a id-->
-                <span class="navbar-toggler-icon">
+          
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barLink" aria-expanded="false">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-                </span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-center" id="barLink">
+          <div class="collapse navbar-collapse justify-content-end" id="barLink">
             <ul class="nav navbar-nav justify-content-end">
                 <li class="active"><a href="Index.php">Home</a></li>
                 <li><a href="#">Vocational Training Centres</a></li>
@@ -104,31 +107,35 @@
       </form>
 </ul>
 </div>
-</nav>              
-                
-<!-- Language -->
-    <!-- Language -->
-    <div class="Lang" align="left">
+</nav>  
+</div>            
+        
 
+<div class="form-row col-12 col-md-12 col-sm-12 ">
+
+  <div class="form-group col-md-7 justify-content-start "><br>
+    <div class="para">
+      <div class="container-fluid">
+        <h1 class="aboutH1"> About us </h1>
+          <span class="about"> <p> This web platform is basically facilitating students to find vocational courses according to
+            their qualifications and facilitates to publish about the vocational training centers and the
+            courses. The vocational training centres have to publish about new intakes for the courses
+            and job opportunities and students can identify the opportunities and register.<p>
+          </span>
+      </div>  
+    </div>
+  </div>
+  <!-- Language -->
+  <div class="form-group col-md-5 justify-content-end"><br>
+    <div class="Lang" align="left">
       <li class=btn><a href="Index.php"><button type="button" href class="btn btn-primary btn-block">English</button></a></li>
       <li class=btn><a href="sinhalaIndex.php"><button type="button" href class="btn btn-primary btn-block">සිංහල</button></a></li>
       <li class=btn><a href="tamilIndex.php"><button type="button" href class="btn btn-primary btn-block">தமிழ்</button></a></li>
     </div>
-          </div>          
   </div>
-
-  <div class="para">
-  <div class="container-fluid">
-    <h1> About us </h1>
-    <span class="about"> <p> This web platform is basically facilitating students to find vocational courses according to
-their qualifications and facilitates to publish about the vocational training centers and the
-courses. The vocational training centres have to publish about new intakes for the courses
-and job opportunities and students can identify the opportunities and register.<p></span>
-  </div>  
-  </div>
-
-  
-  <div class= "Parallex">
+</div><br><br><br><br><br><br><br><br><br><br>
+                   
+<div class= "Parallex">
   </div><!--
   <button class="btn"><i class="fa fa-home"></i> Home</button>
 <button class="btn"><i class="fa fa-bars"></i> Menu</button>
@@ -146,13 +153,45 @@ and job opportunities and students can identify the opportunities and register.<
   <a href="1.2StuHome.php" >StuHome</a>
   <a href="1.2vtcHome.php" >vtcHome</a>
   <a href="course_search_index.php" >Course search</a>
+  <a href="Q&A.php" >Q&A</a>
+  <a href="Q&A2.php" >Q&A</a>
+  <a href="comment.php" >Comment</a>
+  <a href="simpleComment.php" >simpleComment.php</a>
+
+<div class="form-row col-12 col-md-12 col-sm-12 ">
+  <div class="form-group col-md-6 justify-content-start">
+    <div class="para">
+      <div class="container-fluid">
+        <h1 class="aboutH1"> Who do you want to be? </h1>
+          <span class="about"> <p> You can find Vocational Courses according to your qualifications and other preferrences.<p>
+          </span>
+      </div>  
+    </div>
+  </div>
+  
+</div><br><br><br><br><br><br><br><br><br><br>
+
+
+<div class= "Parallex">
+<!--
+
+  
+    
+  </div>
+  <br>    <!--
+      <div class="container-fluid">
+        
+      </div>   --> 
+  </div>
+</div>-->
+
 
 <!-- Add social media icons -->
 
 <br><br>
  <section class="row justify-content-center">
-<section class="col-12 col-sm-12 col-md-12">
-<div class="form-row col-12 col-md-12 col-sm-12 justify-content-center">  
+<section class="col-12 col-sm-12 col-md-12"> <br><br><br><br><br>
+<div class="form-row col-12 col-md-12 col-sm-12 justify-content-center bg-dark">  <br><br><br><br><br>
   <div class="form-group col-md-2 justify-content-center"> <a href="#">
     <img src="Images/location.png" alt="Location" width="50" height="50"> <p class="justify-content-center">Kalagedihena, <br>Nittambuwa,<br>Sri Lanka.</p></a>
   </div>

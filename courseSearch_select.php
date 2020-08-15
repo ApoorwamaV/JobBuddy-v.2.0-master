@@ -99,6 +99,7 @@
      $output .= '</table>  
           </div>';  
      echo $output;  } 
+     /*---------------------------------------------------------------------------------------------------------*/
 else{
 $sql = "SELECT 
  coursedetails.CourseId,coursedetails.CourseName, 
