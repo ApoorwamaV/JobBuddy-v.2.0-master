@@ -1,7 +1,7 @@
 <?php
 
 //require_once('includes/connection.php'); 
-$connection = new PDO('mysql:host=localhost;dbname=jobbuddy', 'root', '');
+$connect = new PDO('mysql:host=localhost;dbname=jobbuddy', 'root', '');
 
 
 $error = '';
@@ -30,16 +30,15 @@ if($error == '')
 {
  $query = "
  INSERT INTO posts 
- (ParentPostID, Post_Content, PostAuthor,PostCategoryId) 
- VALUES (:parent_comment_id, :comment, :comment_sender_name,:PostCategoryId)
+ (ParentPostID, Post_Content, PostAuthor) 
+ VALUES (:ParentPostID, :Post_Content, :PostAuthor)
  ";
  $statement = $connect->prepare($query);
  $statement->execute(
   array(
-   ':parent_comment_id' => $_POST["PostID"],
-   ':comment'    => $Post_Content,
-   ':comment_sender_name' => $PostAuthor,
-   ':PostCategoryId'=>$PostCategoryId,
+   ':ParentPostID' => $_POST["ParentPostID"],
+   ':Post_Content'    => $comment_content,
+   ':PostAuthor' => $comment_name
   )
  );
  $error = '<label class="text-success">Comment Added</label>';
