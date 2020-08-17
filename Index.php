@@ -22,6 +22,45 @@
     width: 100%;
     height: 100%;
   }</style>
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 64px;
+}
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+/* 2/3 column */
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+/* 1/3 column */
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+/* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+}
+</style>
 </head>
 <body>
 <!--Background Slider Start-->
@@ -137,13 +176,6 @@
                    
 <div class= "Parallex">
   </div><!--
-  <button class="btn"><i class="fa fa-home"></i> Home</button>
-<button class="btn"><i class="fa fa-bars"></i> Menu</button>
-<button class="btn"><i class="fa fa-trash"></i> Trash</button>
-<button class="btn"><i class="fa fa-close"></i> Close</button>
-<button class="btn"><i class="fa fa-folder"></i> Folder</button>
-
-
   
 <div class="bg-image img2"></div>
 <div class="bg-image img3"></div>
@@ -158,39 +190,94 @@
   <a href="comment.php" >Comment</a>
   <a href="simpleComment.php" >simpleComment.php</a>
 
-<div class="form-row col-12 col-md-12 col-sm-12 ">
-  <div class="form-group col-md-6 justify-content-start">
-    <div class="para">
-      <div class="container-fluid">
-        <h1 class="aboutH1"> Who do you want to be? </h1>
-          <span class="about"> <p> You can find Vocational Courses according to your qualifications and other preferrences.<p>
-          </span>
-      </div>  
+<!-----------------------------------Zig zag ----------------------------------------------------------->
+
+<!-- Join With Us Section -->
+<div class="container" style="background-color:#f1f1f1">
+  <div class="row">
+    <div class="column-33">
+      <img src="Images/unnamed.jpg" alt="App" width="335" height="335">
+    </div>
+    <div class="column-86">
+      <h1 class="xlarge-font justify-content-end"><b>Join with us............</b></h1>
+      <!--<h1 class="large-font" style="color:MediumSeaGreen;"><b>Why JOBBuddy?</b></h1>-->
+      <p><span style="font-size:24px">As a student,</span>
+      <p><span style="font-size:24px">As a Vocational Training Corse,</span>
+      <p><span style="font-size:24px">As a Company,</span>
+      <!-- Make a digital marketing platform for Vocational Training Centres.</p>
+            <button class="button" style="background-color:gray" >
+                  <a href="./1.1RegVocationalCentre.php" style="color:white">Register as a Vocatioal Training Courses</a>
+            </button>-->
     </div>
   </div>
-  
-</div><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+<!-- Student Section -->
+<div class="container">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Student</b></h1>
+      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Why JOBBuddy?</b></h1>
+      <p><span style="font-size:36px">Build your own future with JOBBuddy.</span>
+       Join with us. Search for Vocational Courses according to your preferences. Resolve your doubts 
+       regarding Vocational Training Courses, Vocational Training Centres,and future job oppotunities.</p>
+            <button class="button" style="background-color:gray" >
+                  <a href="./1.1RegStu.php" style="color:white">Register as a Student</a>
+            </button>
+    </div>
+    <div class="column-33">
+        <img src="Images/Job-Seekers-Header3.jpg" width="335" height="471">
+    </div>
+  </div>
+</div>
+
+<!-- VTC Section -->
+<div class="container" style="background-color:#f1f1f1">
+  <div class="row">
+    <div class="column-33">
+      <img src="Images/vocational-training-center.jpg" alt="App" width="335" height="471">
+    </div>
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Vocational Training Centre</b></h1>
+      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Why JOBBuddy?</b></h1>
+      <p><span style="font-size:24px">Publish new intakes for Vocational Training Courses.</span>
+       Make a digital marketing platform for Vocational Training Centres.</p>
+            <button class="button" style="background-color:gray" >
+                  <a href="./1.1RegVocationalCentre.php" style="color:white">Register as a Vocatioal Training Courses</a>
+            </button>
+    </div>
+  </div>
+</div>
+
+<!-- Companies Section -->
+<div class="container">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Company</b></h1>
+      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Why JOBBuddy?</b></h1>
+      <p><span style="font-size:36px">Share knowledge for a better future.</span> 
+      Share your knowledge among Vocational Course followers and help to make fully qualified future employers.</p>
+            <button class="button" style="background-color:gray" >
+                  <a href="./1.1RegCompany.php" style="color:white">Register as a Company</a>
+            </button>
+    </div>
+    <div class="column-33">
+        <img src="Images/BQNziO.jpg" width="335" height="471" >
+    </div>
+  </div>
+</div>
+<!-------------------------------------End of Zig Zag--------------------------------------------------->
+
 
 
 <div class= "Parallex">
-<!--
 
-  
-    
-  </div>
-  <br>    <!--
-      <div class="container-fluid">
-        
-      </div>   --> 
-  </div>
-</div>-->
-
+</div>
 
 <!-- Add social media icons -->
 
-<br><br>
  <section class="row justify-content-center">
-<section class="col-12 col-sm-12 col-md-12"> <br><br><br><br><br>
+<section class="col-12 col-sm-12 col-md-12"> 
 <div class="form-row col-12 col-md-12 col-sm-12 justify-content-center bg-dark">  <br><br><br><br><br>
   <div class="form-group col-md-2 justify-content-center"> <a href="#">
     <img src="Images/location.png" alt="Location" width="50" height="50"> <p class="justify-content-center">Kalagedihena, <br>Nittambuwa,<br>Sri Lanka.</p></a>
