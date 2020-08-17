@@ -1,8 +1,13 @@
 <?php
-
+echo "add";
+echo "Hi";
 //require_once('includes/connection.php'); 
 $connect = new PDO('mysql:host=localhost;dbname=jobbuddy', 'root', '');
-
+/*
+$ParentPostID = $_POST['ParentPostID'];
+ $Post_Content = $_POST['Post_Content'];
+ $PostAuthor =$_POST['PostAuthor'];
+*/
 
 $error = '';
 $PostAuthor = '';
@@ -27,18 +32,17 @@ else
 }
 
 if($error == '')
-{
- $query = "
- INSERT INTO posts 
+{ echo"hi";
+ $query = "INSERT INTO posts
  (ParentPostID, Post_Content, PostAuthor) 
- VALUES (:ParentPostID, :Post_Content, :PostAuthor)
- ";
+ VALUES ('{$ParentPostID}', '{$Post_Content}', '{$PostAuthor}')";
+
  $statement = $connect->prepare($query);
  $statement->execute(
   array(
-   ':ParentPostID' => $_POST["ParentPostID"],
-   ':Post_Content'    => $comment_content,
-   ':PostAuthor' => $comment_name
+   '$ParentPostID' => $_POST["PostID"],
+   '$Post_Content'    => $Post_Content,
+   '$PostAuthor' => $PostAuthor
   )
  );
  $error = '<label class="text-success">Comment Added</label>';

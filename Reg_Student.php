@@ -148,7 +148,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  /*555555555555555555555555555555555555555555555555555555555555555555555555555555555555555*/
  
  
- $query = "INSERT INTO students(designationStu,firstNameStu,lastNameStu,fullNameStu,initialNameStu,EmailStu,passwordStu,NICStu,DOBStu,genderStu,civilStatusStu,addressStu,districtStu,contactNoStu,eduLevelStu,softCopy) VALUES ('{$designationStu}','{$firstNameStu}','{$lastNameStu}','{$fullNameStu}','{$initialNameStu}','{$inputEmailStu}','{$hashed_password}','{$inputNICStu}','{$DOBStu}','{$inputGenderStu}','{$inputCStatusStu}','{$inputAddressStu}','{$inputDistrictStu}','{$inputContactNoStu}','{$eduLevel}','{$image}')";
+ $query = "INSERT INTO students(designationStu,firstNameStu,lastNameStu,fullNameStu,initialNameStu,EmailStu,passwordStu,NICStu,DOBStu,genderStu,civilStatusStu,addressStu,districtStu,contactNoStu,eduLevelStu,softCopy) 
+ VALUES ('{$designationStu}','{$firstNameStu}','{$lastNameStu}','{$fullNameStu}','{$initialNameStu}','{$inputEmailStu}','{$hashed_password}','{$inputNICStu}','{$DOBStu}','{$inputGenderStu}','{$inputCStatusStu}','{$inputAddressStu}','{$inputDistrictStu}','{$inputContactNoStu}','{$eduLevel}','{$image}')";
   $result='';     
   $result = mysqli_query($connection,$query); 
 

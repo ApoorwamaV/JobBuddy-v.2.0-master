@@ -1,10 +1,9 @@
 <?php
  //require_once('includes/connection.php'); 
-
+echo "fetch";
  $connect = new PDO('mysql:host=localhost;dbname=jobbuddy', 'root', '');
-
- $query = "
- SELECT * FROM posts 
+//Get all comments
+ $query = "SELECT * FROM posts 
  WHERE ParentPostID = '0' 
  ORDER BY PostID DESC
  ";
@@ -28,7 +27,7 @@
  }
  
  echo $output;
- 
+ //Get all rplys
  function get_reply_comment($connect, $parent_id = 0, $marginleft = 0)
  {
   $query = "

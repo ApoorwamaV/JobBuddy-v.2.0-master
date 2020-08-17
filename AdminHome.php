@@ -19,6 +19,34 @@
 
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!---------------------------------------------Add Column---------------------------------------------------->
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 0px;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
 
 </head>
 <body>
@@ -106,7 +134,34 @@ if(isset($_POST['but_logout'])){
   <div class="form-group col-md-2"> <a href="./courses_admin_panel.php">
     <img src="Images/school.png" alt="Company Details" width="80" height="80"> <p>Vocational Training Courses</p></a>
   </div>
-  
+  <!---------------------------------------------------Other-----------------------------------------------------
+<div class="form-row col-12 col-md-12 col-sm-12 justify-content-center" row="12">  
+  <div class="form-group col-md-5" row="5"> <a href="#"> 
+    <img src="Images/z_bus-piv-Future-of.jpg" alt="Image" width="100%" height="100%"> </a>
+  </div>
+</div>
+</section>
+</section>-->
+<!------------------------------Layout-------------------------------------------->
+<section class="row justify-content-strech">
+<div class="col-12 col-sm-12 col-md-12">
+          <div class="row">
+            <div class="column" style="background-color:#aaa;">
+              <h2>Column 1</h2>
+              <p>Some text..</p>
+            </div>
+            <div class="column" style="background-color:#bbb;">
+              <h2>Column 2</h2>
+              <p>Some text..</p>
+            </div>
+            <div class="column" style="background-color:#ccc;">
+              <h2>Column 3</h2>
+              <p>Some text..</p>
+            </div>
+          </div>
+</div>
+</section>
+  <!---------------------------------------------------Image------------------------------------------------------->
   <img src="Images/z_bus-piv-Future-of.jpg" alt="Image" width="100%" height="100%">
   <br><br><br><br><br><br><br><br>
   
