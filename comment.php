@@ -109,6 +109,7 @@
     </style>
 </head>
 <body>
+    <div class=comment>
 <!-------------------------------------Registration-Start------------------------------------------------>
     <div class="modal" id="registerModal">
         <div class="modal-dialog">
@@ -275,6 +276,6 @@
                    alert('Please Check Your Inputs');
            });*/
         });
-    </script>
+    </script></div>
 </body>
 </html>

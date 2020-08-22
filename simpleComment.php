@@ -37,6 +37,7 @@ if(isset($_POST['but_logout'])){
 <?php/
 }
 ?>
+<div class="comment">
 <div class="Navigation Bar">
     <nav class="navbar navbar-expand-sm navbar-default navbar-dark bg-dark">
         <div class="container-fluid">
@@ -97,7 +98,7 @@ if(isset($_POST['but_logout'])){
  <section class="row justify-content-center">
 <section class="col-12 col-sm-12 col-md-12">
 <div class="form-row col-12 col-md-12 col-sm-12 justify-content-center">  
-  <div class="form-group col-md-2"> <a href="#">
+  <div class="form-group col-md-2"> <a href="javascript:history.back()">
     <img src="Images/user.png" alt="User Profile" width="80" height="80"> <p>User Profile</p></a>
   </div>
   <div class="form-group col-md-2"><a href="course_search.php">
@@ -119,12 +120,12 @@ if(isset($_POST['but_logout'])){
   
 </section></section>
   <br />
-  <div class="form-group col-md-7">
+  <div class="form-group col-md-7" >
           <p class="about" >You can 
               find questions which are related to your prefered area, and also you can comment on relevant areas</p></div>
 <!------------------------------------Q & A ----------------------------------------->
 
-<form action="simpleComment_select.php" method="GET" enctype="multipart/form-data">
+<form action="simpleComment_select.php" method="GET" enctype="multipart/form-data"  style="background-image: url('Images/StockSnap_BKC8Y8VF8K-1.jpg') ;">
 <!-------------------------------------Search Courses------------------------------------------------>
     <div class="form-row col-12 col-md-12 col-sm-12">
   
@@ -165,7 +166,7 @@ if(isset($_POST['but_logout'])){
    <span id="comment_message"></span>
    <br />
    <div id="display_comment"></div>
-  </div>
+  </div></div>
  </body>
  <?php echo "Test"?>
 </html>

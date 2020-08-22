@@ -1,0 +1,18 @@
+/*-----------------------------------------------background----------------------------------------------------*/
+.stuHome{
+    background-image: url('Images/StockSnap_BKC8Y8VF8K-1.jpg') ;
+    background-size: cover;
+    height: 100%;
+}
+
+.comment{
+    background-image: url('Images/StockSnap_BKC8Y8VF8K-1.jpg') ;
+    background-size: cover;
+    height: 100%;
+}
+
+#comment{
+    background-image: url('Images/43011aa1441cd95097ad81db69d88eee--pattern-background-vector-background.jpg') ;
+    background-size: cover;
+    height: 100%;
+}

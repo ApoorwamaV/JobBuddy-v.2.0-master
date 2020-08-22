@@ -25,26 +25,35 @@
   box-sizing: border-box;
 }
 
-/* Create three equal columns that floats next to each other */
-.column {
+/* Create two equal columns that floats next to each other */
+.columnLayout {
   float: left;
-  width: 33.33%;
-  padding: 0px;
-  
+  width: 50%;
+  padding: 10px;
 }
 
 /* Clear floats after the columns */
-.row:after {
+.rowLayout:after {
   content: "";
   display: table;
   clear: both;
 }
+/* Style the buttons */
+.btnLayout {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
+.btnLayout:hover {
+  background-color: #ddd;
+}
+
+.btnLayout.active {
+  background-color: #666;
+  color: white;
 }
 </style>
 
@@ -59,56 +68,67 @@ if(isset($_POST['but_logout'])){
 ?>
 
 <div class="Navigation Bar">
-    <nav class="navbar navbar-expand-sm navbar-default navbar-dark bg-dark">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">Job Buddy</a>
-          </div>
+<nav class="navbar navbar-expand-sm navbar-default navbar-dark bg-dark">
+<div class="container-fluid">
+  <div class="navbar-header">
+      <a class="navbar-brand" href="#">Job Buddy</a>
+  </div>
 <!--logo-->
   <a class="navbar-brand" href="#">
-  <img src="LOGO.jpg" alt="logo" style="width:100px;">
+    <img src="LOGO.jpg" alt="logo" style="width:100px;">
   </a>     
 <!--Creating toggle-->
   <button class="navbar-toggler" data-toggle="collapse" data-target="#barLink"> <!--# for a id-->
     <span class="navbar-toggler-icon">
-    </span>
+      </span>
   </button>
-  <div class="collapse navbar-collapse justify-content-center" id="barLink">
-    <ul class="nav navbar-nav">
+  <div class="collapse navbar-collapse " id="barLink">
+    <ul class="nav navbar-nav justify-content-end">
       <li class="active"><a href="1.2StuHome.php" >Home</a></li>
       <li><a href="#">I want to know more about </a></li>
       <li><a href="3AboutAll.php">About us</a></li>
       <li><a href="4ContactAll.php">Contact</a></li>
 <!--Admin Panel-->
-                <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">User Details
-                  <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="./stu_admin_panel.php">Student Details</a></li>
-                    <li><a href="./vtc_admin_panel.php">Vocational Training Centre Details</a></li>
-                    <li><a href="./com_admin_panel.php">Company Details</a></li>
-                    <li><a href="./courses_admin_panel.php">Courses Details</a></li>
-                  </ul>
-                </li>
+      <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">User Details
+                  <span class="caret"></span>
+          </a>
+        <ul class="dropdown-menu">
+            <li><a href="./stu_admin_panel.php">Student Details</a></li>
+            <li><a href="./vtc_admin_panel.php">Vocational Training Centre Details</a></li>
+            <li><a href="./com_admin_panel.php">Company Details</a></li>
+            <li><a href="./courses_admin_panel.php">Courses Details</a></li>
+        </ul>
+      </li>
 
 <!--Search-->
       <li>
       <form class="form-inline" action="/action_page.php">
           <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-success" type="submit">Search</button>
+          <button class="btn btn-success bg-success" type="submit">Search</button>
       </form>
-</li> 
+      </li> 
 <!--Logout-->
       <li>
           <form method='post' action="">
-            <button class="btn btn-danger" type="submit" name="but_logout">Logout</button>
+            <button class="btn btn-danger BG-DANGER" type="submit" name="but_logout">Logout</button>
           </form>
       </li>
-</ul>
+    </ul>
+  </div>
 </div>
-</nav>              
+</nav> 
+</div>
+<!-- Language -->
+<div class="form-group col-md-5 justify-content-end"><br>
+  <div class="Lang justify-content-end" align="left">
+    <li class=btn><a href="Index.php"><button type="button" href class="btn btn-primary bg-primary btn-block">English</button></a></li>
+    <li class=btn><a href="sinhalaIndex.php"><button type="button" href class="btn btn-primary bg-primary  btn-block">සිංහල</button></a></li>
+    <li class=btn><a href="tamilIndex.php"><button type="button" href class="btn btn-primary bg-primary  btn-block">தமிழ்</button></a></li>
+  </div>
+</div>             
                 
- </div>          
+          
   </div>
 
   <div class="bg-image img1"></div>
@@ -120,7 +140,7 @@ if(isset($_POST['but_logout'])){
     <img src="Images/user.png" alt="User Profile" width="80" height="80"> <p>User Profile</p></a>
   </div>
   <div class="form-group col-md-2"><a href="#">
-    <img src="Images/privacy.png" alt="Search for Courses"  width="80" height="80"> <p>Add Admin</p></a>
+    <img src="Images/campaign.png" alt="Search for Courses"  width="80" height="80"> <p>Q & A</p></a>
   </div>
   <div class="form-group col-md-2"> <a href="./stu_admin_panel.php">
     <img src="Images/student.png" alt="Update Profile" width="80" height="80"> <p>Students</p></a>
@@ -134,62 +154,147 @@ if(isset($_POST['but_logout'])){
   <div class="form-group col-md-2"> <a href="./courses_admin_panel.php">
     <img src="Images/school.png" alt="Company Details" width="80" height="80"> <p>Vocational Training Courses</p></a>
   </div>
-  <!---------------------------------------------------Other-----------------------------------------------------
-<div class="form-row col-12 col-md-12 col-sm-12 justify-content-center" row="12">  
-  <div class="form-group col-md-5" row="5"> <a href="#"> 
-    <img src="Images/z_bus-piv-Future-of.jpg" alt="Image" width="100%" height="100%"> </a>
+</section>
+</section>
+<!------------------------------Layout-------------------------------------------->
+
+
+<div id="btnContainer">
+  <button class="btnLayout" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+  <button class="btnLayout active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+</div>
+<br>
+
+<div class="rowLayout">
+  <div class="columnLayout" style="background-color:black; color:white">
+    <h2 style="font-size:24px">Manage Admins</h2>
+    <p>Some text..</p>
+    
+            <button class="button" style="background-color:gray" >
+                  <a href="#" style="color:white">Register as a Student</a>
+            </button>
+  </div>
+  <div class="columnLayout" style="background-color:black; color:white">
+    <h2 style="font-size:24px">Check Emails</h2>
+    <p>Some text..</p>
+            <button class="button" style="background-color:gray" >
+                  <a href="#" style="color:white">Register as a Student</a>
+            </button>
   </div>
 </div>
-</section>
-</section>-->
-<!------------------------------Layout-------------------------------------------->
-<section class="row justify-content-strech">
-<div class="col-12 col-sm-12 col-md-12">
-          <div class="row">
-            <div class="column" style="background-color:#aaa;">
-              <h2>Column 1</h2>
-              <p>Some text..</p>
-            </div>
-            <div class="column" style="background-color:#bbb;">
-              <h2>Column 2</h2>
-              <p>Some text..</p>
-            </div>
-            <div class="column" style="background-color:#ccc;">
-              <h2>Column 3</h2>
-              <p>Some text..</p>
-            </div>
-          </div>
+
+<div class="rowLayout">
+  <div class="columnLayout" style="background-color:black; color:white">
+    <h2 style="font-size:24px">Generate Reports</h2>
+    <p>Some text..</p>
+            <button class="button" style="background-color:gray" >
+                  <a href="#" style="color:white">Register as a Student</a>
+            </button>
+  </div>
+  <div class="columnLayout" style="background-color:black; color:white">
+    <h2 style="font-size:24px">Column 4</h2>
+    <p>Some text..</p>
+            <button class="button" style="background-color:gray" >
+                  <a href="#" style="color:white">Register as a Student</a>
+            </button>
+  </div>
 </div>
-</section>
+
+<script>
+// Get the elements with class="columnLayout"
+var elements = document.getElementsByClassName("columnLayout");
+
+// Declare a loop variable
+var i;
+
+// List View
+function listView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "100%";
+  }
+}
+
+// Grid View
+function gridView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "50%";
+  }
+}
+
+/* Optional: Add active class to the current button (highlight it) */
+var container = document.getElementById("btnContainer");
+var btns = container.getElementsByClassName("btnLayout");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
   <!---------------------------------------------------Image------------------------------------------------------->
   <img src="Images/z_bus-piv-Future-of.jpg" alt="Image" width="100%" height="100%">
-  <br><br><br><br><br><br><br><br>
+  
+<!---------------------------------------------------Add new admin------------------------------------------------------->
+<div class="container-fluid">
+  <form class="bg-dark form-container col-12 col-md-12 col-sm-12 justify-content-center bg-dark" method="post" action="Reg_Admin.php" enctype="multipart/form-data">                  
+  <h1 class="aboutH1 " align="center" style="color:white"> Add Admin </h1>    
+      <div class="form-row col-12 col-md-12 col-sm-12 bg-dark">  
+            <div class="form-group col-md-6 justify-content-start bg-dark"><br>        
+                <label for="AdminID" style="color:white">Admin ID</label>
+                <input type="text" class="form-control" name="AdminID" placeholder="adminX"  required>         
+            </div>
+            <div class="form-group col-md-6 justify-content-end "><br>
+                <label for="AdminName" style="color:white">Admin Name</label>
+                <input type="text" class="form-control" name="AdminName" placeholder="Admin Name"  required> 
+            </div>
+      </div>
+      <div class="form-row col-12 col-md-12 col-sm-12 bg-dark">  
+            <div class="form-group col-md-6 justify-content-start bg-dark"><br>        
+                <label for="AdminEmail" style="color:white">Admin Email</label>
+                <input type="text" class="form-control" name="AdminEmail" placeholder="admin@gmail.com"  required>         
+            </div>
+            <div class="form-group col-md-6 justify-content-end "><br>
+                <label for="AdminPassword" style="color:white">Admin Password</label>
+                <input type="text" class="form-control" name="AdminPassword" placeholder="Admin Password"  required> 
+            </div>
+      </div>
+      <div class="form-group  " align="center" col="5"> 
+        <button type="submit" name="register" class="btn btn-primary btn-block">Register</button>
+      </div>
+  </form>
+</div>
   
 <!-- Add social media icons -->
 
-<br><br>
- <section class="row justify-content-center">
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div>
+<section class="row justify-content-center">
 <section class="col-12 col-sm-12 col-md-12">
-<div class="form-row col-12 col-md-12 col-sm-12 justify-content-center"> <br><br><br><br><br><br><br><br> 
-  <div class="form-group col-md-2 justify-content-center"> <a href="#">
-    <img src="Images/location.png" alt="Location" width="50" height="50"> <p class="justify-content-center">Kalagedihena, <br>Nittambuwa,<br>Sri Lanka.</p></a>
+  <div class="form-row col-12 col-md-12 col-sm-12 justify-content-center bg-dark"> <br><br><br><br><br><br><br><br> 
+    <div class="form-group col-md-2 justify-content-center"> <a href="#" style="color:white">
+      <img src="Images/location.png" alt="Location" width="50" height="50"> <p class="justify-content-center">Kalagedihena, <br>Nittambuwa,<br>Sri Lanka.</p></a>
+    </div>
+    <div class="form-group col-md-2 justify-content-center"> <a href="#" style="color:white">
+      <img src="Images/call.png" alt="Contact Number" width="50" height="50"> <p class="justify-content-center">+94 70 588 2716</p></a>
+    </div>
+    <div class="form-group col-md-2 justify-content-center"> <a href="https://www.facebook.com/106660131113039?referrer=whatsapp" style="color:white">
+      <img src="Images/facebook.png" alt="Facebook" width="50" height="50"> <p class="justify-content-center">JOBBuddy Career</p></a>
+    </div>
+    <div class="form-group col-md-2 justify-content-center"> <a href="#" style="color:white">
+      <img src="Images/whatsapp.png" alt="Whatsapp" width="50" height="50"> <p class="justify-content-center">+94 70 588 2716</p></a>
+    </div>
+    <div class="form-group col-md-2 justify-content-center"> <a href="https://www.youtube.com/channel/UCzh1By4MZccb8SsgAlvyFSA" style="color:white">
+      <img src="Images/youtube.png" alt="Youtube" width="50" height="50"> <p class="justify-content-center">JOBBuddy Career</p></a>
+    </div>
+    <div class="form-group col-md-2 justify-content-center"><a href="mailto:jobbuddycareer@gmail.com" style="color:white">
+      <img src="Images/gmail.png" alt="Gmail"  width="50" height="50"> <p class="justify-content-center">jobbuddycareer@gmail.com</p></a>
+    </div>  
   </div>
-  <div class="form-group col-md-2 justify-content-center"> <a href="#">
-    <img src="Images/call.png" alt="Contact Number" width="50" height="50"> <p class="justify-content-center">+94 70 588 2716</p></a>
-  </div>
-  <div class="form-group col-md-2 justify-content-center"> <a href="https://www.facebook.com/106660131113039?referrer=whatsapp">
-    <img src="Images/facebook.png" alt="Facebook" width="50" height="50"> <p class="justify-content-center">JOBBuddy Career</p></a>
-  </div>
-  <div class="form-group col-md-2 justify-content-center"> <a href="#">
-    <img src="Images/whatsapp.png" alt="Whatsapp" width="50" height="50"> <p class="justify-content-center">+94 70 588 2716</p></a>
-  </div>
-  <div class="form-group col-md-2 justify-content-center"> <a href="https://www.youtube.com/channel/UCzh1By4MZccb8SsgAlvyFSA">
-    <img src="Images/youtube.png" alt="Youtube" width="50" height="50"> <p class="justify-content-center">JOBBuddy Career</p></a>
-  </div>
-  <div class="form-group col-md-2 justify-content-center"><a href="mailto:jobbuddycareer@gmail.com">
-    <img src="Images/gmail.png" alt="Gmail"  width="50" height="50"> <p class="justify-content-center">jobbuddycareer@gmail.com</p></a>
-  </div>  
-  </section></section>
+</section>
+</section>
+</div>
 
  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

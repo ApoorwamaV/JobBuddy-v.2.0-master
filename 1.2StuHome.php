@@ -29,6 +29,7 @@ isset($_POST['Stu_NIC'])?>
     <title>Student Profile</title>
 
     <link rel="stylesheet" type="text/css" href="Lib.css">
+    <link rel="stylesheet" type="text/css" href="Lib2.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="javascript" href="js/bootstrap.js">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
@@ -74,9 +75,9 @@ if(isset($_POST['but_logout'])){
   <div class="collapse navbar-collapse justify-content-end" id="barLink">
     <ul class="nav navbar-nav justify-content-end">
       <li class="active"><a href="1.2StuHome.php" >Home</a></li>
-      <li><a href="#">I want to know more about </a></li>
+      <li><a href="simpleComment.php">I want to know more about </a></li>
       <li><a href="3AboutAll.php">About us</a></li>
-      <li><a href="4ContactAll.php">Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
 
 <!--Search-->
       <li>
@@ -92,8 +93,9 @@ if(isset($_POST['but_logout'])){
             <button class="btn btn-danger" type="submit" name="but_logout">Logout</button>
           </span>
 </li>
-<li>
+<li> <div class= "Username" Style="color:white">
 <?php echo $fullNameStu; ?>
+</div>
 </li>
 
 </ul>
@@ -123,7 +125,7 @@ if(isset($_POST['but_logout'])){
  <section class="row justify-content-center">
 <section class="col-12 col-sm-12 col-md-12">
 <div class="form-row col-12 col-md-12 col-sm-12 justify-content-center">  
-  <div class="form-group col-md-2"> <a href="#">
+  <div class="form-group col-md-2"> <a href="#stuDetails">
     <img src="Images/user.png" alt="User Profile" width="80" height="80"> <p>User Profile</p></a>
   </div>
   <div class="form-group col-md-2"><a href="course_search.php">
@@ -147,11 +149,11 @@ if(isset($_POST['but_logout'])){
 
 
 <!--Trying to review student data --- Start-->
-  <section class="container-fluid">
-    <section class="row justify-content-center">
+  <section class="container-fluid stuHome" id="stuDetails">   <!--Added ID to link sections in same ID-->
+    <section class="row justify-content-start">
     <section class="col-6 col-sm-6 col-md-6">
       
-    <form class="form-container justify-content-center col-12 col-sm-6 col-md-10 " >
+    <form class="form-container justify-content-start col-12 col-sm-6 col-md-10 " > 
     <form class=" solid stuReg">
       
 <!-----------------------------------View Stu NIC & Email----------------------------------------------->
@@ -209,10 +211,10 @@ if(isset($_POST['but_logout'])){
 
 <!-- Add social media icons -->
 
-<br><br>
- <section class="row justify-content-center">
+<br>
+ <section class="row justify-content-center" id="contact">
 <section class="col-12 col-sm-12 col-md-12">
-<div class="form-row col-12 col-md-12 col-sm-12 justify-content-center">  
+<div class="form-row col-12 col-md-12 col-sm-12 justify-content-center bg-dark">  
   <div class="form-group col-md-2 justify-content-center"> <a href="#">
     <img src="Images/location.png" alt="Location" width="50" height="50"> <p class="justify-content-center">Kalagedihena, <br>Nittambuwa,<br>Sri Lanka.</p></a>
   </div>
