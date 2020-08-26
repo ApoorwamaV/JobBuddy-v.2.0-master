@@ -109,7 +109,7 @@ if(isset($_POST['but_logout'])){
 }
 ?>
 <!--VTC Name-->
-<nav class="navbar navbar-expand-sm navbar-default navbar-dark bg-dark">
+<nav class="navbar justify-content-center navbar-expand-sm navbar-default navbar-dark bg-dark">
 <h1>
   <div class= "Username" Style="color:white">
 <?php echo $vtcName; ?>
@@ -136,17 +136,8 @@ if(isset($_POST['but_logout'])){
     <ul class="nav navbar-nav justify-content-end">
       
       <li class="active"><a href="1.2vtcHome.php" >Home</a></li>
-      <li><a href="#">Q & A </a></li>
-      <li><a href="#services"> Settings</a></li>
-      <li><a href="#clients">User Profile </a></li>
+      <li><a href="#contact">Contact</a></li>
 
-<!--Search-->
-      <li>
-      <form class="form-inline" action="/action_page.php">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-success" type="submit">Search</button>
-      </form>
-</li> 
 <!--Logout-->
       <li>
           <form method='post' action="">
