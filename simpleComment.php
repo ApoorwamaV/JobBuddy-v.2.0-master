@@ -168,7 +168,7 @@ if(isset($_POST['but_logout'])){
    <div id="display_comment"></div>
   </div></div>
  </body>
- <?php echo "Test"?>
+ 
 </html>
 
 <script>
@@ -212,7 +212,7 @@ $(document).ready(function(){
 
  $(document).on('click', '.reply', function(){
   var PostID = $(this).attr("id");
-  $('#PostID').val(PostID);
+  $('#ParentPostID').val(PostID);
   $('#PostAuthor').focus();
  });
  

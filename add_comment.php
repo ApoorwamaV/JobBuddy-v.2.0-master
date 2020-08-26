@@ -1,6 +1,5 @@
 <?php
-echo "add";
-echo "Hi";
+
 //require_once('includes/connection.php'); 
 $connect = new PDO('mysql:host=localhost;dbname=jobbuddy', 'root', '');
 /*
@@ -32,7 +31,7 @@ else
 }
 
 if($error == '')
-{ echo"hi";
+{ 
  $query = "INSERT INTO posts
  (ParentPostID, Post_Content, PostAuthor) 
  VALUES ('{$ParentPostID}', '{$Post_Content}', '{$PostAuthor}')";

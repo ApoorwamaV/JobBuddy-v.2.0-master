@@ -28,7 +28,7 @@ echo "fetch";
  
  echo $output;
  //Get all rplys
- function get_reply_comment($connect, $parent_id = 0, $marginleft = 0)
+ function get_reply_comment($connect, $parent_id, $marginleft = 0)
  {
   $query = "
   SELECT * FROM posts WHERE ParentPostID = '".$parent_id."'
