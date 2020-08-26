@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vocational Training Centres</title>
+    <title>Home</title>
 
     <link rel="stylesheet" type="text/css" href="Lib.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -117,9 +117,9 @@
 
           <div class="collapse navbar-collapse justify-content-end" id="barLink">
             <ul class="nav navbar-nav justify-content-end">
-                <li ><a href="Index.php">Home</a></li>
-                <li class="active"><a href="VocationalTrainingCentres.php">Vocational Training Centre</a></li>
-                <li><a href="Companies.php">Company</a></li>
+                <li class="active"><a href="Index.php">Home</a></li>
+                <li><a href="VocationalTrainingCentres.php">Vocational Training Centres</a></li>
+                
                 <li><a href="3AboutAll.php">About us</a></li>
                 <li><a href="4ContactAll.php">Contact</a></li>
 
@@ -283,9 +283,9 @@ $(document).on('click', '#btn_add', function(){
         }  
     });
     //Update
-    $(document).on('click', '.btn_show', function(){  
-        var id=$(this).data("id8");  
-            window.location.href ="http://localhost/dashboard/A_Updated_Home/JobBuddy-v.2.0-master/VocationalTrainingCentre_Courses.php?id="+id;
+    $(document).on('click', '.btn_update', function(){  
+        var id=$(this).data("id9");  
+            window.location.href ="http://localhost/dashboard/A_Updated_Home/JobBuddy-v.2.0-master/vtc_update.php?id="+id;
            
           
     });  

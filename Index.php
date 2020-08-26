@@ -114,7 +114,7 @@
             <ul class="nav navbar-nav justify-content-end">
                 <li class="active"><a href="Index.php">Home</a></li>
                 <li><a href="VocationalTrainingCentres.php">Vocational Training Centres</a></li>
-                
+                <li><a href="Companies.php">Vocational Training Centres</a></li>
                 <li><a href="3AboutAll.php">About us</a></li>
                 <li><a href="4ContactAll.php">Contact</a></li>
 
@@ -189,6 +189,7 @@
   <a href="Q&A2.php" >Q&A</a>
   <a href="comment.php" >Comment</a>
   <a href="simpleComment.php" >simpleComment.php</a>
+  <a href="dashboard.php" >dashboard.php</a>
 
 <!-----------------------------------Zig zag ----------------------------------------------------------->
 

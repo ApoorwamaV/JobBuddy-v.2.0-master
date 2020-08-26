@@ -1,11 +1,16 @@
 <?php require_once('includes/connection.php'); ?>
+<?php require_once('includes/functions.php'); ?>
+<?php
+
+$vtcRegID=$_GET['id'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vocational Training Centres</title>
+    <title>Vocational Courses</title>
 
     <link rel="stylesheet" type="text/css" href="Lib.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -67,38 +72,6 @@
 
 </head>
 <body>
-<!--Background Slider Start-->
-<header>
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <!--<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>-->
-    </ol>
-    <div class="carousel-inner" role="listbox">
-      <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image: url('Images/WEB_2.jpg')">
-        <div class="carousel-caption d-none d-md-block">
-        </div>
-      </div>
-      <!-- Slide Two - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('Images/WEB_1.jpg')">
-        <div class="carousel-caption d-none d-md-block">
-        </div>
-      </div>
-      </div>
-
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-  </div>
-</header>
-
 <div class="Navigation Bar">
     <nav class="navbar  navbar-expand-md navbar-default navbar-dark bg-dark">
         <div class="container-fluid">
@@ -118,7 +91,7 @@
           <div class="collapse navbar-collapse justify-content-end" id="barLink">
             <ul class="nav navbar-nav justify-content-end">
                 <li ><a href="Index.php">Home</a></li>
-                <li class="active"><a href="VocationalTrainingCentres.php">Vocational Training Centre</a></li>
+                <li class="active"><a href="VocationalTrainingCentres.php">Vocational Training Centres</a></li>
                 <li><a href="Companies.php">Company</a></li>
                 <li><a href="3AboutAll.php">About us</a></li>
                 <li><a href="4ContactAll.php">Contact</a></li>
@@ -178,34 +151,22 @@
     </div>
   </div>
 </div><br><br><br><br><br><br><br><br><br><br>
+                   
+<div class= "Parallex">
+  </div>
+  
 
-<div class="container">  
-            <br />  
-            
-			<br />
-			<div class="table-responsive" id="stuDetails">  
-            <h1>Vocational Trainig Centers Details Table</h1>
-				<span id="result"></span>
-				<div id="live_data"></div>                 
-			</div>  
-        </div>
-        
-  <?php     
-    include("includes/footer.php");
-?>
 
-</body>
-</html>
+
 <script>
-
-
 
 $(document).ready(function(){
     function fetch_data()  
     {  
         $.ajax({  
-            url:"VocationalTrainingCentres_handle.php",  
+            url:"VocationalTrainingCentres_Courses_handle.php",  
             method:"POST",  
+            
             success:function(data){  
 				$('#live_data').html(data);  
             }  
