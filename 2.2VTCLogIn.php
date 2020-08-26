@@ -18,9 +18,9 @@
 <section class="col-12 col-sm-6 col-md-3">
       <form class="form-container" action="loginVtc.php" method="post">
         <div class="form-group">
-          <label for="vtcID">Vocational Training Centre ID</label>
-          <input type="text" class="form-control" name="vtcID" id="vtcID" 
-                  aria-describedby="vtcID" placeholder="Enter Vocational Training Centre ID">
+          <label for="vtcRegId">Vocational Training Centre ID</label>
+          <input type="text" class="form-control" name="vtcRegId" id="vtcRegId" 
+                  aria-describedby="vtcRegId" placeholder="Enter Vocational Training Centre ID">
         </div>
         <div class="form-group">
           <label for="vtcPassword">Password</label>

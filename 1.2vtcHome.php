@@ -1,6 +1,46 @@
 <?php
    require_once('includes/connection.php');
-?>
+   require_once('includes/functions.php');?>
+
+<?php session_start();?>
+
+<?php echo $_SESSION['vtcRegId'];
+$vtcRegId= $_SESSION['vtcRegId']; 
+
+$sql="select * from vtcenters where vtcRegId='$vtcRegId'";
+
+/*
+$sql = "SELECT vtcenters.vtcName, vtcenters.district, 
+                vtcenters.contact_No, vtcenters.vtc_Email, 
+                vtcenters.dir_Designation, vtcenters.dir_fullName, 
+                coursedetails.CourseId,coursedetails.CourseName,                 
+                coursedetails.Duration, coursedetails.EduLevel, coursedetails.NVQ
+    FROM 
+                vtcenters
+    INNER JOIN 
+                coursedetails   
+    ON
+    coursedetails.vtcRegID=vtcenters.vtcRegID WHERE coursedetails.vtcRegID='$vtcRegId' vtcenters.vtcRegID='$vtcRegId' " ;*/
+
+$result=mysqli_query($connection,$sql);
+$result1=$result->fetch_object();
+/*
+SELECT * FROM `vtcenters` WHERE 1`ID`, `vtcName`, `vtcRegID`, `district`, `contact_No`, `vtc_Email`, `vtcAddress`,
+ `dir_Designation`, `passwordVtc`, `dir_firstName`, `dir_lastName`, `dir_fullName`, 
+ `dir_initialName`, `dir_NIC`, `certificete`, `courses`
+*/
+$vtcName=$result1->vtcName;
+$district=$result1->district;
+$contact_No=$result1->contact_No;
+$vtc_Email=$result1->vtc_Email;
+$dir_Designation=$result1->dir_Designation;
+$dir_fullName=$result1->dir_fullName;/*
+$CourseId=$result1->CourseId;
+$CourseName=$result1->CourseName;
+$Duration=$result1->Duration;
+$EduLevel=$result1->EduLevel;
+$NVQ=$result1->NVQ;*/
+isset($_POST['vtcRegID'])?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -68,6 +108,15 @@ if(isset($_POST['but_logout'])){
     header('Location: Index.php');
 }
 ?>
+<!--VTC Name-->
+<nav class="navbar navbar-expand-sm navbar-default navbar-dark bg-dark">
+<h1>
+  <div class= "Username" Style="color:white">
+<?php echo $vtcName; ?>
+</div>
+</h1>
+</nav>
+<!----------------------------------------------------------------------------------------------Nav Bar----------------------------------------------------->
 <div class="Navigation Bar">
     <nav class="navbar navbar-expand-sm navbar-default navbar-dark bg-dark">
         <div class="container-fluid">
@@ -120,36 +169,36 @@ if(isset($_POST['but_logout'])){
 
   <div class="bg-image img1"></div>
 
+  <section class="row justify-content-center">
+<section class="col-12 col-sm-12 col-md-12">
+<div class="form-row col-12 col-md-12 col-sm-12 justify-content-center">  
+  <div class="form-group col-md-2"> <a href="#stuDetails">
+    <img src="Images/user.png" alt="User Profile" width="80" height="80"> <p>User Profile</p></a>
+  </div>
+  <div class="form-group col-md-2"><a href="course_search.php">
+    <img src="Images/school.png" alt="Search for Courses"  width="80" height="80"> <p>Search Courses</p></a>
+  </div>
+  <div class="form-group col-md-2"> <a href="course_search.php">
+    <img src="Images/teacher.png" alt="Vocational Training Courses" width="80" height="80"> <p>Vocational Training Centres</p></a>
+  </div>
+  <div class="form-group col-md-2"> <a href="course_search.php">
+    <img src="Images/company.png" alt="Company Details" width="80" height="80"> <p>Companies</p></a>
+  </div>
+  
+  <div class="form-group col-md-2"> <a href="course_search.php">
+    <img src="Images/update.png" alt="Update Profile" width="80" height="80"> <p>Update Profile</p></a>
+  </div>
+  <div class="form-group col-md-2"> <a href="course_search.php">
+    <img src="Images/delete.png" alt="Delete Profile" width="80" height="80"> <p>Delete Profile</p></a>
+  </div>
+  
+</section></section>
+
   <a href="./vtc_admin_panel.php"><i class="fa fa-fw fa-wrench"></i> View Courses</a>
 
   <a href="addvtcCourses.php"><i class="fa fa-fw fa-wrench"></i> Add Courses</a>
 
-  
 
-<!--
-  <section class="form-row col-12 col-md-12 col-sm-12">
-    <section class="form-group col-md-2">
-        <a href=""><img src="avatar.png" alt="Avatar" class="avatar"></a>
-    </section>
-  </section>-->
-
-  <!--<div class="Title" align="center">
-    <img src="WEB 2.jpg" alt="Job Buddy"  width="1520" height="768">
-  </div>-->
-  <button class="btn"><i class="fa fa-trash"></i> Trash</button>
-<!-- The sidebar 
-<div class="sidebar">
-  <a href="#clients"><i class="fa fa-fw fa-user"></i> User Details </a>
-  <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
-  <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
-  <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-  <a href="#contact"><i class="fa fa-fw fa-trash"></i> Contact</a>
-  <li>
-          <form method='post' action="">
-            <button class="btn btn-danger" type="submit" name="but_logout">Logout</button>
-          </form>
-      </li>
-</div>-->
 <!--Image as a link-->
 <div class="form-group col-12 col-md-12 col-sm-12">
   <div class="form-row col-md-4">
@@ -171,10 +220,11 @@ if(isset($_POST['but_logout'])){
 
 <!-- Add social media icons -->
 
-<br><br>
- <section class="row justify-content-center">
+<br>
+<span>
+ <section class=" justify-content-center" id="contact">
 <section class="col-12 col-sm-12 col-md-12">
-<div class="form-row col-12 col-md-12 col-sm-12 justify-content-center">  
+<div class="form-row col-12 col-md-12 col-sm-12 justify-content-center bg-dark">  
   <div class="form-group col-md-2 justify-content-center"> <a href="#">
     <img src="Images/location.png" alt="Location" width="50" height="50"> <p class="justify-content-center">Kalagedihena, <br>Nittambuwa,<br>Sri Lanka.</p></a>
   </div>
@@ -193,13 +243,13 @@ if(isset($_POST['but_logout'])){
   <div class="form-group col-md-2 justify-content-center"> <a href="https://www.youtube.com/channel/UCzh1By4MZccb8SsgAlvyFSA">
     <img src="Images/youtube.png" alt="Youtube" width="50" height="50"> <p class="justify-content-center">JOBBuddy Career</p></a>
   </div>
-  </section></section>
+  </section></section> </span>
 <!--<img src="success-at-SHL-tests.jpg" alt="JobBuddy" width="2000px" height="1085px"><!-- alt="Mountain View" style="width:304px;height:228px;">-->
 
  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-</body>   
+ 
 </body>
 </html>
