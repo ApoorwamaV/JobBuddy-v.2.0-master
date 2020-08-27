@@ -2,11 +2,11 @@
 
 //require_once('includes/connection.php'); 
 $connect = new PDO('mysql:host=localhost;dbname=jobbuddy', 'root', '');
-/*
+
 $ParentPostID = $_POST['ParentPostID'];
  $Post_Content = $_POST['Post_Content'];
  $PostAuthor =$_POST['PostAuthor'];
-*/
+
 
 $error = '';
 $PostAuthor = '';
@@ -39,7 +39,7 @@ if($error == '')
  $statement = $connect->prepare($query);
  $statement->execute(
   array(
-   '$ParentPostID' => $_POST["PostID"],
+   '$ParentPostID' => $ParentPostID,
    '$Post_Content'    => $Post_Content,
    '$PostAuthor' => $PostAuthor
   )

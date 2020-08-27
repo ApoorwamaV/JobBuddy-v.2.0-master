@@ -193,6 +193,7 @@ $(document).ready(function(){
      load_comment();
     }
    }
+   
   })
  });
 
@@ -208,6 +209,7 @@ $(document).ready(function(){
     $('#display_comment').html(data);
    }
   })
+ 
  };
 
  $(document).on('click', '.reply', function(){
@@ -217,6 +219,8 @@ $(document).ready(function(){
  });
  
 });
+
+
 </script>
 
 

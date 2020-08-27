@@ -21,9 +21,7 @@ coursedetails.vtcRegID=vtcenters.vtcRegID";
                 <tr>  
                      <th width="10%">Course ID</th>  
                      <th width="20%">Course Name</th>
-                     <th width="10%">Vocational Training Centre ID</th>
-                     <th width="30%">Vocational Training Centre Name</th>
-                     <th width="10%">District</th>
+                     
                      <th width="10%">Duration</th>
                      <th width="20%">Edulevel</th>                     
                      <th width="20%">Action</th>

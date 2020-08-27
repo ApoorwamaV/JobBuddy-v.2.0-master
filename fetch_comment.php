@@ -1,6 +1,6 @@
 <?php
  //require_once('includes/connection.php'); 
-echo "fetch";
+//echo "fetch";
  $connect = new PDO('mysql:host=localhost;dbname=jobbuddy', 'root', '');
 //Get all comments
  $query = "SELECT * FROM posts 
