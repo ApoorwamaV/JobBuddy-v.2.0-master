@@ -151,7 +151,10 @@ $vtcRegID=$_GET['id'];
     </div>
   </div>
 </div><br><br><br><br><br><br><br><br><br><br>
-                   
+<!--History Manage-->
+<?php     
+      include("includes/historyManage.php");
+    ?>                   
 <div class= "Parallex">
   </div>
   

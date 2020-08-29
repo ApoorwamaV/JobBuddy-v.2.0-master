@@ -17,6 +17,10 @@
 
 </head>
 <body>
+  <!--History Manage-->
+  <?php     
+      include("includes/historyManage.php");
+    ?>
 <!--Page Body-->
     <img src="Stu Reg.jpg" alt="Student Registration"  width="1550" height="768">
   

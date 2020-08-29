@@ -22,13 +22,11 @@
     <title>Courses Data Admin Panel</title>
 </head>
 <body>
-
-<div class="icon-bar">
-  <a class="active" href="Index.php"><i class="fa fa-home"></i></a>
-  <a href="#"><i class="fa fa-search"></i></a>
-  <a href="#"><i class="fa fa-trash"></i></a>
-</div>
-<a href="Index.php" class="previous round">&#8249;</a>
+<!--History Manage-->
+<?php     
+      include("includes/historyManage.php");
+    ?>
+    
 <div class="container">  
             <br />  
             <br />

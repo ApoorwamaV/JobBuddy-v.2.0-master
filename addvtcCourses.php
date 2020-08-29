@@ -20,6 +20,11 @@
 
 <body>
 
+<!--History Manage-->
+<?php     
+      include("includes/historyManage.php");
+    ?>
+
 <div class="form-row col-12 col-md-12 col-sm-12">
 
 <section class="container-fluid  bg">

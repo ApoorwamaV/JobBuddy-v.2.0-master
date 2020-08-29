@@ -11,6 +11,10 @@
     <link rel="javascript" href="js/bootstrap.js">
 </head>
 <body> 
+  <!--History Manage-->
+  <?php     
+      include("includes/historyManage.php");
+    ?>
 <!--Page Body-->
 
 <!--Login Form-->

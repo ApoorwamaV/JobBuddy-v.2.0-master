@@ -119,7 +119,11 @@ if(isset($_POST['but_logout'])){
   
 </section></section>
 
-  
+<!--History Manage-->
+<?php     
+      include("includes/historyManage.php");
+    ?> 
+
 <section class="container-fluid">
     <section class="row ">
     <section class="col-12 col-sm-12 col-md-12">

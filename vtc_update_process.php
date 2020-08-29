@@ -2,7 +2,19 @@
 <?php require_once('includes/functions.php'); ?>
 
 <?php
- $query = "UPDATE vtcenters SET vtcRegID='".$_POST['vtcRegID']."',vtcName='".$_POST['vtcName']."',district='".$_POST['district']."',contact_No='".$_POST['contact_No']."',vtc_Email='".$_POST['email_VTC']."',dir_Designation='".$_POST['dir_Designation']."',vtcAddress='".$_POST['vtcAddress']."',dir_firstName='".$_POST['dir_firstName']."',dir_lastName='".$_POST['dir_lastName']."',dir_fullName='".$_POST['dir_fullName']."',dir_initialName='".$_POST['dir_initialName']."',dir_NIC='".$_POST['dir_NIC']."' WHERE vtcRegID='".$_POST['vtcRegID']."'";
+ $query = "UPDATE vtcenters SET vtcRegID='".$_POST['vtcRegID']."',
+                                vtcName='".$_POST['vtcName']."',
+                                district='".$_POST['district']."',
+                                contact_No='".$_POST['contact_No']."',
+                                vtc_Email='".$_POST['email_VTC']."',
+                                dir_Designation='".$_POST['dir_Designation']."',
+                                vtcAddress='".$_POST['vtcAddress']."',
+                                dir_firstName='".$_POST['dir_firstName']."',
+                                dir_lastName='".$_POST['dir_lastName']."',
+                                dir_fullName='".$_POST['dir_fullName']."',
+                                dir_initialName='".$_POST['dir_initialName']."',
+                                dir_NIC='".$_POST['dir_NIC']."' 
+                                WHERE vtcRegID='".$_POST['vtcRegID']."'";
  mysqli_query($connection,$query);
 // echo "Company Details Upadated Successfully..!";
  $result = mysqli_query($connection,$query); 

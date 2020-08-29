@@ -24,13 +24,13 @@ $row= mysqli_fetch_array($result);
 </head>
 <body>
 <!--Page Body-->
-    <img src="Stu Reg.jpg" alt="Student Registration"  width="1550" height="768">
-  
+<img id="stuRegImg" src="Stu Reg.jpg" alt="Student Registration"  width="1550"><br><br><br>
+    
 <!--Student Register Form-->
 <section class="container-fluid">
     <section class="row justify-content-center">
     <section class="col-12 col-sm-6 col-md-10">
-    <form class="form-container justify-content-center col-12 col-sm-6 col-md-10 " method="post" action="Reg_Student.php" enctype="multipart/form-data">
+    <form class="form-container justify-content-center col-12 col-sm-6 col-md-10 " method="post" action="stu_update_process.php" enctype="multipart/form-data">
     <form class="stuReg">
 <!-------------------------------------Row 01------------------------------------------------>
     <div class="form-row col-12 col-md-12 col-sm-12">
@@ -78,6 +78,7 @@ $row= mysqli_fetch_array($result);
             <label for="inputEmailStu">Email</label>
             <input type="email" class="form-control" name="inputEmailStu" value="<?php echo $row['EmailStu']; ?>" placeholder="prathiba@email.com">
         </div>
+  
 
 </div>
 <!-------------------------------------Row 05------------------------------------------------>

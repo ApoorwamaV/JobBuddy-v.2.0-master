@@ -29,6 +29,10 @@ if(isset($_POST['but_logout'])){
     header('Location: Index.php');
 }
 ?>
+<!--History Manage-->
+<?php     
+      include("includes/historyManage.php");
+    ?>
 <div class="Navigation Bar">
     <nav class="navbar navbar-expand-sm navbar-default navbar-dark bg-dark">
         <div class="container-fluid">

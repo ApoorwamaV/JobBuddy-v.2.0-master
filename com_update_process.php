@@ -7,11 +7,11 @@
  //echo "Company Details Upadated Successfully..!";
  $result = mysqli_query($connection,$query); 
  if($result){
-    echo "<script type='text/javascript'>alert('Vocational Training Center Details Updated Successfully..');</script>"; 
+    echo "<script type='text/javascript'>alert('Company Details Updated Successfully..');</script>"; 
     
  echo "<script>
  window.setTimeout(function() {
-     window.location = 'vtc_admin_panel.php';
+     window.location = 'com_admin_panel.php';
    }, 500);
  </script>"  ;
  exit();  

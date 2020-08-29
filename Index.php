@@ -114,7 +114,7 @@
             <ul class="nav navbar-nav justify-content-end">
                 <li class="active"><a href="Index.php">Home</a></li>
                 <li><a href="VocationalTrainingCentres.php">Vocational Training Centres</a></li>
-                <li><a href="Companies.php">Vocational Training Centres</a></li>
+                <li><a href="Companies.php">Companies</a></li>
                 <li><a href="3AboutAll.php">About us</a></li>
                 <li><a href="4ContactAll.php">Contact</a></li>
 
@@ -139,11 +139,7 @@
                     <li><a href="./adminLogIn.php">Administrator</a></li>
               </ul>
               </li>
-<!--Search-->
-      <form class="form-inline" action="/action_page.php">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-success" type="submit">Search</button>
-      </form>
+
 </ul>
 </div>
 </nav>  

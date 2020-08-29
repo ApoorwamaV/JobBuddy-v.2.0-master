@@ -30,9 +30,13 @@
 <div class="watapita">
     <img id="stuRegImg" src="Stu Reg.jpg" alt="Student Registration"  width="1550"><br><br><br>
     <div style="background: url(image/197798-Ireland-trees-green-road-grass-street-fence-shrubs-summer-nature-landscape-hedges-748x474.jpg)" class="page-holder bg-cover">
-    <a href="Index.php" class="previous round">&#8249;</a>
-    <a href="#" class="next round">&#8250;</a>
-    <button class="btn"><i class="fa fa-close"></i> Close</button>
+   
+
+ <!--History Manage-->
+    <?php     
+      include("includes/historyManage.php");
+    ?>
+  
   <!--Page Content-->
   <div>
     <div class="form-row col-12 col-md-12 col-sm-12" >

@@ -179,6 +179,11 @@
   </div>
 </div><br><br><br><br><br><br><br><br><br><br>
 
+<!--History Manage-->
+<?php     
+      include("includes/historyManage.php");
+    ?>
+
 <div class="container">  
             <br />  
             

@@ -16,13 +16,13 @@
                               districtStu='".$_POST['inputDistrictStu']."',
                               contactNoStu='".$_POST['inputContactNoStu']."',
                               eduLevelStu='".$_POST['edu']."',
-                              softCopy='".$_POST['dir_initialName']."',
+                              softCopy='".$_POST['id_copy']."'
                               WHERE NICStu='".$_POST['inputNICStu']."'";
  mysqli_query($connection,$query);
- //echo "Company Details Upadated Successfully..!";
+ 
  $result = mysqli_query($connection,$query); 
  if($result){
-    echo "<script type='text/javascript'>alert('Vocational Training Center Details Updated Successfully..');</script>"; 
+    echo "<script type='text/javascript'>alert('Student Details Updated Successfully..');</script>"; 
     
  echo "<script>
  window.setTimeout(function() {

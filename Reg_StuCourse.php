@@ -82,13 +82,6 @@ if(isset($_POST['but_logout'])){
       <li><a href="3AboutAll.php">About us</a></li>
       <li><a href="4ContactAll.php">Contact</a></li>
 
-<!--Search-->
-      <li>
-      <form class="form-inline" action="/action_page.php">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-success" type="submit">Search</button>
-      </form>
-</li> 
 
 <!--Logout-->
 <li>
@@ -116,6 +109,11 @@ if(isset($_POST['but_logout'])){
   <a href="course_search.php"><i class="fa fa-fw fa-wrench"></i> Add Courses</a>
   <a href="courses_admin_panel_copy.php.php"><i class="fa fa-fw fa-wrench"></i> Add Courses admin wage</a>
   
+  <!--History Manage-->
+  <?php     
+      include("includes/historyManage.php");
+    ?>
+
   <section class="container-fluid">
     <section class="row justify-content-center">
     <section class="col-12 col-sm-6 col-md-10">

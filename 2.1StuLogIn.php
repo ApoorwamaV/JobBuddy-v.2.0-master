@@ -19,7 +19,10 @@
 </head>
 <body> 
 <!--Page Body-->
-
+<!--History Manage-->
+<?php     
+      include("includes/historyManage.php");
+    ?>
 <!--Login Form-->
 <section class="container-fluid bg">
   <section class="row justify-content-center">

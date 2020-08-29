@@ -103,6 +103,11 @@
           </div>          
   </div>
 
+  <!--History Manage-->
+  <?php     
+      include("includes/historyManage.php");
+    ?>
+    
   <div class="para">
   <div class="container-fluid">
     <h1> අප පිළිබඳව </h1>

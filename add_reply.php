@@ -1,5 +1,5 @@
 <?php
-
+echo "HI";
 //require_once('includes/connection.php'); 
 $connect = new PDO('mysql:host=localhost;dbname=jobbuddy', 'root', '');
 

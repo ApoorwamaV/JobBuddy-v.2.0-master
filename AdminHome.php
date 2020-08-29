@@ -101,13 +101,6 @@ if(isset($_POST['but_logout'])){
         </ul>
       </li>
 
-<!--Search-->
-      <li>
-      <form class="form-inline" action="/action_page.php">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-success bg-success" type="submit">Search</button>
-      </form>
-      </li> 
 <!--Logout-->
       <li>
           <form method='post' action="">
@@ -156,6 +149,10 @@ if(isset($_POST['but_logout'])){
   </div>
 </section>
 </section>
+<!--History Manage-->
+<?php     
+      include("includes/historyManage.php");
+    ?>
 <!------------------------------Layout-------------------------------------------->
 
 
