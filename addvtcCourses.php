@@ -1,6 +1,27 @@
 <?php require_once('includes/connection.php'); ?>
 <?php require_once('includes/functions.php'); ?>
 
+<?php session_start();?>
+
+<?php echo $_SESSION['vtcRegId'];
+$vtcRegId= $_SESSION['vtcRegId']; 
+
+$sql="select * from vtcenters where vtcRegId='$vtcRegId'";
+
+$result=mysqli_query($connection,$sql);
+$result1=$result->fetch_object();
+
+$vtcName=$result1->vtcName;
+$district=$result1->district;
+$contact_No=$result1->contact_No;
+$vtc_Email=$result1->vtc_Email;
+$dir_Designation=$result1->dir_Designation;
+$dir_fullName=$result1->dir_fullName;
+
+isset($_POST['vtcRegID']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
