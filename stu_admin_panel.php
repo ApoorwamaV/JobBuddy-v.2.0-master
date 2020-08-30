@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Profile</title>
-
-    <link rel="stylesheet" type="text/css" href="Lib.css">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+    <link rel="javascript" href="dashboard.js">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="javascript" href="js/bootstrap.js">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
@@ -58,109 +58,13 @@
 </style>
 
 </head>
-<body>
-<?php
-//logout
-if(isset($_POST['but_logout'])){
-    session_destroy();
-    header('Location: Index.php');
-}
-?>
 
-<div class="Navigation Bar">
-<nav class="navbar navbar-expand-sm navbar-default navbar-dark bg-dark">
-<div class="container-fluid">
-  <div class="navbar-header">
-      <a class="navbar-brand" href="#">Job Buddy</a>
-  </div>
-<!--logo-->
-  <a class="navbar-brand" href="#">
-    <img src="LOGO.jpg" alt="logo" style="width:100px;">
-  </a>     
-<!--Creating toggle-->
-  <button class="navbar-toggler" data-toggle="collapse" data-target="#barLink"> <!--# for a id-->
-    <span class="navbar-toggler-icon">
-      </span>
-  </button>
-  <div class="collapse navbar-collapse " id="barLink">
-    <ul class="nav navbar-nav justify-content-end">
-      <li class="active"><a href="1.2StuHome.php" >Home</a></li>
-      <li><a href="#">I want to know more about </a></li>
-      <li><a href="3AboutAll.php">About us</a></li>
-      <li><a href="4ContactAll.php">Contact</a></li>
-<!--Admin Panel-->
-      <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">User Details
-                  <span class="caret"></span>
-          </a>
-        <ul class="dropdown-menu">
-            <li><a href="./stu_admin_panel.php">Student Details</a></li>
-            <li><a href="./vtc_admin_panel.php">Vocational Training Centre Details</a></li>
-            <li><a href="./com_admin_panel.php">Company Details</a></li>
-            <li><a href="./courses_admin_panel.php">Courses Details</a></li>
-        </ul>
-      </li>
-
-<!--Logout-->
-      <li>
-          <form method='post' action="">
-            <button class="btn btn-danger BG-DANGER" type="submit" name="but_logout">Logout</button>
-          </form>
-      </li>
-    </ul>
-  </div>
-</div>
-</nav> 
-</div>
-<!-- Language -->
-<div class="form-group col-md-5 justify-content-end"><br>
-  <div class="Lang justify-content-end" align="left">
-    <li class=btn><a href="Index.php"><button type="button" href class="btn btn-primary bg-primary btn-block">English</button></a></li>
-    <li class=btn><a href="sinhalaIndex.php"><button type="button" href class="btn btn-primary bg-primary  btn-block">සිංහල</button></a></li>
-    <li class=btn><a href="tamilIndex.php"><button type="button" href class="btn btn-primary bg-primary  btn-block">தமிழ்</button></a></li>
-  </div>
-</div>             
-                
-          
-  </div>
-
-  <div class="bg-image img1"></div>
-  <br><br>
- <section class="row justify-content-center">
-<section class="col-12 col-sm-12 col-md-12">
-<div class="form-row col-12 col-md-12 col-sm-12 justify-content-center">  
-  <div class="form-group col-md-2"> <a href="#">
-    <img src="Images/user.png" alt="User Profile" width="80" height="80"> <p>User Profile</p></a>
-  </div>
-  <div class="form-group col-md-2"><a href="#">
-    <img src="Images/campaign.png" alt="Search for Courses"  width="80" height="80"> <p>Q & A</p></a>
-  </div>
-  <div class="form-group col-md-2"> <a href="./stu_admin_panel.php">
-    <img src="Images/student.png" alt="Update Profile" width="80" height="80"> <p>Students</p></a>
-  </div>
-  <div class="form-group col-md-2"> <a href="./vtc_admin_panel.php">
-    <img src="Images/teacher.png" alt="Vocational Training Centres" width="80" height="80"> <p>Vocational Training Centres</p></a>
-  </div>
-  <div class="form-group col-md-2"> <a href="./com_admin_panel.php">
-    <img src="Images/company.png" alt="Company Details" width="80" height="80"> <p>Companies</p></a>
-  </div>
-  <div class="form-group col-md-2"> <a href="./courses_admin_panel.php">
-    <img src="Images/school.png" alt="Company Details" width="80" height="80"> <p>Vocational Training Courses</p></a>
-  </div>
-</section>
-</section>
-<!--History Manage-->
 <?php     
-      include("includes/historyManage.php");
-    ?>
-<!------------------------------Layout-------------------------------------------->
-
-<div class="icon-bar">
-  <a class="active" href="Index.php"><i class="fa fa-home"></i></a>
-  <a href="#"><i class="fa fa-search"></i></a>
-  <a href="#"><i class="fa fa-trash"></i></a>
-</div>
-<a href="Index.php" class="previous round">&#8249;</a>
+    include("includes/printHead.php");
+   
+    
+?>
+<div class="container-print">
 <div class="container">  
             <br />  
             <br />
@@ -170,7 +74,8 @@ if(isset($_POST['but_logout'])){
 				<span id="result"></span>
 				<div id="live_data"></div>                 
 			</div>  
-        </div>
+</div>
+</div>
 
 <!-- Add social media icons -->
 

@@ -163,17 +163,17 @@ if(isset($_POST['but_logout'])){
 <br>
 
 <div class="rowLayout">
+        <!------------------------------Manage Admins-------------------------------------------->
+
   <div class="columnLayout" style="background-color:black; color:white">
     <h2 style="font-size:24px">Manage Admins</h2>
-    <p>Some text..</p>
-    
             <button class="button" style="background-color:gray" >
-                  <a href="#" style="color:white">Register as a Student</a>
+                  <a href="#addadmin" style="color:white">Manage Admin</a>
             </button>
   </div>
+        <!------------------------------Manage Admins-------------------------------------------->
   <div class="columnLayout" style="background-color:black; color:white">
     <h2 style="font-size:24px">District vise Students</h2>
-    <p>Some text..</p>
             <button class="button" style="background-color:gray" >
                   <a href="reportStu.php" style="color:white">View Report</a>
             </button>
@@ -181,18 +181,19 @@ if(isset($_POST['but_logout'])){
 </div>
 
 <div class="rowLayout">
+        <!------------------------------Manage Admins-------------------------------------------->
+
   <div class="columnLayout" style="background-color:black; color:white">
     <h2 style="font-size:24px">District vise Vocational Training Centres</h2>
-    <p>Some text..</p>
             <button class="button" style="background-color:gray" >
                   <a href="reportVtc.php" style="color:white">View Report</a>
             </button>
   </div>
+        <!------------------------------Manage Admins-------------------------------------------->
   <div class="columnLayout" style="background-color:black; color:white">
-    <h2 style="font-size:24px">Column 4</h2>
-    <p>Some text..</p>
+    <h2 style="font-size:24px">Check Emails</h2>
             <button class="button" style="background-color:gray" >
-                  <a href="#" style="color:white">Register as a Student</a>
+                  <a href="https://mail.google.com/mail/u/3/?tab=wm&ogbl#inbox" style="color:white">Emails</a>
             </button>
   </div>
 </div>
@@ -235,7 +236,7 @@ for (var i = 0; i < btns.length; i++) {
   
 <!---------------------------------------------------Add new admin------------------------------------------------------->
 <div class="container-fluid">
-  <form class="bg-dark form-container col-12 col-md-12 col-sm-12 justify-content-center bg-dark" method="post" action="Reg_Admin.php" enctype="multipart/form-data">                  
+  <form class="bg-dark form-container col-12 col-md-12 col-sm-12 justify-content-center bg-dark" method="post" action="Reg_Admin.php" id="addadmin" enctype="multipart/form-data">                  
   <h1 class="aboutH1 " align="center" style="color:white"> Add Admin </h1>    
       <div class="form-row col-12 col-md-12 col-sm-12 bg-dark">  
             <div class="form-group col-md-6 justify-content-start bg-dark"><br>        

@@ -1,29 +1,70 @@
+<?php
+   require_once('includes/connection.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Profile</title>
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+    <link rel="javascript" href="dashboard.js">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="javascript" href="js/bootstrap.js">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
 
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!---------------------------------------------Add Column---------------------------------------------------->
+<style>
+* {
+  box-sizing: border-box;
+}
 
-        <!-- Add icon library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+/* Create two equal columns that floats next to each other */
+.columnLayout {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
 
-        
-    <title>Vocational Training Centers Admin Panel</title>
+/* Clear floats after the columns */
+.rowLayout:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the buttons */
+.btnLayout {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btnLayout:hover {
+  background-color: #ddd;
+}
+
+.btnLayout.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+
 </head>
-<body>
-<!--History Manage-->
-<?php     
-      include("includes/historyManage.php");
-    ?>
 
+<?php     
+    include("includes/printHead.php");
+   
+    
+?>
+<div class="container-print">
 <div class="container">  
             <br />  
             <br />
@@ -33,7 +74,7 @@
 				<span id="result"></span>
 				<div id="live_data"></div>                 
 			</div>  
-        </div>
+        </div></div>
         
 <!-- Add social media icons -->
 
