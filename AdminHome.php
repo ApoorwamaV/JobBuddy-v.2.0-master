@@ -172,20 +172,20 @@ if(isset($_POST['but_logout'])){
             </button>
   </div>
   <div class="columnLayout" style="background-color:black; color:white">
-    <h2 style="font-size:24px">Check Emails</h2>
+    <h2 style="font-size:24px">District vise Students</h2>
     <p>Some text..</p>
             <button class="button" style="background-color:gray" >
-                  <a href="#" style="color:white">Register as a Student</a>
+                  <a href="reportStu.php" style="color:white">View Report</a>
             </button>
   </div>
 </div>
 
 <div class="rowLayout">
   <div class="columnLayout" style="background-color:black; color:white">
-    <h2 style="font-size:24px">Generate Reports</h2>
+    <h2 style="font-size:24px">District vise Vocational Training Centres</h2>
     <p>Some text..</p>
             <button class="button" style="background-color:gray" >
-                  <a href="#" style="color:white">Register as a Student</a>
+                  <a href="reportVtc.php" style="color:white">View Report</a>
             </button>
   </div>
   <div class="columnLayout" style="background-color:black; color:white">
