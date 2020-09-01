@@ -1,24 +1,108 @@
-<?php require_once('includes/connection.php'); ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Joined Vocational Training Centres</title>
+<?php //require_once('includes/connection.php'); 
+$connection = new PDO('mysql:host=localhost;dbname=jobbuddy', 'root', '');
+echo "simpleComment";
+?>
 
-    <link rel="stylesheet" type="text/css" href="Lib.css">
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Q & A </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ 
+  <link rel="stylesheet" type="text/css" href="Lib.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="javascript" href="js/bootstrap.js">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
 
-    
-    <!-- Add icon library -->
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+
+ </head>
+
+
+ <body><!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Vocational Training Centers Admin Panel</title>
+    <title>Joined Companies</title>
 
     <style>
     .carousel-inner img {
@@ -117,12 +201,12 @@
 
           <div class="collapse navbar-collapse justify-content-end" id="barLink">
             <ul class="nav navbar-nav justify-content-end">
-                <li ><a href="Index.php">Home</a></li>
-                <li class="active"><a href="VocationalTrainingCentres.php">Vocational Training Centre</a></li>
-                <li><a href="Companies.php">Company</a></li>
-                <li><a href="viewComment.php">Q & A</a></li>
+                <li><a href="Index.php">Home</a></li>
+                <li><a href="VocationalTrainingCentres.php">Vocational Training Centres</a></li>
+                <li><a href="Companies.php">Companies</a></li>                
+                <li class="active"><a href="viewComment.php">Q & A</a></li>
                 <li><a href="3AboutAll.php">About us</a></li>
-                <li><a href="4ContactAll.php">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
 
 <!--Register-->
               <li class="dropdown">
@@ -145,16 +229,11 @@
                     <li><a href="./adminLogIn.php">Administrator</a></li>
               </ul>
               </li>
-<!--Search-->
-      <form class="form-inline" action="/action_page.php">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-success" type="submit">Search</button>
-      </form>
+
 </ul>
 </div>
 </nav>  
 </div>            
-        
 
 <div class="form-row col-12 col-md-12 col-sm-12 ">
 
@@ -178,55 +257,109 @@
       <li class=btn><a href="tamilIndex.php"><button type="button" href class="btn btn-primary btn-block">தமிழ்</button></a></li>
     </div>
   </div>
-</div><br><br><br><br><br><br><br><br><br><br>
+</div><br><br>
 
 <!--History Manage-->
 <?php     
       include("includes/historyManage.php");
     ?>
 
-<div class="container">  
-            <br />  
-            
-			<br />
-			<div class="table-responsive" id="stuDetails">  
-            <h1>Vocational Trainig Centers Details Table</h1>
-				<span id="result"></span>
-				<div id="live_data"></div>                 
-			</div>  
-        </div>
-        
-  <?php     
+
+  <br />
+  <div class="form-group col-md-7" >
+          
+<!------------------------------------Q & A ----------------------------------------->
+
+  <br />
+  <div class="container">
+ 
+   <span id="comment_message"></span>
+   <br />
+   <div id="display_comment"></div>
+  </div></div>
+  <br><br>
+
+  
+<?php     
     include("includes/footer.php");
 ?>
 
-</body>
+ </body>
+ 
 </html>
+
 <script>
 
-
-
 $(document).ready(function(){
-    function fetch_data()  
-    {  
-        $.ajax({  
-            url:"VocationalTrainingCentres_handle.php",  
-            method:"POST",  
-            success:function(data){  
-				$('#live_data').html(data);  
-            }  
-        });  
-    } 
-    
+  /*-----------------------------Add Comment-------------------------------------------------*/ 
+    $('#comment_form').on('submit', function(event){
+  event.preventDefault();
+  var form_data = $(this).serialize();
+  $.ajax({
+   url:"add_comment.php",
+   method:"POST",
+   data:form_data,
+   dataType:"JSON",
+   success:function(data)
+   {
+    if(data.error != '')
+    {
+     $('#comment_form')[0].reset();
+     $('#comment_message').html(data.error);
+     $('#PostID').val('0');
+     load_comment();
+    }
+   }
+   
+  })
+ });
+ /*-----------------------------Add Reply-------------------------------------------------*/
+ $('#reply_form').on('submit', function(event){
+  event.preventDefault();
+  var form_data = $(this).serialize();
+  $.ajax({
+   url:"add_reply.php",
+   method:"POST",
+   data:form_data,
+   dataType:"JSON",
+   success:function(data)
+   {
+    if(data.error != '')
+    {
+     $('#reply_form')[0].reset();
+     $('#comment_message').html(data.error);
+     $('#PostID').val('0');
+     load_comment();
+    }
+   }
+   
+  })
+ });
+
+ load_comment();
+/*-----------------------------Load Comment-------------------------------------------------*/
+ function load_comment()
+ {
+  $.ajax({
+   url:"viewComment_fetch.php",
+   method:"POST",
+   success:function(data)
+   {
+    $('#display_comment').html(data);
+   }
+  })
+ 
+ };
+
+ $(document).on('click', '.reply', function(){
+  var PostID = $(this).attr("id");
+  $('#ParentPostID').val(PostID);
+  $('#PostAuthor').focus();
+ });
+ 
+});
 
 
-fetch_data(); 
-    //Update
-    $(document).on('click', '.btn_show', function(){  
-        var id=$(this).data("id8");  
-            window.location.href ="http://localhost/dashboard/A_Updated_Home/JobBuddy-v.2.0-master/VocationalTrainingCentre_Courses.php?id="+id;
-           
-          
-    });  
-    });       
 </script>
+
+

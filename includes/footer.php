@@ -2,7 +2,7 @@
 <!-- Add social media icons -->
 <div class="col-12 col-sm-12 col-md-12 bg-dark">
     <div>        
-                <section class="row justify-content-center">
+                <section class="row justify-content-center" id="contact">
                     <section class="col-12 col-sm-12 col-md-12"> 
                         <div class="form-row col-12 col-md-12 col-sm-12 justify-content-start bg-dark">  
                             <div class="form-group col-md-2 justify-content-center"> <a href="#"><br><br>

@@ -18,7 +18,7 @@
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Vocational Training Centers Admin Panel</title>
+    <title>Joined Companies</title>
 
     <style>
     .carousel-inner img {
@@ -117,11 +117,12 @@
 
           <div class="collapse navbar-collapse justify-content-end" id="barLink">
             <ul class="nav navbar-nav justify-content-end">
-                <li class="active"><a href="Index.php">Home</a></li>
+                <li><a href="Index.php">Home</a></li>
                 <li><a href="VocationalTrainingCentres.php">Vocational Training Centres</a></li>
-                
+                <li  class="active"><a href="Companies.php">Companies</a></li>
+                <li><a href="viewComment.php">Q & A</a></li>
                 <li><a href="3AboutAll.php">About us</a></li>
-                <li><a href="4ContactAll.php">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
 
 <!--Register-->
               <li class="dropdown">
@@ -150,11 +151,6 @@
 </nav>  
 </div>            
 
-<!--History Manage-->
-<?php     
-      include("includes/historyManage.php");
-    ?>
-
 <div class="form-row col-12 col-md-12 col-sm-12 ">
 
   <div class="form-group col-md-7 justify-content-start "><br>
@@ -177,14 +173,21 @@
       <li class=btn><a href="tamilIndex.php"><button type="button" href class="btn btn-primary btn-block">தமிழ்</button></a></li>
     </div>
   </div>
-</div><br><br><br><br><br><br><br><br><br><br>
+</div><br><br>
+
+<!--History Manage-->
+<?php     
+      include("includes/historyManage.php");
+    ?>
+    
+    <br><br><br><br><br><br><br><br>
 
 <div class="container">  
             <br />  
             
 			<br />
 			<div class="table-responsive" id="stuDetails">  
-            <h1>Vocational Trainig Centers Details Table</h1>
+            <h1>Company Data</h1>
 				<span id="result"></span>
 				<div id="live_data"></div>                 
 			</div>  
@@ -204,7 +207,7 @@ $(document).ready(function(){
     function fetch_data()  
     {  
         $.ajax({  
-            url:"VocationalTrainingCentres_handle.php",  
+            url:"Companies_handle.php",  
             method:"POST",  
             success:function(data){  
 				$('#live_data').html(data);  

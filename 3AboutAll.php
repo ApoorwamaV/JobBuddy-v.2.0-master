@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About Us</title>
+    <title>About All</title>
 
     <link rel="stylesheet" type="text/css" href="Lib.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -17,14 +17,85 @@
     
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }</style>
+  <style>
+* {
+  box-sizing: border-box;
+}
 
+.container {
+  padding: 64px;
+}
 
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+/* 2/3 column */
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+/* 1/3 column */
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+/* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+}
+</style>
 </head>
 <body>
 <!--Background Slider Start-->
 <header>
-<div class="bg-image img3"></div>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <!--<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>-->
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <!-- Slide One - Set the background image for this slide in the line below -->
+      <div class="carousel-item active" style="background-image: url('Images/WEB_2.jpg')">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+      <!-- Slide Two - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url('Images/WEB_1.jpg')">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+      </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+  </div>
 </header>
+
+<!---------------------------------------------------Nav Bar------------------------------>
 <div class="Navigation Bar">
     <nav class="navbar navbar-expand-sm navbar-default navbar-dark bg-dark">
         <div class="container-fluid">
@@ -43,11 +114,12 @@
           </button>
           <div class="collapse navbar-collapse justify-content-center" id="barLink">
             <ul class="nav navbar-nav justify-content-end">
-                <li class="active"><a href="Index.php">Home</a></li>
-                <li><a href="#">Vocational Training Centres</a></li>
-                
-                <li><a href="3AboutAll.php">About us</a></li>
-                <li><a href="4ContactAll.php">Contact</a></li>
+                <li><a href="Index.php">Home</a></li>
+                <li><a href="VocationalTrainingCentres.php">Vocational Training Centres</a></li>
+                <li><a href="Companies.php">Companies</a></li>
+                <li><a href="viewComment.php">Q & A</a></li>
+                <li  class="active"><a href="3AboutAll.php">About us</a></li>
+                <li><a href="#contact">Contact</a></li>
 
 
 </ul>
@@ -64,10 +136,7 @@
     </div>
           </div>          
   </div>
-  <!--History Manage-->
-  <?php     
-      include("includes/historyManage.php");
-    ?>
+  
 
   <div class="para">
   <div class="container-fluid">
@@ -79,58 +148,29 @@ and job opportunities and students can identify the opportunities and register.<
   </div>  
   </div>
 
+<!--History Manage-->
+<?php     
+      include("includes/historyManage.php");
+    ?>
+
+<br><br>
   
   <div class= "Parallex">
   </div>
   <form class="container">
-<h1>Agreement Form</h1>
-<h2>For Students</h2>
-<h2>For Vocational Training Centres</h2>
-<h2>For Organizations</h2>
-</form>
-  <!--
-  <button class="btn"><i class="fa fa-home"></i> Home</button>
-<button class="btn"><i class="fa fa-bars"></i> Menu</button>
-<button class="btn"><i class="fa fa-trash"></i> Trash</button>
-<button class="btn"><i class="fa fa-close"></i> Close</button>
-<button class="btn"><i class="fa fa-folder"></i> Folder</button>
-
-
+      <h1>Agreement Form</h1> 
+      <?php     
+      include("includes/StuSidedownbar.php");
+    ?>
+      <h2>For Students</h2>
+      <h2>For Vocational Training Centres</h2>
+      <h2>For Organizations</h2>
+  </form>
   
-<div class="bg-image img2"></div>
-<div class="bg-image img3"></div>
-<div class="bg-image img4"></div>
-<div class="bg-image img5"></div>
-  </div>   -->
-  <a href="1.2StuHome.php" >StuHome</a>
-  <a href="1.2vtcHome.php" >vtcHome</a>
-  <a href="course_search_index.php" >Course search</a>
 
-<!-- Add social media icons -->
-
-<br><br>
- <section class="row justify-content-center">
-<section class="col-12 col-sm-12 col-md-12">
-<div class="form-row col-12 col-md-12 col-sm-12 justify-content-center">  
-  <div class="form-group col-md-2 justify-content-center"> <a href="#">
-    <img src="Images/location.png" alt="Location" width="50" height="50"> <p class="justify-content-center">Kalagedihena, <br>Nittambuwa,<br>Sri Lanka.</p></a>
-  </div>
-  <div class="form-group col-md-2 justify-content-center"> <a href="#">
-    <img src="Images/call.png" alt="Contact Number" width="50" height="50"> <p class="justify-content-center">+94 70 588 2716</p></a>
-  </div>
-  <div class="form-group col-md-2 justify-content-center"> <a href="https://www.facebook.com/106660131113039?referrer=whatsapp">
-    <img src="Images/facebook.png" alt="Facebook" width="50" height="50"> <p class="justify-content-center">JOBBuddy Career</p></a>
-  </div>
-  <div class="form-group col-md-2 justify-content-center"><a href="mailto:jobbuddycareer@gmail.com">
-    <img src="Images/gmail.png" alt="Gmail"  width="50" height="50"> <p class="justify-content-center">jobbuddycareer@gmail.com</p></a>
-  </div>
-  <div class="form-group col-md-2 justify-content-center"> <a href="#">
-    <img src="Images/whatsapp.png" alt="Whatsapp" width="50" height="50"> <p class="justify-content-center">+94 70 588 2716</p></a>
-  </div>
-  <div class="form-group col-md-2 justify-content-center"> <a href="https://www.youtube.com/channel/UCzh1By4MZccb8SsgAlvyFSA">
-    <img src="Images/youtube.png" alt="Youtube" width="50" height="50"> <p class="justify-content-center">JOBBuddy Career</p></a>
-  </div>
-  </section></section>
+  <?php     
+    include("includes/footer.php");
+?>
 <!--<img src="success-at-SHL-tests.jpg" alt="JobBuddy" width="2000px" height="1085px"><!-- alt="Mountain View" style="width:304px;height:228px;">-->
 
  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

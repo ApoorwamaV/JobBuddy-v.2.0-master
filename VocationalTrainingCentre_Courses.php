@@ -1,8 +1,13 @@
 <?php require_once('includes/connection.php'); ?>
 <?php require_once('includes/functions.php'); ?>
+<?php session_start();
+      //Put session start at the beginning of the file
+      
+?>
 <?php
 
 $vtcRegID=$_GET['id'];
+$_SESSION['vtcRegID'] = $_GET['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +28,7 @@ $vtcRegID=$_GET['id'];
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Vocational Training Centers Admin Panel</title>
+    <title>Courses</title>
 
     <style>
     .carousel-inner img {
@@ -72,6 +77,25 @@ $vtcRegID=$_GET['id'];
 
 </head>
 <body>
+
+<?php
+      echo $_GET['id'];
+      $sql = "SELECT * FROM vtcenters  WHERE vtcRegID ='".$_GET['id']."' "; 
+      $result=mysqli_query($connection,$sql);
+      $result1=$result->fetch_object();
+      $vtcName=$result1->vtcName;
+      isset($_POST['vtcRegID'])
+    ?>     
+    <!--VTC Name-->
+    <nav class="navbar justify-content-center navbar-expand-sm navbar-default navbar-dark bg-dark">
+      <h1>
+        <div class= "Username" Style="color:white">
+          <?php echo $vtcName; ?>
+        </div>
+      </h1>
+    </nav>  
+
+
 <div class="Navigation Bar">
     <nav class="navbar  navbar-expand-md navbar-default navbar-dark bg-dark">
         <div class="container-fluid">
@@ -94,7 +118,7 @@ $vtcRegID=$_GET['id'];
                 <li class="active"><a href="VocationalTrainingCentres.php">Vocational Training Centres</a></li>
                 <li><a href="Companies.php">Company</a></li>
                 <li><a href="3AboutAll.php">About us</a></li>
-                <li><a href="4ContactAll.php">Contact</a></li>
+                <li><a href="#contact.php">Contact</a></li>
 
 <!--Register-->
               <li class="dropdown">
@@ -150,13 +174,27 @@ $vtcRegID=$_GET['id'];
       <li class=btn><a href="tamilIndex.php"><button type="button" href class="btn btn-primary btn-block">தமிழ்</button></a></li>
     </div>
   </div>
-</div><br><br><br><br><br><br><br><br><br><br>
+</div><br><br>
 <!--History Manage-->
 <?php     
-      include("includes/historyManage.php");
-    ?>                   
-<div class= "Parallex">
-  </div>
+      include("includes/historyManage.php");?>
+      
+      <br><br><br><br><br><br><br><br>
+            
+<div class="container">  
+            <br />  
+            
+			<br />
+			<div class="table-responsive" id="stuDetails">  
+            <h1>Courses Details Table</h1>
+				<span id="result"></span>
+				<div id="live_data"></div>                 
+			</div>  
+        </div>
+        
+  <?php     
+    include("includes/footer.php");
+?>
   
 
 

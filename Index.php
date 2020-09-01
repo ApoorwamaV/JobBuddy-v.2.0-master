@@ -115,8 +115,9 @@
                 <li class="active"><a href="Index.php">Home</a></li>
                 <li><a href="VocationalTrainingCentres.php">Vocational Training Centres</a></li>
                 <li><a href="Companies.php">Companies</a></li>
+                <li><a href="viewComment.php">Q & A</a></li>
                 <li><a href="3AboutAll.php">About us</a></li>
-                <li><a href="4ContactAll.php">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
 
 <!--Register-->
               <li class="dropdown">
@@ -270,6 +271,10 @@
 <div class= "Parallex">
 
 </div>
+<?php /*    
+    include("includes/sectionCounter.php");*/
+?>
+
 <?php     
     include("includes/footer.php");
 ?>
