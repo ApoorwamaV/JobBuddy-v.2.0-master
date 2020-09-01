@@ -1,4 +1,7 @@
 <?php require_once('includes/connection.php'); ?>
+
+<?php require_once('includes/nav.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -135,7 +138,7 @@
               </ul>
               </li>
 <!--Login-->
-              <li class="dropdown">
+<li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login
               <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -145,11 +148,6 @@
                     <li><a href="./adminLogIn.php">Administrator</a></li>
               </ul>
               </li>
-<!--Search-->
-      <form class="form-inline" action="/action_page.php">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-success" type="submit">Search</button>
-      </form>
 </ul>
 </div>
 </nav>  

@@ -3,64 +3,96 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  background-color: #f1f1f1;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#navbar {
-  background-color: #333;
-  position: fixed;
-  top: -50px;
-  width: 100%;
-  display: block;
-  transition: top 0.3s;
-}
-
-#navbar a {
+/* The grid: Three equal columns that floats next to each other */
+.column {
   float: left;
-  display: block;
-  color: #f2f2f2;
+  width: 33.33%;
+  padding: 50px;
   text-align: center;
-  padding: 15px;
-  text-decoration: none;
-  font-size: 17px;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
 }
 
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
+.containerTab {
+  padding: 20px;
+  color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
 }
 </style>
 </head>
 <body>
 
-<div id="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
+<div style="text-align:center">
+  <h2>Rules and Regulations for Users</h2>
+  <p>Click on the boxes:</p>
 </div>
 
-<div style="padding:15px 15px 2500px;font-size:30px">
-  <p><b>This example demonstrates how to slide down a navbar when the user starts to scroll the page.</b></p>
-  <p>Scroll down this frame to see the effect!</p>
-  <p>Scroll to the top to hide the navbar.</p>
-  <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<!-- Three columns -->
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:black;">
+    For Students
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:grey;">
+    For Vocational Training Centres
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:black;">
+    For Companies
+  </div>
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:black">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Rules and Regulations For Students</h2>
+  <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:grey">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Rules and Regulations For Vocational Training Centres</h2>
+  <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:black">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Rules and Regulations For Companies</h2>
+  <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
 </div>
 
 <script>
-// When the user scrolls down 20px from the top of the document, slide down the navbar
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
   }
+  document.getElementById(tabName).style.display = "block";
 }
 </script>
 
 </body>
-</html>
+</html> 

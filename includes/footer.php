@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="form-col col-4 col-md-4 col-sm-4 justify-content-start bg-dark"> 
-                        <h2 style="color:white; font-size: 16px;"> <Strong>  Register As A  </Strong> </h2>                            
+                        <h2 style="color:white; font-size: 16px;" id="register"> <Strong>  Register As A  </Strong> </h2>                            
                             <hr><a href="./1.1RegStu.php" style="color:white; font-family:Times New Roman; font-size: 16px;"><img src="Images/student.png" alt="Location" width="30" height="30"></n></n>Student</a></hr>
                             <hr><a href="./1.1RegVocationalCentre.php" style="color:white; font-family:Times New Roman; font-size: 16px;"><img src="Images/teacher.png" alt="Location" width="30" height="30"></n></n>Vocational Training Centre</a></hr>
                             <hr><a href="./1.1RegCompany.php" style="color:white; font-family:Times New Roman; font-size: 16px;"><img src="Images/company.png" alt="Location" width="30" height="30"></n></n>Organization</a></hr> 
@@ -49,7 +49,7 @@
                         </div>
                     
                         <div class="form-col col-4 col-md-4 col-sm-4 justify-content-start bg-dark"> 
-                        <h2 style="color:white; font-size: 16px;"> <Strong>  LogIn As A  </Strong> </h2>                            
+                        <h2 style="color:white; font-size: 16px;" id="login"> <Strong>  LogIn As A  </Strong> </h2>                            
                             <hr><a href="./2.1StuLogIn.php" style="color:white; font-family:Times New Roman; font-size: 16px;"><img src="Images/student.png" alt="Location" width="30" height="30"></n></n>Student</a></hr>
                             <hr><a href="./2.2VTCLogIn.php" style="color:white; font-family:Times New Roman; font-size: 16px;"><img src="Images/teacher.png" alt="Location" width="30" height="30"></n></n>Vocational Training Centre</a></hr>
                             <hr><a href="./2.3CompanyLogIn.php" style="color:white; font-family:Times New Roman; font-size: 16px;"><img src="Images/company.png" alt="Location" width="30" height="30"></n></n>Organization</a></hr>   

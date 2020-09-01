@@ -220,7 +220,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
               </li>
 <!--Login-->
               <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#login">Login
               <span class="caret"></span></a>
               <ul class="dropdown-menu">
                     <li><a href="./2.1StuLogIn.php">Student</a></li>
