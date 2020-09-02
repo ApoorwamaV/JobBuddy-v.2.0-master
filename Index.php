@@ -4,22 +4,7 @@
 <br><br><br><br><br><br><br><br><br><br>
                    
 <div class= "Parallex">
-  </div><!--
-  
-<div class="bg-image img2"></div>
-<div class="bg-image img3"></div>
-<div class="bg-image img4"></div>
-<div class="bg-image img5"></div>
-  </div>   -->
-  <a href="1.2StuHome.php" >StuHome</a>
-  <a href="1.2vtcHome.php" >vtcHome</a>
-  <a href="course_search_index.php" >Course search</a>
-  <a href="Q&A.php" >Q&A</a>
-  <a href="Q&A2.php" >Q&A</a>
-  <a href="comment.php" >Comment</a>
-  <a href="simpleComment.php" >simpleComment.php</a>
-  <a href="dashboard.php" >dashboard.php</a>
-
+  </div>
 <!-----------------------------------Zig zag ----------------------------------------------------------->
 
 <!-- Join With Us Section -->
