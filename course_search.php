@@ -76,7 +76,12 @@ if(isset($_POST['but_logout'])){
             <button class="btn btn-danger" type="submit" name="but_logout">Logout</button>
           </span>
 </li>
-<li><?php echo $fullNameStu; ?></li>
+
+<li> 
+    <div class= "Username" Style="color:white">
+        <?php echo $fullNameStu; ?>
+    </div>
+</li>
 
 </ul>
 </div>
@@ -241,8 +246,9 @@ $(document).ready(function(){
     
         $(document).on('click', '.btn_register', function(){  
         var id=$(this).data("id8");  
-            window.location.href ="http://localhost/dashboard/A_Updated_Home/JobBuddy-v.2.0-master/stu_update.php?id="+id;
+            window.location.href ="http://localhost/dashboard/A_Updated_Home/JobBuddy-v.2.0-master/Reg_StuCourse.php?id="+id;
             //C:\xampp\htdocs\dashboard\A_Updated_Home\JobBuddy-v.2.0-master
+            $_SESSION['CourseId'] = $_POST['CourseId'];
            
     }); 
 

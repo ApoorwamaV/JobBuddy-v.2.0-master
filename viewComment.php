@@ -208,7 +208,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                 <li><a href="3AboutAll.php">About us</a></li>
                 <li><a href="#contact">Contact</a></li>
 
-<!--Register-->
+<!--Register
               <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">Register
               <span class="caret"></span></a>
@@ -218,7 +218,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                     <li><a href="./1.1RegCompany.php">Company</a></li>
               </ul>
               </li>
-<!--Login-->
+<!--Login-
               <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#login">Login
               <span class="caret"></span></a>
@@ -229,7 +229,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                     <li><a href="./adminLogIn.php">Administrator</a></li>
               </ul>
               </li>
-
+-->
 </ul>
 </div>
 </nav>  

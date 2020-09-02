@@ -1,3 +1,26 @@
+<?php require_once('includes/connection.php'); 
+
+?>
+<!---------------------------------Bring User Name-------------------------------->
+<?php session_start();?>
+
+<?php echo $_SESSION['Stu_NIC'];
+$Stu_NIC= $_SESSION['Stu_NIC']; 
+
+$sql="select * from students where NICStu='$Stu_NIC'";
+$result=mysqli_query($connection,$sql);
+$result1=$result->fetch_object();
+
+$fullNameStu=$result1->fullNameStu;
+$EmailStu=$result1->EmailStu;
+$contactNoStu=$result1->contactNoStu;
+$eduLevelStu=$result1->eduLevelStu;
+$addressStu=$result1->addressStu;
+$districtStu=$result1->districtStu;
+$DOBStu=$result1->DOBStu;
+isset($_POST['Stu_NIC'])?>
+
+
 <?php/*  
 	$connect = mysqli_connect("localhost", "root", "", "jobbuddy");
 	$sql = "SELECT * FROM coursedetails WHERE CourseId = '".$_POST["id"]."'";  
@@ -8,22 +31,12 @@ echo $_SESSION['Stu_NIC'];
  ?>
  <?php require_once('includes/connection.php'); ?>
 <?php require_once('includes/functions.php'); ?>
- <?php
- $sql="SELECT * FROM students WHERE NICStu ='".$_POST['id']."'";
-$result = mysqli_query($connection,$sql);
-$row= mysqli_fetch_array($result);
+<?php
+  $_SESSION['vtcRegId'] = $_POST['vtcRegId'];
+$result2 = mysqli_query($connection,"SELECT * FROM coursedetails WHERE CourseId ='".$_GET['id']."'");
+$row= mysqli_fetch_array($result2);
 
-?>
-<?php  
-	$connect = mysqli_connect("localhost", "root", "", "jobbuddy");
-	$sql = "select * FROM coursedetails WHERE CourseId = '".$_POST["id"]."'";  
-    //echo $_POST["id"];
-    $result = mysqli_query($connection,$sql);
-    $row= mysqli_fetch_array($result);
-	if(mysqli_query($connect, $sql))  
-	{  
-		echo 'Data Deleted';  
-	}  
+echo $_GET['id'];
  ?>
  <!DOCTYPE html>
 <html lang="en">
@@ -60,6 +73,9 @@ if(isset($_POST['but_logout'])){
     header('Location: Index.php');
 }
 ?>
+<?php/
+}
+?>
 <div class="Navigation Bar">
     <nav class="navbar navbar-expand-sm navbar-default navbar-dark bg-dark">
         <div class="container-fluid">
@@ -75,19 +91,23 @@ if(isset($_POST['but_logout'])){
     <span class="navbar-toggler-icon">
     </span>
   </button>
-  <div class="collapse navbar-collapse justify-content-center" id="barLink">
-    <ul class="nav navbar-nav">
+  <div class="collapse navbar-collapse justify-content-end" id="barLink">
+    <ul class="nav navbar-nav justify-content-end">
       <li class="active"><a href="1.2StuHome.php" >Home</a></li>
-      <li><a href="#">I want to know more about </a></li>
+      <li><a href="simpleComment.php">Q & A </a></li>
       <li><a href="3AboutAll.php">About us</a></li>
-      <li><a href="4ContactAll.php">Contact</a></li>
-
+      <li><a href="#contact">Contact</a></li>
 
 <!--Logout-->
 <li>
           <span>
             <button class="btn btn-danger" type="submit" name="but_logout">Logout</button>
           </span>
+</li>
+<li> 
+    <div class= "Username" Style="color:white">
+        <?php echo $fullNameStu; ?>
+    </div>
 </li>
 
 </ul>
@@ -105,9 +125,6 @@ if(isset($_POST['but_logout'])){
   </div>
 
   <div class="bg-image img1"></div>
-
-  <a href="course_search.php"><i class="fa fa-fw fa-wrench"></i> Add Courses</a>
-  <a href="courses_admin_panel_copy.php.php"><i class="fa fa-fw fa-wrench"></i> Add Courses admin wage</a>
   
   <!--History Manage-->
   <?php     
@@ -148,11 +165,11 @@ if(isset($_POST['but_logout'])){
   
 		<div class="form-group col-md-6">
             <label for="NICStu">Student NIC Number</label>
-            <input type="text" class="form-control" name="NICStu" value="<?php echo $row['NICStu']; ?>" required>
+            <input type="text" class="form-control" name="NICStu" value="<?php echo $Stu_NIC; ?>" readonly>
         </div>
 		<div class="form-group col-md-6">
             <label for="fullNameStu">Student Full Name (English Capital Letters)</label>
-            <input type="text" class="form-control" name="fullNameStu" value="<?php echo $row['fullNameStu']; ?>" required>
+            <input type="text" class="form-control" name="fullNameStu" value="<?php echo  $fullNameStu; ?>" required>
         </div>
 	</div>
 <!-------------------------------------Row 04------------------------------------------------>
@@ -160,11 +177,11 @@ if(isset($_POST['but_logout'])){
   
   <div class="form-group col-md-6">
 	  <label for="contactNoStu">Student Contact Number</label>
-	  <input type="text" class="form-control" name="contactNoStu" value="<?php echo $row['contactNoStu']; ?>" required>
+	  <input type="text" class="form-control" name="contactNoStu" value="<?php echo $contactNoStu; ?>" required>
   </div>
   <div class="form-group col-md-6">
 	  <label for="EmailStu">Student Email Address</label>
-	  <input type="text" class="form-control" name="EmailStu" value="<?php echo $row['EmailStu']; ?>" required>
+	  <input type="text" class="form-control" name="EmailStu" value="<?php echo $EmailStu; ?>" required>
   </div>
 </div>
 

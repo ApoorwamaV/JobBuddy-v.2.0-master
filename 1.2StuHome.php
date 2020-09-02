@@ -75,17 +75,9 @@ if(isset($_POST['but_logout'])){
   <div class="collapse navbar-collapse justify-content-end" id="barLink">
     <ul class="nav navbar-nav justify-content-end">
       <li class="active"><a href="1.2StuHome.php" >Home</a></li>
-      <li><a href="simpleComment.php">I want to know more about </a></li>
+      <li><a href="simpleComment.php">Q & A </a></li>
       <li><a href="3AboutAll.php">About us</a></li>
       <li><a href="#contact">Contact</a></li>
-
-<!--Search-->
-      <li>
-      <form class="form-inline" action="/action_page.php">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-success" type="submit">Search</button>
-      </form>
-</li> 
 
 <!--Logout-->
 <li>
@@ -93,9 +85,10 @@ if(isset($_POST['but_logout'])){
             <button class="btn btn-danger" type="submit" name="but_logout">Logout</button>
           </span>
 </li>
-<li> <div class= "Username" Style="color:white">
-<?php echo $fullNameStu; ?>
-</div>
+<li> 
+    <div class= "Username" Style="color:white">
+        <?php echo $fullNameStu; ?>
+    </div>
 </li>
 
 </ul>

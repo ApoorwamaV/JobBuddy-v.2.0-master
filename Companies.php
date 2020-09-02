@@ -124,7 +124,7 @@
                 <li><a href="3AboutAll.php">About us</a></li>
                 <li><a href="#contact">Contact</a></li>
 
-<!--Register-->
+<!--Register
               <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">Register
               <span class="caret"></span></a>
@@ -134,7 +134,7 @@
                     <li><a href="./1.1RegCompany.php">Company</a></li>
               </ul>
               </li>
-<!--Login-->
+<!--Login
               <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login
               <span class="caret"></span></a>
@@ -144,7 +144,7 @@
                     <li><a href="./2.3CompanyLogIn.php">Company</a></li>
                     <li><a href="./adminLogIn.php">Administrator</a></li>
               </ul>
-              </li>
+              </li>-->
 
 </ul>
 </div>

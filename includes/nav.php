@@ -111,7 +111,7 @@
 
           <div class="collapse navbar-collapse justify-content-end" id="barLink">
             <ul class="nav navbar-nav justify-content-end">
-                <li class="active"><a href="Index.php">Home</a></li>
+                <li><a href="Index.php">Home</a></li>
                 <li><a href="VocationalTrainingCentres.php">Vocational Training Centres</a></li>
                 <li><a href="Companies.php">Companies</a></li>
                 <li><a href="viewComment.php">Q & A</a></li>

@@ -34,10 +34,6 @@
       </n></n><p><span style="font-size:24px">As a student,</span>
       </n></n><p><span style="font-size:24px">As a Vocational Training Centre,</span>
       </n></n><p><span style="font-size:24px">As a Company,</span>
-      <!-- Make a digital marketing platform for Vocational Training Centres.</p>
-            <button class="button" style="background-color:gray" >
-                  <a href="./1.1RegVocationalCentre.php" style="color:white">Register as a Vocatioal Training Courses</a>
-            </button>-->
     </div>
   </div>
 </div>
