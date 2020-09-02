@@ -124,7 +124,7 @@ if(isset($_POST['but_logout'])){
   <div class="form-group col-md-2"><a href="course_search.php">
     <img src="Images/school.png" alt="Search for Courses"  width="80" height="80"> <p>Search Courses</p></a>
   </div>
-  <div class="form-group col-md-2"> <a href="course_search.php">
+  <div class="form-group col-md-2"> <a href="UserView_VocationalTrainingCentres.php">
     <img src="Images/teacher.png" alt="Vocational Training Courses" width="80" height="80"> <p>Vocational Training Centres</p></a>
   </div>
   <div class="form-group col-md-2"> <a href="course_search.php">
