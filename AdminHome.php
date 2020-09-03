@@ -132,7 +132,7 @@ if(isset($_POST['but_logout'])){
   <div class="form-group col-md-2"> <a href="#">
     <img src="Images/user.png" alt="User Profile" width="80" height="80"> <p>User Profile</p></a>
   </div>
-  <div class="form-group col-md-2"><a href="#">
+  <div class="form-group col-md-2"><a href="./simpleComment.php">
     <img src="Images/campaign.png" alt="Search for Courses"  width="80" height="80"> <p>Q & A</p></a>
   </div>
   <div class="form-group col-md-2"> <a href="./stu_admin_panel.php">

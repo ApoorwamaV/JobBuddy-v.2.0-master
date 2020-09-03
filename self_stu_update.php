@@ -12,6 +12,13 @@ $result1=$result->fetch_object();
 
 $row= mysqli_fetch_array($result);
 
+$firstNameStu=$result1->firstNameStu;
+$lastNameStu=$result1->lastNameStu;
+$initialNameStu=$result1->initialNameStu;
+$civilStatusStu=$result1->civilStatusStu;
+$NICStu=$result1->NICStu;
+$genderStu=$result1->genderStu;
+
 $fullNameStu=$result1->fullNameStu;
 $EmailStu=$result1->EmailStu;
 $contactNoStu=$result1->contactNoStu;
@@ -65,12 +72,12 @@ isset($_POST['Stu_NIC'])
 <!--First Name-->
         <div class="form-group col-md-5">
             <label for="firstNameStu">First Name</label>
-            <input type="text" class="form-control" name="firstNameStu" placeholder="Prathiba" value="<?php echo $row['firstNameStu']; ?>" required>
+            <input type="text" class="form-control" name="firstNameStu" placeholder="Prathiba" value="<?php echo $firstNameStu; ?>" required>
         </div>
 <!--Last Name-->
         <div class="form-group col-md-5">
             <label for="lastNameStu">Last Name</label>
-            <input type="text" class="form-control" name="lastNameStu" placeholder="Iddamalgoda" value="<?php echo $row['lastNameStu']; ?>" required>
+            <input type="text" class="form-control" name="lastNameStu" placeholder="Iddamalgoda" value="<?php echo $lastNameStu; ?>" required>
         </div>
     </div>
 <!-------------------------------------Row 02------------------------------------------------>
@@ -78,7 +85,7 @@ isset($_POST['Stu_NIC'])
 <!--Full Name-->
             <div class="form-group col-md-12">
                 <label for="fullNameStu">Full Name</label>
-                <input type="text" class="form-control" name="fullNameStu" placeholder="PRATHIBA IDDAMALGODA" value="<?php echo $row['fullNameStu']; ?>" required>
+                <input type="text" class="form-control" name="fullNameStu" placeholder="PRATHIBA IDDAMALGODA" value="<?php echo $fullNameStu; ?>" required>
             </div>        
 </div>
 <!-------------------------------------Row 03------------------------------------------------>
@@ -86,7 +93,7 @@ isset($_POST['Stu_NIC'])
 <!--Name with initials-->
             <div class="form-group col-md-12">
                 <label for="initialNameStu">Name with initials</label>
-                <input type="text" class="form-control" name="initialNameStu" placeholder="P.Iddamalgoda" value="<?php echo $row['initialNameStu']; ?>" required>
+                <input type="text" class="form-control" name="initialNameStu" placeholder="P.Iddamalgoda" value="<?php echo $initialNameStu; ?>" required>
             </div>         
 </div>    
 <!-------------------------------------Row 04------------------------------------------------>
@@ -94,7 +101,7 @@ isset($_POST['Stu_NIC'])
 <!--E mail-->
         <div class="form-group col-md-6">
             <label for="inputEmailStu">Email</label>
-            <input type="email" class="form-control" name="inputEmailStu" value="<?php echo $row['EmailStu']; ?>" placeholder="prathiba@email.com">
+            <input type="email" class="form-control" name="inputEmailStu" value="<?php echo $EmailStu; ?>" placeholder="prathiba@email.com">
         </div>
   
 
@@ -105,12 +112,12 @@ isset($_POST['Stu_NIC'])
         <div class="form-group col-6 col-md-6">
             <label for="inputNICStu">NIC number</label>
             <!--PK- Can't change. So added read only-->
-            <read-only><input type="text" class="form-control" name="inputNICStu" placeholder="95******" value="<?php echo $row['NICStu']; ?>" required ></read-only>
+            <read-only><input type="text" class="form-control" name="inputNICStu" placeholder="95******" value="<?php echo $NICStu; ?>" readonly ></read-only>
         </div>
 <!--Date of Birth-->
         <div class="form-group col-md-6">
           <label for="DOBStu">Date of birth</label>
-          <input type="date" class="form-control" name="DOBStu" value="<?php echo $row['DOBStu']; ?>" required>
+          <input type="date" class="form-control" name="DOBStu" value="<?php echo $DOBStu; ?>" required>
         </div>
 </div>
 <!-------------------------------------Row 05------------------------------------------------>
@@ -121,7 +128,7 @@ isset($_POST['Stu_NIC'])
             <div class="form-group col-md-4">
             <select name="inputGenderStu" class="form-control">
               
-              <option selected><?php echo $row['genderStu']; ?></option>
+              <option selected><?php echo $genderStu; ?></option>
               <option>Male</option>
               <option>Female</option>
             </select>
@@ -131,7 +138,7 @@ isset($_POST['Stu_NIC'])
         <div class="form-group col-6 col-md-6">
             <label for="inputCStatusStu">Civil Status</label>
             <select name="inputCStatusStu" class="form-control" >
-            <option selected><?php echo $row['civilStatusStu']; ?></option> 
+            <option selected><?php echo $civilStatusStu; ?></option> 
               <option>Married</option>
               <option>Single</option>
             </select>
@@ -141,7 +148,7 @@ isset($_POST['Stu_NIC'])
 <!--Address-->
           <div class="form-group col-12 col-md-12 col-sm-12">
             <label for="inputAddressStu">Address</label>
-              <input type="text" class="form-control" name="inputAddressStu" placeholder="1234, Kandy road, Nittambuwa." value="<?php echo $row['addressStu']; ?>" required>
+              <input type="text" class="form-control" name="inputAddressStu" placeholder="1234, Kandy road, Nittambuwa." value="<?php echo $addressStu; ?>" required>
           </div>
 <!-------------------------------------Row 07------------------------------------------------>      
 <!--Password-->               
@@ -149,7 +156,7 @@ isset($_POST['Stu_NIC'])
           <div class="form-group col-md-6">
             <label for="inputDistrictStu">District</label>
             <select name="inputDistrictStu" class="form-control" required>
-              <option selected><?php echo $row['districtStu']; ?></option>
+              <option selected><?php echo $districtStu; ?></option>
               <option>Colombo</option>
               <option>Gampaha</option>
               <option>Kaluthara</option>
@@ -165,7 +172,7 @@ isset($_POST['Stu_NIC'])
           </div>
           <div class="form-group col-md-6">
             <label for="inputContactNoStu">Contact No</label>
-            <input type="text" class="form-control" name="inputContactNoStu" value="<?php echo $row['contactNoStu']; ?>" placeholder="+94 7# ## ## ###">
+            <input type="text" class="form-control" name="inputContactNoStu" value="<?php echo $contactNoStu; ?>" placeholder="+94 7# ## ## ###">
           </div>
 </div>
 <!-------------------------------------Row 08------------------------------------------------>
@@ -238,7 +245,7 @@ isset($_POST['Stu_NIC'])
 <!-------------------------------------Row 13------------------------------------------------>
 <div class="form-row col-12 col-md-12 col-sm-12"><label for="inputNICPhoto">Drop Your NIC Softcopy File</label>
 <div class="custom-file">
-        <input type="file" class="custom-file-input" id="validatedCustomFile" name="id_copy" value="<?php echo $row['softCopy']; ?>">
+        <input type="file" class="custom-file-input" id="validatedCustomFile" name="id_copy" value="<?php echo $softCopy; ?>">
         <label class="custom-file-label" for="validatedCustomFile" name="text_id">Choose file...</label>
         <div class="invalid-feedback">Example invalid custom file feedback</div>
 </div>
