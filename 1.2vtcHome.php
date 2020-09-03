@@ -166,11 +166,11 @@ if(isset($_POST['but_logout'])){
   <div class="form-group col-md-2"> <a href="#stuDetails">
     <img src="Images/user.png" alt="User Profile" width="80" height="80"> <p>User Profile</p></a>
   </div>
-  <div class="form-group col-md-2"><a href="course_search.php">
-    <img src="Images/school.png" alt="Search for Courses"  width="80" height="80"> <p>Search Courses</p></a>
+  <div class="form-group col-md-2"><a href="addvtcCourses.php">
+    <img src="Images/school.png" alt="Search for Courses"  width="80" height="80"> <p>Add Courses</p></a>
   </div>
   <div class="form-group col-md-2"> <a href="course_search.php">
-    <img src="Images/teacher.png" alt="Vocational Training Courses" width="80" height="80"> <p>Vocational Training Centres</p></a>
+    <img src="Images/teacher.png" alt="Vocational Training Courses" width="80" height="80"> <p>Our Courses</p></a>
   </div>
   <div class="form-group col-md-2"> <a href="course_search.php">
     <img src="Images/company.png" alt="Company Details" width="80" height="80"> <p>Companies</p></a>
@@ -184,10 +184,6 @@ if(isset($_POST['but_logout'])){
   </div>
   
 </section></section>
-
-  <a href="./vtc_admin_panel.php"><i class="fa fa-fw fa-wrench"></i> View Courses</a>
-
-  <a href="addvtcCourses.php"><i class="fa fa-fw fa-wrench"></i> Add Courses</a>
 
 
 <!--Image as a link-->

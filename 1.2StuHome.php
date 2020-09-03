@@ -106,14 +106,7 @@ if(isset($_POST['but_logout'])){
   </div>
   
   <div class="bg-image img1"></div>
-<!-- The sidebar 
-<div class="sidebar">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-</div>
- The sidebar END -->
+
  <br><br>
  <section class="row justify-content-center">
 <section class="col-12 col-sm-12 col-md-12">
@@ -127,14 +120,14 @@ if(isset($_POST['but_logout'])){
   <div class="form-group col-md-2"> <a href="UserView_VocationalTrainingCentres.php">
     <img src="Images/teacher.png" alt="Vocational Training Courses" width="80" height="80"> <p>Vocational Training Centres</p></a>
   </div>
-  <div class="form-group col-md-2"> <a href="course_search.php">
+  <div class="form-group col-md-2"> <a href="UserView_Companies.php">
     <img src="Images/company.png" alt="Company Details" width="80" height="80"> <p>Companies</p></a>
   </div>
   
-  <div class="form-group col-md-2"> <a href="course_search.php">
+  <div class="form-group col-md-2"> <a href="self_stu_update.php">
     <img src="Images/update.png" alt="Update Profile" width="80" height="80"> <p>Update Profile</p></a>
   </div>
-  <div class="form-group col-md-2"> <a href="course_search.php">
+  <div class="form-group col-md-2"> <a href="self_stu_delete.php">
     <img src="Images/delete.png" alt="Delete Profile" width="80" height="80"> <p>Delete Profile</p></a>
   </div>
   

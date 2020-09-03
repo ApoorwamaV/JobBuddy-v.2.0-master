@@ -120,32 +120,6 @@ $_SESSION['vtcRegID'] = $_GET['id'];
                 <li><a href="3AboutAll.php">About us</a></li>
                 <li><a href="#contact.php">Contact</a></li>
 
-<!--Register-->
-              <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" href="#">Register
-              <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                    <li><a href="./1.1RegStu.php">Student</a></li>
-                    <li><a href="./1.1RegVocationalCentre.php">Vocational Training Centre</a></li>
-                    <li><a href="./1.1RegCompany.php">Company</a></li>
-              </ul>
-              </li>
-<!--Login-->
-              <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login
-              <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                    <li><a href="./2.1StuLogIn.php">Student</a></li>
-                    <li><a href="./2.2VTCLogIn.php">Vocational Training Centre</a></li>
-                    <li><a href="./2.3CompanyLogIn.php">Company</a></li>
-                    <li><a href="./adminLogIn.php">Administrator</a></li>
-              </ul>
-              </li>
-<!--Search-->
-      <form class="form-inline" action="/action_page.php">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-success" type="submit">Search</button>
-      </form>
 </ul>
 </div>
 </nav>  

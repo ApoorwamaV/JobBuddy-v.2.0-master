@@ -1,11 +1,15 @@
-<?php require_once('includes/connection.php'); 
+
+ <?php require_once('includes/connection.php'); ?>
+<?php require_once('includes/functions.php'); ?>
 
 ?>
 <!---------------------------------Bring User Name-------------------------------->
-<?php session_start();?>
+<?php session_start();
+?>
 
 <?php echo $_SESSION['Stu_NIC'];
 $Stu_NIC= $_SESSION['Stu_NIC']; 
+
 
 $sql="select * from students where NICStu='$Stu_NIC'";
 $result=mysqli_query($connection,$sql);
@@ -21,23 +25,6 @@ $DOBStu=$result1->DOBStu;
 isset($_POST['Stu_NIC'])?>
 
 
-<?php/*  
-	$connect = mysqli_connect("localhost", "root", "", "jobbuddy");
-	$sql = "SELECT * FROM coursedetails WHERE CourseId = '".$_POST["id"]."'";  
-    //echo $_POST["id"];
-*/
-session_start();
-echo $_SESSION['Stu_NIC'];
- ?>
- <?php require_once('includes/connection.php'); ?>
-<?php require_once('includes/functions.php'); ?>
-<?php
-  $_SESSION['vtcRegId'] = $_POST['vtcRegId'];
-$result2 = mysqli_query($connection,"SELECT * FROM coursedetails WHERE CourseId ='".$_GET['id']."'");
-$row= mysqli_fetch_array($result2);
-
-echo $_GET['id'];
- ?>
  <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -134,32 +121,21 @@ if(isset($_POST['but_logout'])){
   <section class="container-fluid">
     <section class="row justify-content-center">
     <section class="col-12 col-sm-6 col-md-10">
-    <form class="form-container justify-content-center col-12 col-sm-6 col-md-10 " method="post" action="Reg_StuCourse.php" enctype="multipart/form-data">
+    <form class="form-container justify-content-center col-12 col-sm-6 col-md-10 " method="post" action="Reg_StuCourse_handle.php" enctype="multipart/form-data">
     <form class=" solid stuReg">
 <!-------------------------------------Row 01------------------------------------------------>
 <div class="form-row col-12 col-md-12 col-sm-12">
   
   <div class="form-group col-md-6">
 	  <label for="CourseId">Vocational Course ID</label>
-	  <input type="text" class="form-control" name="CourseId" value="<?php echo $row['CourseId']; ?>" required>
+	  <input type="text" class="form-control" name="CourseId" >
   </div>
   <div class="form-group col-md-6">
 	  <label for="CourseName">Vocational Course Name</label>
-	  <input type="text" class="form-control" name="CourseName" value="<?php echo $row['CourseName']; ?>" required>
+	  <input type="text" class="form-control" name="CourseName" >
   </div>
 </div>
-<!-------------------------------------Row 02------------------------------------------------>
-    <div class="form-row col-12 col-md-12 col-sm-12">
-  
-		<div class="form-group col-md-6">
-            <label for="vtcRegID">Vocational Training Centre ID</label>
-            <input type="text" class="form-control" name="vtcRegID" value="<?php echo $row['vtcRegID']; ?>" required>
-        </div>
-		<div class="form-group col-md-6">
-            <label for="vtcName">Vocational Training Centre Name</label>
-            <input type="text" class="form-control" name="vtcName" value="<?php echo $row['vtcName']; ?>" required>
-        </div>
-	</div>
+
 	<!-------------------------------------Row 03------------------------------------------------>
     <div class="form-row col-12 col-md-12 col-sm-12">
   

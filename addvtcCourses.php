@@ -1,3 +1,4 @@
+
 <?php require_once('includes/connection.php'); ?>
 <?php require_once('includes/functions.php'); ?>
 
@@ -69,7 +70,7 @@ isset($_POST['vtcRegID']);
 
         <div class="form-group" >
           <label for="vtcID">Vocation Training Centre ID </label>
-          <input type="text" name="vtcID" class="form-control" id="vtcID"  placeholder="Vocation Training Centre ID">          
+          <input type="text" name="vtcID" class="form-control" id="vtcID"  placeholder="Vocation Training Centre ID" value="<?php echo $vtcRegId?>" readonly>          
         </div>
 
         <div class="form-group" >
